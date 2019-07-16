@@ -1,3 +1,5 @@
+package best;
+
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -5,7 +7,7 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class AccountCreationTest extends BaseTest {
+public class AccountCreationTest extends BaseTest{
 
     private SignInPage signInPage;
     private AccountCreationPage accountCreationPage;

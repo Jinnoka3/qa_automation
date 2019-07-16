@@ -1,3 +1,5 @@
+package best;
+
 import lombok.Data;
 import org.testng.annotations.DataProvider;
 
