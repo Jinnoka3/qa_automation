@@ -12,6 +12,13 @@
                     <include name="signInTest" />
                 </methods>
             </class>
+
+            <class name="best.AccountCreationTest">
+                <methods>
+                    <include name="personalInfoTest" />
+                </methods>
+            </class>
+
         </classes>
     </test>
 
