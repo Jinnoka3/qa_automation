@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="Simple test suite">
+<suite name="Registration test suite">
     <parameter name="dataFile" value="src/test/data/data.json"/>
 
 
 
-    <!--<test name="signInTest" verbose="2">
+    <test name="Registration" verbose="2">
         <classes>
+
+            <class name="best.HomeTest">
+                <methods>
+                    <include name="positiveHomePageTest" />
+                </methods>
+            </class>
+
             <class name="best.SignInTest">
                 <methods>
                     <include name="signInTest" />
@@ -21,19 +28,19 @@
             </class>
 
         </classes>
-    </test>-->
+    </test>
 
-    <test name="signInAccount" verbose="2">
+   <!-- <test name="signInAccount" verbose="2">
         <classes>
             <class name="best.VerificationTest">
                 <methods>
-                    <!--<include name="signInAccount" />
-                    <include name="signInAccount" />-->
+                    &lt;!&ndash;<include name="signInAccount" />
+                    <include name="signInAccount" />&ndash;&gt;
                     <include name="editUserDataTest" />
                 </methods>
             </class>
 
         </classes>
-    </test>
+    </test>-->
 
 </suite>

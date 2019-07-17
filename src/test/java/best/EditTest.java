@@ -4,9 +4,8 @@ import data_model.AccountData;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 
-public class VerificationTest extends BaseTest {
+public class EditTest extends BaseTest {
 
     private SignInPage signInPage;
     private AccountCreationPage accountCreationPage;
@@ -19,7 +18,7 @@ public class VerificationTest extends BaseTest {
     }
 
     @Test(dataProvider = "personalInformation")
-    public void verificationUserDataTest(AccountData accountData) {
+    public void editUserDataTest(AccountData accountData) {
 
         signInPage = PageFactory.initElements(driver, SignInPage.class);
         accountCreationPage = PageFactory.initElements(driver, AccountCreationPage.class);
@@ -30,13 +29,6 @@ public class VerificationTest extends BaseTest {
         accountCreationPage.accountCreate(accountData);
 
         myAccountPage.clickPersonalInfo();
-
-        SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(myPersonalInfoPage.verificationName(accountData));
-        softAssert.assertTrue(myPersonalInfoPage.verificationLastName(accountData));
-        softAssert.assertTrue(myPersonalInfoPage.verificationEmail(accountData));
-        softAssert.assertAll();
-
+        
     }
 }
-

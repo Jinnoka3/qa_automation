@@ -1,5 +1,6 @@
 package best;
 
+import data_model.AccountData;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
@@ -22,11 +23,7 @@ public class SignInTest extends BaseTest{
 
         signInPage.signIn(accountData);
 
-
             Assert.assertEquals("Authentication", signInPage.getTitle());
-            //LOGGER.info("Correct email");
-
-            //LOGGER.error("Uncorrect email");
         }
     }
 

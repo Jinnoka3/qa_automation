@@ -1,4 +1,4 @@
-package best;
+package data_model;
 
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;

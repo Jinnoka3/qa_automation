@@ -1,5 +1,6 @@
 package best;
 
+import data_model.AccountData;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
@@ -24,12 +25,7 @@ public class AccountCreationTest extends BaseTest{
         signInPage.signIn(accountData);
         accountCreationPage.accountCreate(accountData);
 
-
             Assert.assertEquals("> My account", accountCreationPage.getInvalidData());
-            //LOGGER.info("Correct user data");
-
-            //LOGGER.error("Uncorrect email");
-
     }
 
  /*@Test(dataProvider = "personalInformation", dataProviderClass = AccountData.class)

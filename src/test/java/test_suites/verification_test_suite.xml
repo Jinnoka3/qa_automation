@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Verification test suite">
+    <parameter name="dataFile" value="src/test/data/data.json"/>
+
+    <test name="Verification" verbose="2">
+        <classes>
+
+            <class name="best.VerificationTest">
+                <methods>
+                    <include name="verificationUserDataTest" />
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+</suite>

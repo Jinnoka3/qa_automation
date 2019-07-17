@@ -9,11 +9,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
+@Listeners(SimpleTestListener.class)
 public class BaseTest {
 
     static final Logger LOGGER = Logger.getLogger(AccountCreationPage.class);
@@ -33,12 +35,11 @@ public class BaseTest {
         driver.manage().window().maximize();
         driver.get(ConfigFileReader.readUrl());
         PropertyConfigurator.configure(ConfigFileReader.readLog());
-        LOGGER.info("Start");
+
     }
 
     @AfterClass
     public void afterClassMethod(){
         driver.close();
-        LOGGER.info("End");
     }
 }

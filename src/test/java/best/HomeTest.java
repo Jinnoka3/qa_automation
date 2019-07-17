@@ -3,6 +3,7 @@ package best;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
@@ -10,6 +11,7 @@ import java.io.IOException;
 public class HomeTest extends BaseTest {
 
     private HomePage homePage;
+
 
     @Test()
     public void positiveHomePageTest(){
@@ -20,10 +22,5 @@ public class HomeTest extends BaseTest {
         String text = homePage.getTitle();
 
             Assert.assertEquals("My Store", text);
-            //LOGGER.info("Home page");
-
-
-            //LOGGER.error("Not home page");
-
     }
 }

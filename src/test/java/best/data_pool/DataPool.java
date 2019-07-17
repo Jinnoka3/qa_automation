@@ -1,6 +1,6 @@
 package best.data_pool;
 
-import best.AccountData;
+import data_model.AccountData;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;
