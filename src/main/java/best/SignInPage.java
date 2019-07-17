@@ -3,9 +3,6 @@ package best;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-
-import java.util.Date;
 
 public class SignInPage extends BasePage{
 
@@ -30,11 +27,11 @@ public class SignInPage extends BasePage{
     @FindBy(xpath = "//input[@id='email']")
     private WebElement emailRegistered;
 
-    @FindBy(xpath = "//input[@id='email']")
+    @FindBy(xpath = "//input[@id='passwd']")
     private WebElement passwordRegistered;
 
-   /* @FindBy(xpath = "//p[@class='submit']//span[1]")
-    private WebElement signIn;*/
+    @FindBy(xpath = "//p[@class='submit']//span[1]")
+    private WebElement signIn;
 
     public void sendEmailFirstPage(String emailFirst) {
         emailFirstPage.sendKeys(emailFirst);
@@ -48,9 +45,9 @@ public class SignInPage extends BasePage{
         passwordRegistered.sendKeys(password);
     }
 
-    /*public void clickSignIn(){
+    public void clickSignIn(){
         signIn.click();
-    }*/
+    }
 
     public void clickCreateAnAccount(){
         createAnAccount.click();
@@ -65,7 +62,7 @@ public class SignInPage extends BasePage{
         /*Date dat = new Date();
         long now = dat.getTime();*/
 
-        clickSignIn();
+        super.clickSignIn();
         sendEmailFirstPage(accountData.getEmail());
         clickCreateAnAccount();
         getTitle();
@@ -73,11 +70,11 @@ public class SignInPage extends BasePage{
 
     public void alreadyRegistered(AccountData accountData){
 
-        clickSignIn();
+        super.clickSignIn();
         sendEmail(accountData.getEmail());
-        sendPassword(accountData.getEmail());
+        sendPassword(accountData.getPassword());
         clickSignIn();
-        //getTitle();
+        getTitle();
     }
 
     @Override

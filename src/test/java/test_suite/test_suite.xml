@@ -5,7 +5,7 @@
     <parameter name="dataFile" value="src/test/data/data.json"/>
 
 
-    <test name="signInTest" verbose="2">
+    <!--<test name="signInTest" verbose="2">
         <classes>
             <class name="best.SignInTest">
                 <methods>
@@ -16,6 +16,19 @@
             <class name="best.AccountCreationTest">
                 <methods>
                     <include name="personalInfoTest" />
+                </methods>
+            </class>
+
+        </classes>
+    </test>-->
+
+    <test name="signInAccount" verbose="2">
+        <classes>
+            <class name="best.VerificationTest">
+                <methods>
+                    <!--<include name="signInAccount" />
+                    <include name="signInAccount" />-->
+                    <include name="verificationUserDataTest" />
                 </methods>
             </class>
 

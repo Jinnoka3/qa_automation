@@ -22,10 +22,10 @@ public class AccountCreationPage extends BasePage{
     @FindBy(xpath = "//*[@id=\"customer_lastname\"]")
     private WebElement lastName;
 
-    @FindBy(xpath = "//*[@id=\"email\"]")
-    private WebElement emailSecondPage;
+    @FindBy(xpath = "//input[@id='email']")
+    protected WebElement emailSecondPage;
 
-    @FindBy(xpath = "//*[@id=\"passwd\"]")
+    @FindBy(xpath = "//input[@id='passwd']")
     private WebElement password;
 
     @FindBy(xpath = "//*[@id=\"days\"]")
@@ -43,11 +43,11 @@ public class AccountCreationPage extends BasePage{
     @FindBy(xpath = "//*[@id=\"optin\"]")
     private WebElement specialOffers;
 
-    @FindBy(xpath = "//*[@id=\"customer_firstname\"]")
-    private WebElement firstNameInAdressForm;
+    @FindBy(xpath = "//input[@id='firstname']")
+    protected WebElement firstNameInAdressForm;
 
-    @FindBy(xpath = "//*[@id=\"customer_lastname\"]")
-    private WebElement lastNameInAdressForm;
+    @FindBy(xpath = " //input[@id='lastname']")
+    protected WebElement lastNameInAdressForm;
 
     @FindBy(xpath = "//*[@id=\"company\"]")
     private WebElement company;
@@ -201,7 +201,7 @@ public class AccountCreationPage extends BasePage{
         sendFirstName(accountData.getFirstName());
         sendLastName(accountData.getLastName());
         sendEmailSecondPage(accountData.getEmail());
-        sendPassword(accountData.getEmail());
+        sendPassword(accountData.getPassword());
         sendAddressLine1(accountData.getAddress1());
         sendCity(accountData.getCity());
         sendState(accountData.getState());

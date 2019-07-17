@@ -1,4 +1,3 @@
-/*
 package best;
 
 import org.openqa.selenium.WebDriver;
@@ -50,4 +49,3 @@ public class MyAccountPage extends BasePage {
 
     }
 }
-*/
