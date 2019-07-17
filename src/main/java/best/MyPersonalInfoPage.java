@@ -1,9 +1,13 @@
 package best;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import data_model.AccountData;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import java.io.File;
+import java.io.IOException;
 
 public class MyPersonalInfoPage extends AccountCreationPage{
 
@@ -18,6 +22,9 @@ public class MyPersonalInfoPage extends AccountCreationPage{
 
     @FindBy(xpath = "//span[contains(text(),'Save')]")
     private WebElement save;
+
+    @FindBy(xpath = "//p[@class='alert alert-success']")
+    private WebElement messageSuccessUpdate;
 
     public MyPersonalInfoPage(WebDriver driver) {
         super(driver);
@@ -39,9 +46,25 @@ public class MyPersonalInfoPage extends AccountCreationPage{
         return  (this.emailSecondPage.getAttribute("value")).contentEquals(accountData.getEmail());
     }
 
-    public void editNameInAdress(AccountData acc) {
+    public boolean editNameInAdress(AccountData acc) throws IOException {
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        AccountData account = objectMapper.readValue( new File( "C:\\Users\\User\\IdeaProjects\\qa_automation585\\src\\test\\data\\new_data.json" ), AccountData.class );
+
+        this.firstNameInAdressForm.clear();
+        this.firstNameInAdressForm.sendKeys(account.getFirstName());
+
         this.lastNameInAdressForm.clear();
-        this.lastNameInAdressForm.sendKeys(acc.getFirstName());
+        this.lastNameInAdressForm.sendKeys(account.getLastName());
+
+        this.emailSecondPage.clear();
+        this.emailSecondPage.sendKeys(account.getNewEmail());
+
+        currentPassword.sendKeys(acc.getPassword());
+        newPassword.sendKeys(account.getNewPassword());
+        confirmation.sendKeys(account.getNewPassword());
+        clickSave();
+        return messageSuccessUpdate.isDisplayed();
     }
 
 

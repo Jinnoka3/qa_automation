@@ -19,11 +19,14 @@ public class AccountData {
     private String firstName;
     private String lastName;
     private String email;
+    private String newEmail;
 
 
     //private String wrongEmail;
 
     private String password;
+
+    private String newPassword;
 
     private String date;
     private String month;
@@ -48,6 +51,6 @@ public class AccountData {
 
     public AccountData() {
         this.email = now + "koko@gmail.com";
-
+        this.newEmail = now + "misha@gmail.com";
     }
 }

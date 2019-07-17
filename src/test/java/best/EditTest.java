@@ -1,9 +1,14 @@
 package best;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import data_model.AccountData;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import java.io.File;
+import java.io.IOException;
 
 public class EditTest extends BaseTest {
 
@@ -18,7 +23,7 @@ public class EditTest extends BaseTest {
     }
 
     @Test(dataProvider = "personalInformation")
-    public void editUserDataTest(AccountData accountData) {
+    public void editUserDataTest(AccountData accountData) throws IOException {
 
         signInPage = PageFactory.initElements(driver, SignInPage.class);
         accountCreationPage = PageFactory.initElements(driver, AccountCreationPage.class);
@@ -29,6 +34,7 @@ public class EditTest extends BaseTest {
         accountCreationPage.accountCreate(accountData);
 
         myAccountPage.clickPersonalInfo();
-        
+
+        Assert.assertTrue(myPersonalInfoPage.editNameInAdress(accountData), "No update");
     }
 }
