@@ -11,24 +11,19 @@ public class HomeTest extends BaseTest {
 
     private HomePage homePage;
 
-    @Override
-    @BeforeClass
-    public void beforeClassMethod() throws IOException {
-        super.beforeClassMethod();
-        homePage = PageFactory.initElements(driver, HomePage.class);
-    }
-
     @Test()
     public void positiveHomePageTest(){
+
+        homePage = PageFactory.initElements(driver, HomePage.class);
         LOGGER.info("Title: " + homePage.getTitle());
 
         String text = homePage.getTitle();
-        try {
+
             Assert.assertEquals("My Store", text);
-            LOGGER.info("Home page");
-        }
-        catch (Error error){
-            LOGGER.error("Not home page");
-        }
+            //LOGGER.info("Home page");
+
+
+            //LOGGER.error("Not home page");
+
     }
 }

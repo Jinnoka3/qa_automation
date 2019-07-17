@@ -3,6 +3,7 @@ package best;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class SignInPage extends BasePage{
 
@@ -34,6 +35,14 @@ public class SignInPage extends BasePage{
 
     public String getInvalidEmail(){
         return invalidEmail.getText();
+    }
+
+    public void signIn(AccountData accountData){
+
+        clickSignIn();
+        sendEmailFirstPage(accountData.getEmail());
+        clickCreateAnAccount();
+        getTitle();
     }
 
     @Override

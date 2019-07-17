@@ -196,4 +196,19 @@ public class AccountCreationPage extends BasePage{
     public String getInvalidData(){
         return invalidData.getText();
     }
+
+    public void accountCreate(AccountData accountData){
+        sendFirstName(accountData.getFirstName());
+        sendLastName(accountData.getLastName());
+        sendEmailSecondPage(accountData.getEmail());
+        sendPassword(accountData.getEmail());
+        sendAddressLine1(accountData.getAddress1());
+        sendCity(accountData.getCity());
+        sendState(accountData.getState());
+        sendZip(accountData.getZip());
+        sendCountry(accountData.getCountry());
+        sendMobilePhone(accountData.getMobile());
+        sendAnAddressAlias(accountData.getAlias());
+        clickRegister();
+    }
 }

@@ -3,40 +3,38 @@ package best;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
 
 public class SignInTest extends BaseTest{
 
-    private SignInPage signInPage;
 
-    @Override
-    @BeforeClass
-    public void beforeClassMethod() throws IOException {
-        super.beforeClassMethod();
+
+    @DataProvider(name = "personalInformation")
+    public Object[][] dataProviderNewUser() {
+        return dataPool.getData();
+    }
+
+    @Test(dataProvider = "personalInformation")
+    public void signInTest(AccountData accountData){
+
+        LOGGER.info("email: " + accountData.getEmail());
+        SignInPage signInPage;
         signInPage = PageFactory.initElements(driver, SignInPage.class);
-    }
 
-    @Test(dataProvider = "personalInformation", dataProviderClass = AccountData.class)
-    public void signIn(AccountData obj){
-        signInPage.clickSignIn();
-        LOGGER.info("email: " + obj.getEmail());
-        signInPage.sendEmailFirstPage(obj.getEmail());
-        signInPage.clickCreateAnAccount();
+        signInPage.signIn(accountData);
 
-        String text = signInPage.getTitle();
 
-        try {
-            Assert.assertEquals("Authentication", text);
-            LOGGER.info("Correct email");
-        }
-        catch (Error error){
-            LOGGER.error("Uncorrect email");
+            Assert.assertEquals("Authentication", signInPage.getTitle());
+            //LOGGER.info("Correct email");
+
+            //LOGGER.error("Uncorrect email");
         }
     }
 
-    @Test(dataProvider = "personalInformation", dataProviderClass = AccountData.class)
+   /* @Test(dataProvider = "personalInformation", dataProviderClass = AccountData.class)
     public void signInError(AccountData obj){
         signInPage.clickSignIn();
         LOGGER.info("email: " + obj.getWrongEmail());
@@ -52,5 +50,5 @@ public class SignInTest extends BaseTest{
         catch (Error error){
             LOGGER.error("Correct email");
         }
-    }
-}
+    }*/
+

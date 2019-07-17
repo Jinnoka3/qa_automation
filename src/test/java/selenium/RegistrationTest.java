@@ -1,3 +1,4 @@
+/*
 package selenium;
 
 import org.openqa.selenium.By;
@@ -173,3 +174,4 @@ public class RegistrationTest {
     }
 
 }
+*/

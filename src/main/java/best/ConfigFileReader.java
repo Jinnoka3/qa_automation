@@ -40,4 +40,10 @@ public class ConfigFileReader{
         return log;
     }
 
+    public static String readJson() throws IOException {
+        properties.load(ip);
+        String json = properties.getProperty("json");
+        return json;
+    }
+
 }

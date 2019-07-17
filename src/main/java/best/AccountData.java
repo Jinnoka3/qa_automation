@@ -1,22 +1,25 @@
 package best;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.Data;
 import org.testng.annotations.DataProvider;
 
 import java.util.Date;
 
 @Data
+
+@JsonPropertyOrder()
 public class AccountData {
 
-    Date dat = new Date();
+  /*  Date dat = new Date();
     long now = dat.getTime();
 
-    private String gender;
+    private String gender;*/
     private String firstName;
     private String lastName;
     private String email;
 
-    private String wrongEmail;
+    //private String wrongEmail;
 
     private String password;
 
@@ -41,7 +44,7 @@ public class AccountData {
     private String alias;
 
 
-    public AccountData() {
+    /*public AccountData() {
         this.firstName = "Daria";
         this.lastName = "Kalinina";
         this.email = "koko@gmail.com" + now;
@@ -55,7 +58,7 @@ public class AccountData {
         this.country = "21";
         this.mobile = "98093243";
         this.alias = "Unknown Address";
-    }
+    }*/
 
 
     /*public String getFirstName() {
@@ -112,11 +115,4 @@ public class AccountData {
         return "Unknown Address";
     }*/
 
-
-    @DataProvider(name = "personalInformation")
-    public Object[][] dataProviderNewUser() {
-        return new Object[][]{
-                {new AccountData()}
-        };
-    }
 }
