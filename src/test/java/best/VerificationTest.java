@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 
 public class VerificationTest extends BaseTest {
     private SignInPage signInPage;
-    private AccountCreationPage accountCreationPage;
     private MyAccountPage myAccountPage;
 
     @DataProvider(name = "personalInformation")
@@ -20,7 +19,7 @@ public class VerificationTest extends BaseTest {
 
         //LOGGER.info("email: " + accountData.getEmail());
         signInPage = PageFactory.initElements(driver, SignInPage.class);
-        accountCreationPage = PageFactory.initElements(driver, AccountCreationPage.class);
+
         myAccountPage = PageFactory.initElements(driver, MyAccountPage.class);
 
         signInPage.alreadyRegistered(accountData);
