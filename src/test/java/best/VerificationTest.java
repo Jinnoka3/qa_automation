@@ -72,8 +72,6 @@ public class VerificationTest extends BaseTest {
     @Test(dataProvider = "personalInformation")
     public void editUserDataTest(AccountData accountData) {
 
-        //AccountData accountDataAfter = new AccountData();
-
 
         signInPage = PageFactory.initElements(driver, SignInPage.class);
         accountCreationPage = PageFactory.initElements(driver, AccountCreationPage.class);
@@ -85,7 +83,7 @@ public class VerificationTest extends BaseTest {
 
         myAccountPage.clickPersonalInfo();
 
-        //myPersonalInfoPage.editNameInAdress(accountDataAfter);
+        //myPersonalInfoPage.editNameInAdress(dataPool.getDataNew());
 
 
     }
