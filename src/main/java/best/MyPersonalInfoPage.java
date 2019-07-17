@@ -39,5 +39,10 @@ public class MyPersonalInfoPage extends AccountCreationPage{
         return  (this.emailSecondPage.getAttribute("value")).contentEquals(accountData.getEmail());
     }
 
+    public void editNameInAdress(AccountData acc) {
+        this.lastNameInAdressForm.clear();
+        this.lastNameInAdressForm.sendKeys(acc.getFirstName());
+    }
+
 
 }

@@ -28,7 +28,7 @@
                 <methods>
                     <!--<include name="signInAccount" />
                     <include name="signInAccount" />-->
-                    <include name="verificationUserDataTest" />
+                    <include name="editUserDataTest" />
                 </methods>
             </class>
 

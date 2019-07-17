@@ -70,19 +70,24 @@ public class VerificationTest extends BaseTest {
     }
 
     @Test(dataProvider = "personalInformation")
-    public void verificationUserAddressesTest(AccountData accountData) {
+    public void editUserDataTest(AccountData accountData) {
 
-        //LOGGER.info("email: " + accountData.getEmail());
+        //AccountData accountDataAfter = new AccountData();
+
+
         signInPage = PageFactory.initElements(driver, SignInPage.class);
-
+        accountCreationPage = PageFactory.initElements(driver, AccountCreationPage.class);
         myAccountPage = PageFactory.initElements(driver, MyAccountPage.class);
+        myPersonalInfoPage = PageFactory.initElements(driver, MyPersonalInfoPage.class);
 
-        //signInPage.alreadyRegistered(accountData);
+        signInPage.signIn(accountData);
+        accountCreationPage.accountCreate(accountData);
 
-        myAccountPage.clickMyAddresses();
-        //myAccountPage.verificationAddresses();
+        myAccountPage.clickPersonalInfo();
 
-       // Assert.assertEquals("My account - My Store", myAccountPage.getTitle());
+        //myPersonalInfoPage.editNameInAdress(accountDataAfter);
+
+
     }
 }
 

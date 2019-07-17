@@ -25,7 +25,7 @@ public class BaseTest {
     public void beforeClassMethod(ITestContext testContext) throws IOException {
         dataPool = new DataPool();
         HashMap<String,String> parameters = new HashMap<>( testContext.getCurrentXmlTest().getAllParameters());
-        dataPool.processDataFile(parameters.get( "dataFile" ));
+        dataPool.processDataFile(parameters.get( "dataFile"));
 
         System.setProperty("webdriver.chrome.driver", ConfigFileReader.readDriverPath());
         driver = new ChromeDriver();
