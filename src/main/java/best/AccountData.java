@@ -1,5 +1,6 @@
 package best;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.Data;
 import org.testng.annotations.DataProvider;
@@ -8,16 +9,14 @@ import java.util.Date;
 
 @Data
 
-@JsonPropertyOrder()
 public class AccountData {
 
-  /*  Date dat = new Date();
-    long now = dat.getTime();
 
-    private String gender;*/
+    private String gender;
     private String firstName;
     private String lastName;
     private String email;
+
 
     //private String wrongEmail;
 

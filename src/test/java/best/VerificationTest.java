@@ -1,3 +1,4 @@
+/*
 package best;
 
 import org.openqa.selenium.support.PageFactory;
@@ -38,3 +39,4 @@ public class VerificationTest extends BaseTest {
     }
 }
 
+*/

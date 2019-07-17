@@ -10,7 +10,7 @@ import java.io.IOException;
 
 public class SignInTest extends BaseTest{
 
-
+    private SignInPage signInPage;
 
     @DataProvider(name = "personalInformation")
     public Object[][] dataProviderNewUser() {
@@ -21,7 +21,6 @@ public class SignInTest extends BaseTest{
     public void signInTest(AccountData accountData){
 
         LOGGER.info("email: " + accountData.getEmail());
-        SignInPage signInPage;
         signInPage = PageFactory.initElements(driver, SignInPage.class);
 
         signInPage.signIn(accountData);
