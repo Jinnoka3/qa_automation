@@ -54,14 +54,11 @@ public class SignInPage extends BasePage{
         createAnAccount.click();
     }
 
-    public String getInvalidEmail(){
-        return invalidEmail.getText();
+    public boolean getInvalidEmail(){
+        return invalidEmail.isDisplayed();
     }
 
     public void signIn(AccountData accountData){
-
-        /*Date dat = new Date();
-        long now = dat.getTime();*/
 
         super.clickSignIn();
         sendEmailFirstPage(accountData.getEmail());

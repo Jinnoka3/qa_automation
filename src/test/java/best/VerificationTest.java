@@ -57,7 +57,6 @@ public class VerificationTest extends BaseTest {
         softAssert.assertTrue(myAddressesPage.verificationLastName(accountData));
         softAssert.assertTrue(myAddressesPage.verificationFirstAddress(accountData));
         softAssert.assertTrue(myAddressesPage.verificationMobile(accountData));
-        //softAssert.assertTrue(myPersonalInfoPage.verificationEmail(accountData));
         softAssert.assertAll();
     }
 }

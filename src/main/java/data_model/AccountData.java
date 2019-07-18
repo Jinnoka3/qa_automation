@@ -50,7 +50,7 @@ public class AccountData {
 
 
     public AccountData() {
-        this.email = now + "koko@gmail.com";
-        this.newEmail = now + "misha@gmail.com";
+        this.email = "koko" + now + "@gmail.com";
+        this.newEmail = "misha" + now + "@gmail.com";
     }
 }
