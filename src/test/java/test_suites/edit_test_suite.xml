@@ -7,9 +7,15 @@
     <test name="Edit" verbose="2">
         <classes>
 
-            <class name="best.EditTest">
+            <class name="best.EditInfoTest">
                 <methods>
                     <include name="editUserDataTest" />
+                </methods>
+            </class>
+
+            <class name="best.EditAddressesTest">
+                <methods>
+                    <include name="editAddressesTest" />
                 </methods>
             </class>
 

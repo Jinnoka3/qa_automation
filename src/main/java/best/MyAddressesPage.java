@@ -1,9 +1,13 @@
 package best;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import data_model.AccountData;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import java.io.File;
+import java.io.IOException;
 
 public class MyAddressesPage extends AccountCreationPage{
 
@@ -21,6 +25,12 @@ public class MyAddressesPage extends AccountCreationPage{
 
     @FindBy(xpath = "//span[@class='address_phone_mobile']")
     private WebElement addressMobile;
+
+    @FindBy(xpath = "//span[contains(text(),'Update')]")
+    private WebElement update;
+
+    @FindBy(xpath = "//span[contains(text(),'Save')]")
+    private WebElement save;
 
     public MyAddressesPage(WebDriver driver) {
         super(driver);
@@ -40,5 +50,24 @@ public class MyAddressesPage extends AccountCreationPage{
 
     public boolean verificationFirstAddress(AccountData accountData){
         return addressFirst.getText().contentEquals(accountData.getAddress1());
+    }
+
+    public void clickUpdate(){
+        update.click();
+    }
+    public void clickSave(){
+        save.click();
+    }
+
+    public void editAddresses(AccountData acc) throws IOException {
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        AccountData account = objectMapper.readValue( new File( "C:\\Users\\User\\IdeaProjects\\qa_automation585\\src\\test\\data\\new_data.json" ), AccountData.class );
+
+        clickUpdate();
+        this.adressLine1.clear();
+        this.adressLine1.sendKeys(account.getNewAddress1());
+
+        clickSave();
     }
 }

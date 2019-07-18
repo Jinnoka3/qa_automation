@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import java.io.File;
 import java.io.IOException;
 
-public class EditTest extends BaseTest {
+public class EditInfoTest extends BaseTest {
 
     private SignInPage signInPage;
     private AccountCreationPage accountCreationPage;
@@ -36,21 +36,5 @@ public class EditTest extends BaseTest {
         myAccountPage.clickPersonalInfo();
 
         Assert.assertTrue(myPersonalInfoPage.editInfo(accountData), "No update");
-    }
-
-    @Test(dataProvider = "personalInformation")
-    public void editAddressesTest(AccountData accountData) throws IOException {
-
-        signInPage = PageFactory.initElements(driver, SignInPage.class);
-        accountCreationPage = PageFactory.initElements(driver, AccountCreationPage.class);
-        myAccountPage = PageFactory.initElements(driver, MyAccountPage.class);
-        myPersonalInfoPage = PageFactory.initElements(driver, MyPersonalInfoPage.class);
-
-        signInPage.signIn(accountData);
-        accountCreationPage.accountCreate(accountData);
-
-        myAccountPage.clickPersonalInfo();
-
-        Assert.assertTrue(myPersonalInfoPage.editAddresses(accountData), "No update");
     }
 }

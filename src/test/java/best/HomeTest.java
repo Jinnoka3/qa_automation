@@ -17,10 +17,7 @@ public class HomeTest extends BaseTest {
     public void positiveHomePageTest(){
 
         homePage = PageFactory.initElements(driver, HomePage.class);
-        LOGGER.info("Title: " + homePage.getTitle());
 
-        String text = homePage.getTitle();
-
-            Assert.assertEquals("My Store", text);
+            Assert.assertEquals("My Store", homePage.getTitle());
     }
 }

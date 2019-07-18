@@ -32,7 +32,7 @@
 
    <!-- <test name="signInAccount" verbose="2">
         <classes>
-            <class name="best.VerificationTest">
+            <class name="best.VerificationAccountInfoTestuntInfoTest">
                 <methods>
                     &lt;!&ndash;<include name="signInAccount" />
                     <include name="signInAccount" />&ndash;&gt;

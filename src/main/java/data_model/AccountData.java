@@ -20,6 +20,7 @@ public class AccountData {
     private String lastName;
     private String email;
     private String newEmail;
+    private String newAddress1;
 
 
     //private String wrongEmail;

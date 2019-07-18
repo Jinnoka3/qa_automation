@@ -6,37 +6,15 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-public class VerificationTest extends BaseTest {
-
+public class VerificationAddressesTest extends BaseTest{
     private SignInPage signInPage;
     private AccountCreationPage accountCreationPage;
     private MyAccountPage myAccountPage;
-    private MyPersonalInfoPage myPersonalInfoPage;
     private MyAddressesPage myAddressesPage;
 
     @DataProvider(name = "personalInformation")
     public Object[][] dataProviderNewUser() {
         return dataPool.getData();
-    }
-
-    @Test(dataProvider = "personalInformation")
-    public void verificationUserDataTest(AccountData accountData) {
-
-        signInPage = PageFactory.initElements(driver, SignInPage.class);
-        accountCreationPage = PageFactory.initElements(driver, AccountCreationPage.class);
-        myAccountPage = PageFactory.initElements(driver, MyAccountPage.class);
-        myPersonalInfoPage = PageFactory.initElements(driver, MyPersonalInfoPage.class);
-
-        signInPage.signIn(accountData);
-        accountCreationPage.accountCreate(accountData);
-
-        myAccountPage.clickPersonalInfo();
-
-        SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(myPersonalInfoPage.verificationName(accountData));
-        softAssert.assertTrue(myPersonalInfoPage.verificationLastName(accountData));
-        softAssert.assertTrue(myPersonalInfoPage.verificationEmail(accountData));
-        softAssert.assertAll();
     }
 
     @Test(dataProvider = "personalInformation")
@@ -60,4 +38,3 @@ public class VerificationTest extends BaseTest {
         softAssert.assertAll();
     }
 }
-

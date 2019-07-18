@@ -18,10 +18,10 @@ public class AccountCreationPage extends BasePage{
     private WebElement gender;
 
     @FindBy(xpath = "//*[@id=\"customer_firstname\"]")
-    private WebElement firstName;
+    protected WebElement firstName;
 
     @FindBy(xpath = "//*[@id=\"customer_lastname\"]")
-    private WebElement lastName;
+    protected WebElement lastName;
 
     @FindBy(xpath = "//input[@id='email']")
     protected WebElement emailSecondPage;
@@ -54,7 +54,7 @@ public class AccountCreationPage extends BasePage{
     private WebElement company;
 
     @FindBy(xpath = "//*[@id=\"address1\"]")
-    private WebElement adressLine1;
+    protected WebElement adressLine1;
 
     @FindBy(xpath = "//*[@id=\"address2\"]")
     private WebElement adressLine2;
