@@ -1,5 +1,6 @@
 package best;
 
+import best.utils.ConfigFileReader;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import data_model.AccountData;
 import org.openqa.selenium.WebDriver;
@@ -62,7 +63,7 @@ public class MyAddressesPage extends AccountCreationPage{
     public void editAddresses(AccountData acc) throws IOException {
 
         ObjectMapper objectMapper = new ObjectMapper();
-        AccountData account = objectMapper.readValue( new File( "C:\\Users\\User\\IdeaProjects\\qa_automation585\\src\\test\\data\\new_data.json" ), AccountData.class );
+        AccountData account = objectMapper.readValue( new File( ConfigFileReader.readJson() ), AccountData.class );
 
         clickUpdate();
         this.adressLine1.clear();
