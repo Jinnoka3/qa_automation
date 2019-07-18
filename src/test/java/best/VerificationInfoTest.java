@@ -32,9 +32,13 @@ public class VerificationInfoTest extends BaseTest {
         myAccountPage.clickPersonalInfo();
 
         SoftAssert softAssert = new SoftAssert();
+        softAssert.assertTrue(myPersonalInfoPage.verificationGender(accountData));
         softAssert.assertTrue(myPersonalInfoPage.verificationName(accountData));
         softAssert.assertTrue(myPersonalInfoPage.verificationLastName(accountData));
         softAssert.assertTrue(myPersonalInfoPage.verificationEmail(accountData));
+        /*softAssert.assertTrue(myPersonalInfoPage.verificationDate(accountData));
+        softAssert.assertTrue(myPersonalInfoPage.verificationMonth(accountData));
+        softAssert.assertTrue(myPersonalInfoPage.verificationYear(accountData));*/
         softAssert.assertAll();
     }
 }

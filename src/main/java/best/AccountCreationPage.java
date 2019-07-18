@@ -1,11 +1,15 @@
 package best;
 
 import data_model.AccountData;
+import lombok.Getter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+@Getter
 public class AccountCreationPage extends BasePage{
 
     private WebDriver driver;
@@ -18,13 +22,13 @@ public class AccountCreationPage extends BasePage{
     private WebElement gender;
 
     @FindBy(xpath = "//*[@id=\"customer_firstname\"]")
-    protected WebElement firstName;
+    private WebElement firstName;
 
     @FindBy(xpath = "//*[@id=\"customer_lastname\"]")
-    protected WebElement lastName;
+    private WebElement lastName;
 
     @FindBy(xpath = "//input[@id='email']")
-    protected WebElement emailSecondPage;
+    private WebElement emailSecondPage;
 
     @FindBy(xpath = "//input[@id='passwd']")
     private WebElement password;
@@ -45,16 +49,16 @@ public class AccountCreationPage extends BasePage{
     private WebElement specialOffers;
 
     @FindBy(xpath = "//input[@id='firstname']")
-    protected WebElement firstNameInAdressForm;
+    private WebElement firstNameInAdressForm;
 
     @FindBy(xpath = " //input[@id='lastname']")
-    protected WebElement lastNameInAdressForm;
+    private WebElement lastNameInAdressForm;
 
     @FindBy(xpath = "//*[@id=\"company\"]")
     private WebElement company;
 
     @FindBy(xpath = "//*[@id=\"address1\"]")
-    protected WebElement adressLine1;
+    private WebElement adressLine1;
 
     @FindBy(xpath = "//*[@id=\"address2\"]")
     private WebElement adressLine2;
@@ -110,20 +114,20 @@ public class AccountCreationPage extends BasePage{
         password.sendKeys(pswrd);
     }
 
-    public void sendDate() {
+    /*public void sendDate(String dt) {
         Select dropdown = new Select(date);
-        dropdown.selectByValue("9");
+        dropdown.selectByValue(dt);
     }
 
-    public void sendMonth() {
+    public void sendMonth(String mnth) {
         Select dropdown = new Select(month);
-        dropdown.selectByValue("1");
+        dropdown.selectByVisibleText(mnth);
     }
 
-    public void sendYear() {
+    public void sendYear(String y) {
         Select dropdown = new Select(year);
-        dropdown.selectByValue("1996");
-    }
+        dropdown.selectByValue(y);
+    }*/
 
     public void clickNewsletter(){
         newsletter.click();
@@ -199,15 +203,29 @@ public class AccountCreationPage extends BasePage{
     }
 
     public void accountCreate(AccountData accountData){
+        clickGender();
         sendFirstName(accountData.getFirstName());
         sendLastName(accountData.getLastName());
         sendEmailSecondPage(accountData.getEmail());
         sendPassword(accountData.getPassword());
+
+        /*sendDate(accountData.getDate());
+        sendMonth(accountData.getMonth());
+        sendYear(accountData.getYear());*/
+
+        firstNameInAdress(accountData.getFirstName());
+        lastNameInAdress(accountData.getLastName());
+        sendCompany(accountData.getCompany());
+
         sendAddressLine1(accountData.getAddress1());
+        sendAddressLine2(accountData.getAddress2());
         sendCity(accountData.getCity());
         sendState(accountData.getState());
         sendZip(accountData.getZip());
         sendCountry(accountData.getCountry());
+
+        sendAdditionalInfo(accountData.getInfo());
+        sendHomePhone(accountData.getPhone());
         sendMobilePhone(accountData.getMobile());
         sendAnAddressAlias(accountData.getAlias());
         clickRegister();

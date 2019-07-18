@@ -33,7 +33,13 @@ public class VerificationAddressesTest extends BaseTest{
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(myAddressesPage.verificationFirstName(accountData));
         softAssert.assertTrue(myAddressesPage.verificationLastName(accountData));
+        softAssert.assertTrue(myAddressesPage.verificationCompany(accountData));
         softAssert.assertTrue(myAddressesPage.verificationFirstAddress(accountData));
+        softAssert.assertTrue(myAddressesPage.verificationSecondAddress(accountData));
+        softAssert.assertTrue(myAddressesPage.verificationCity(accountData));
+        softAssert.assertTrue(myAddressesPage.verificationZip(accountData));
+        //softAssert.assertTrue(myAddressesPage.verificationCountry(accountData));
+        softAssert.assertTrue(myAddressesPage.verificationPhone(accountData));
         softAssert.assertTrue(myAddressesPage.verificationMobile(accountData));
         softAssert.assertAll();
     }
