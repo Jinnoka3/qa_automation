@@ -4,12 +4,24 @@
 <suite name="Verification test suite">
     <parameter name="dataFile" value="src/test/data/data.json"/>
 
-    <test name="Verification" verbose="2">
+    <!--<test name="Verification" verbose="2">
         <classes>
 
             <class name="best.VerificationTest">
                 <methods>
                     <include name="verificationUserDataTest" />
+                </methods>
+            </class>
+
+        </classes>
+    </test>-->
+
+    <test name="Verification" verbose="2">
+        <classes>
+
+            <class name="best.VerificationTest">
+                <methods>
+                    <include name="verificationUserAddressesTest" />
                 </methods>
             </class>
 

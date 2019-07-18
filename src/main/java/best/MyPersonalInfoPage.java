@@ -46,7 +46,28 @@ public class MyPersonalInfoPage extends AccountCreationPage{
         return  (this.emailSecondPage.getAttribute("value")).contentEquals(accountData.getEmail());
     }
 
-    public boolean editNameInAdress(AccountData acc) throws IOException {
+    public boolean editInfo(AccountData acc) throws IOException {
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        AccountData account = objectMapper.readValue( new File( "C:\\Users\\User\\IdeaProjects\\qa_automation585\\src\\test\\data\\new_data.json" ), AccountData.class );
+
+        this.firstNameInAdressForm.clear();
+        this.firstNameInAdressForm.sendKeys(account.getFirstName());
+
+        this.lastNameInAdressForm.clear();
+        this.lastNameInAdressForm.sendKeys(account.getLastName());
+
+        this.emailSecondPage.clear();
+        this.emailSecondPage.sendKeys(account.getNewEmail());
+
+        currentPassword.sendKeys(acc.getPassword());
+        newPassword.sendKeys(account.getNewPassword());
+        confirmation.sendKeys(account.getNewPassword());
+        clickSave();
+        return messageSuccessUpdate.isDisplayed();
+    }
+
+    public boolean editAddresses(AccountData acc) throws IOException {
 
         ObjectMapper objectMapper = new ObjectMapper();
         AccountData account = objectMapper.readValue( new File( "C:\\Users\\User\\IdeaProjects\\qa_automation585\\src\\test\\data\\new_data.json" ), AccountData.class );

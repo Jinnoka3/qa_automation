@@ -35,6 +35,22 @@ public class EditTest extends BaseTest {
 
         myAccountPage.clickPersonalInfo();
 
-        Assert.assertTrue(myPersonalInfoPage.editNameInAdress(accountData), "No update");
+        Assert.assertTrue(myPersonalInfoPage.editInfo(accountData), "No update");
+    }
+
+    @Test(dataProvider = "personalInformation")
+    public void editAddressesTest(AccountData accountData) throws IOException {
+
+        signInPage = PageFactory.initElements(driver, SignInPage.class);
+        accountCreationPage = PageFactory.initElements(driver, AccountCreationPage.class);
+        myAccountPage = PageFactory.initElements(driver, MyAccountPage.class);
+        myPersonalInfoPage = PageFactory.initElements(driver, MyPersonalInfoPage.class);
+
+        signInPage.signIn(accountData);
+        accountCreationPage.accountCreate(accountData);
+
+        myAccountPage.clickPersonalInfo();
+
+        Assert.assertTrue(myPersonalInfoPage.editAddresses(accountData), "No update");
     }
 }

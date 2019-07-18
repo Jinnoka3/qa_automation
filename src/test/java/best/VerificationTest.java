@@ -12,6 +12,7 @@ public class VerificationTest extends BaseTest {
     private AccountCreationPage accountCreationPage;
     private MyAccountPage myAccountPage;
     private MyPersonalInfoPage myPersonalInfoPage;
+    private MyAddressesPage myAddressesPage;
 
     @DataProvider(name = "personalInformation")
     public Object[][] dataProviderNewUser() {
@@ -36,7 +37,28 @@ public class VerificationTest extends BaseTest {
         softAssert.assertTrue(myPersonalInfoPage.verificationLastName(accountData));
         softAssert.assertTrue(myPersonalInfoPage.verificationEmail(accountData));
         softAssert.assertAll();
+    }
 
+    @Test(dataProvider = "personalInformation")
+    public void verificationUserAddressesTest(AccountData accountData) {
+
+        signInPage = PageFactory.initElements(driver, SignInPage.class);
+        accountCreationPage = PageFactory.initElements(driver, AccountCreationPage.class);
+        myAccountPage = PageFactory.initElements(driver, MyAccountPage.class);
+        myAddressesPage = PageFactory.initElements(driver, MyAddressesPage.class);
+
+        signInPage.signIn(accountData);
+        accountCreationPage.accountCreate(accountData);
+
+        myAccountPage.clickMyAddresses();
+
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertTrue(myAddressesPage.verificationFirstName(accountData));
+        softAssert.assertTrue(myAddressesPage.verificationLastName(accountData));
+        softAssert.assertTrue(myAddressesPage.verificationFirstAddress(accountData));
+        softAssert.assertTrue(myAddressesPage.verificationMobile(accountData));
+        //softAssert.assertTrue(myPersonalInfoPage.verificationEmail(accountData));
+        softAssert.assertAll();
     }
 }
 
