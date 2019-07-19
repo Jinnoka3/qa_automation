@@ -22,11 +22,11 @@ public abstract class BasePage {
         return driver.getTitle();
     }
 
-    protected void clickSignIn(){
+    public void clickSignIn(){
         signIn.click();
     }
 
-    protected void clickSignOut(){
+    public void clickSignOut(){
         signOut.click();
     }
 }
