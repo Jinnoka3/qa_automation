@@ -66,11 +66,11 @@ public class SignInPage extends BasePage{
         getTitle();
     }
 
-    public void alreadyRegistered(AccountData accountData){
+    public void alreadyRegistered(String email, String password){
 
         super.clickSignIn();
-        sendEmail(accountData.getEmail());
-        sendPassword(accountData.getPassword());
+        sendEmail(email);
+        sendPassword(password);
         clickSignIn();
         getTitle();
     }

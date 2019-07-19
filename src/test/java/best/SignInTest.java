@@ -24,6 +24,5 @@ public class SignInTest extends BaseTest {
 
         Assert.assertEquals("Authentication", signInPage.getTitle());
     }
-
 }
 

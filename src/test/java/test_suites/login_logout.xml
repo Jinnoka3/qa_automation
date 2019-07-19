@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Edit test suite">
+    <parameter name="email" value="galinaprokofevna@gmail.com"/>
+    <parameter name="password" value="123456"/>
+
+    <test name="Edit" verbose="2">
+        <parameter name="dataFile" value="src/test/data/data.json"/>
+        <classes>
+
+            <class name="best.LoginLogoutTest">
+                <methods>
+                    <include name="loginLogoutTest" />
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+</suite>
