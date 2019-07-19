@@ -907,3 +907,27 @@
 19/07/19 17:07:10 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=personalInfoTest status=SUCCESS method=AccountCreationTest.personalInfoTest(data_model.AccountData)[pri:0, instance:best.AccountCreationTest@271053e1] output={null}]=AccountCreationTest.personalInfoTest(data_model.AccountData)[pri:0, instance:best.AccountCreationTest@271053e1], [TestResult name=positiveHomePageTest status=SUCCESS method=HomeTest.positiveHomePageTest()[pri:0, instance:best.HomeTest@553f17c] output={null}]=HomeTest.positiveHomePageTest()[pri:0, instance:best.HomeTest@553f17c], [TestResult name=signInTest status=SUCCESS method=SignInTest.signInTest(data_model.AccountData)[pri:0, instance:best.SignInTest@4f7d0008] output={null}]=SignInTest.signInTest(data_model.AccountData)[pri:0, instance:best.SignInTest@4f7d0008]}]
 19/07/19 17:07:10 INFO best.AccountCreationPage: Failed tests:[ResultMap map={}]
 19/07/19 17:07:10 INFO best.AccountCreationPage: End
+19/07/19 17:12:48 INFO best.AccountCreationPage: Start
+19/07/19 17:13:01 INFO best.AccountCreationPage: Test has started running:verificationUserDataTest at:1563541981743
+19/07/19 17:13:12 INFO best.AccountCreationPage: Test was success
+19/07/19 17:13:20 INFO best.AccountCreationPage: Test has started running:verificationUserAddressesTest at:1563542000034
+19/07/19 17:13:29 INFO best.AccountCreationPage: Test was success
+19/07/19 17:13:29 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=verificationUserAddressesTest status=SUCCESS method=VerificationAddressesTest.verificationUserAddressesTest(data_model.AccountData)[pri:0, instance:best.VerificationAddressesTest@553f17c] output={null}]=VerificationAddressesTest.verificationUserAddressesTest(data_model.AccountData)[pri:0, instance:best.VerificationAddressesTest@553f17c], [TestResult name=verificationUserDataTest status=SUCCESS method=VerificationInfoTest.verificationUserDataTest(data_model.AccountData)[pri:0, instance:best.VerificationInfoTest@5f341870] output={null}]=VerificationInfoTest.verificationUserDataTest(data_model.AccountData)[pri:0, instance:best.VerificationInfoTest@5f341870]}]
+19/07/19 17:13:29 INFO best.AccountCreationPage: Failed tests:[ResultMap map={}]
+19/07/19 17:13:29 INFO best.AccountCreationPage: End
+19/07/19 17:13:37 INFO best.AccountCreationPage: Start
+19/07/19 17:13:44 INFO best.AccountCreationPage: Test has started running:editUserDataTest at:1563542024852
+19/07/19 17:13:59 INFO best.AccountCreationPage: Test was success
+19/07/19 17:14:06 INFO best.AccountCreationPage: Test has started running:editAddressesTest at:1563542046512
+19/07/19 17:14:20 INFO best.AccountCreationPage: Test was success
+19/07/19 17:14:20 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=editAddressesTest status=SUCCESS method=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:best.EditAddressesTest@553f17c] output={null}]=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:best.EditAddressesTest@553f17c], [TestResult name=editUserDataTest status=SUCCESS method=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@5f341870] output={null}]=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@5f341870]}]
+19/07/19 17:14:20 INFO best.AccountCreationPage: Failed tests:[ResultMap map={}]
+19/07/19 17:14:20 INFO best.AccountCreationPage: End
+19/07/19 17:14:32 INFO best.AccountCreationPage: Start
+19/07/19 17:14:40 INFO best.AccountCreationPage: Test has started running:logInTest at:1563542080250
+19/07/19 17:14:44 INFO best.AccountCreationPage: Test was success
+19/07/19 17:14:44 INFO best.AccountCreationPage: Test has started running:logOutTest at:1563542084888
+19/07/19 17:14:48 INFO best.AccountCreationPage: Test was success
+19/07/19 17:14:48 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=logOutTest status=SUCCESS method=LoginLogoutTest.logOutTest()[pri:0, instance:best.LoginLogoutTest@598067a5] output={null}]=LoginLogoutTest.logOutTest()[pri:0, instance:best.LoginLogoutTest@598067a5], [TestResult name=logInTest status=SUCCESS method=LoginLogoutTest.logInTest(java.lang.String, java.lang.String)[pri:0, instance:best.LoginLogoutTest@598067a5] output={null}]=LoginLogoutTest.logInTest(java.lang.String, java.lang.String)[pri:0, instance:best.LoginLogoutTest@598067a5]}]
+19/07/19 17:14:48 INFO best.AccountCreationPage: Failed tests:[ResultMap map={}]
+19/07/19 17:14:48 INFO best.AccountCreationPage: End

@@ -3,9 +3,6 @@
 
 <suite name="Registration test suite">
     <parameter name="dataFile" value="src/test/data/data.json"/>
-   <!-- <parameter name="class" value="AccountData.class"/>-->
-
-
 
     <test name="Registration" verbose="2">
         <classes>
