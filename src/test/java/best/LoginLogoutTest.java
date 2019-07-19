@@ -23,11 +23,18 @@ public class LoginLogoutTest extends BaseTest{
 
     @Parameters({"email", "password"})
     @Test()
-    public void loginLogoutTest(String email, String password) {
+    public void logInTest(String email, String password) {
 
         signInPage = PageFactory.initElements(driver, SignInPage.class);
 
         signInPage.alreadyRegistered(email, password);
         Assert.assertEquals("My account", signInPage.getTitle());
+    }
+
+    @Test()
+    public void logOutTest() {
+
+        signInPage.clickSignOut();
+        Assert.assertEquals("Authentication", signInPage.getTitle());
     }
 }

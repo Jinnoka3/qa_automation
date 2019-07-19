@@ -793,3 +793,55 @@
 19/07/19 14:53:32 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=loginLogoutTest status=SUCCESS method=LoginLogoutTest.loginLogoutTest(java.lang.String, java.lang.String)[pri:0, instance:best.LoginLogoutTest@14bf9759] output={null}]=LoginLogoutTest.loginLogoutTest(java.lang.String, java.lang.String)[pri:0, instance:best.LoginLogoutTest@14bf9759]}]
 19/07/19 14:53:32 INFO best.AccountCreationPage: Failed tests:[ResultMap map={}]
 19/07/19 14:53:32 INFO best.AccountCreationPage: End
+19/07/19 14:58:27 INFO best.AccountCreationPage: Start
+19/07/19 14:58:38 INFO best.AccountCreationPage: Test has started running:logInTest at:1563533918117
+19/07/19 14:58:42 INFO best.AccountCreationPage: Test was success
+19/07/19 14:58:42 INFO best.AccountCreationPage: Test has started running:logOutTest at:1563533922431
+19/07/19 14:58:52 INFO best.AccountCreationPage: Test was failure
+19/07/19 14:58:52 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=logInTest status=SUCCESS method=LoginLogoutTest.logInTest(java.lang.String, java.lang.String)[pri:0, instance:best.LoginLogoutTest@57fffcd7] output={null}]=LoginLogoutTest.logInTest(java.lang.String, java.lang.String)[pri:0, instance:best.LoginLogoutTest@57fffcd7]}]
+19/07/19 14:58:52 INFO best.AccountCreationPage: Failed tests:[ResultMap map={[TestResult name=logOutTest status=FAILURE method=LoginLogoutTest.logOutTest(java.lang.String, java.lang.String)[pri:0, instance:best.LoginLogoutTest@57fffcd7] output={null}]=LoginLogoutTest.logOutTest(java.lang.String, java.lang.String)[pri:0, instance:best.LoginLogoutTest@57fffcd7]}]
+19/07/19 14:58:52 INFO best.AccountCreationPage: End
+19/07/19 14:59:47 INFO best.AccountCreationPage: Start
+19/07/19 14:59:48 INFO best.AccountCreationPage: Test has started running:logInTest at:1563533988024
+19/07/19 14:59:48 INFO best.AccountCreationPage: Test was skipped!
+19/07/19 14:59:48 INFO best.AccountCreationPage: Test has started running:logOutTest at:1563533988025
+19/07/19 14:59:48 INFO best.AccountCreationPage: Test was skipped!
+19/07/19 14:59:48 INFO best.AccountCreationPage: Passed tests: [ResultMap map={}]
+19/07/19 14:59:48 INFO best.AccountCreationPage: Failed tests:[ResultMap map={}]
+19/07/19 14:59:48 INFO best.AccountCreationPage: End
+19/07/19 14:59:57 INFO best.AccountCreationPage: Start
+19/07/19 14:59:58 INFO best.AccountCreationPage: Test has started running:logInTest at:1563533998189
+19/07/19 14:59:58 INFO best.AccountCreationPage: Test was skipped!
+19/07/19 14:59:58 INFO best.AccountCreationPage: Test has started running:logOutTest at:1563533998190
+19/07/19 14:59:58 INFO best.AccountCreationPage: Test was skipped!
+19/07/19 14:59:58 INFO best.AccountCreationPage: Passed tests: [ResultMap map={}]
+19/07/19 14:59:58 INFO best.AccountCreationPage: Failed tests:[ResultMap map={}]
+19/07/19 14:59:58 INFO best.AccountCreationPage: End
+19/07/19 15:00:19 INFO best.AccountCreationPage: Start
+19/07/19 15:00:26 INFO best.AccountCreationPage: Test has started running:logInTest at:1563534026880
+19/07/19 15:00:30 INFO best.AccountCreationPage: Test was success
+19/07/19 15:00:30 INFO best.AccountCreationPage: Test has started running:logOutTest at:1563534030508
+19/07/19 15:00:40 INFO best.AccountCreationPage: Test was failure
+19/07/19 15:00:40 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=logInTest status=SUCCESS method=LoginLogoutTest.logInTest(java.lang.String, java.lang.String)[pri:0, instance:best.LoginLogoutTest@14bf9759] output={null}]=LoginLogoutTest.logInTest(java.lang.String, java.lang.String)[pri:0, instance:best.LoginLogoutTest@14bf9759]}]
+19/07/19 15:00:40 INFO best.AccountCreationPage: Failed tests:[ResultMap map={[TestResult name=logOutTest status=FAILURE method=LoginLogoutTest.logOutTest(java.lang.String, java.lang.String)[pri:0, instance:best.LoginLogoutTest@14bf9759] output={null}]=LoginLogoutTest.logOutTest(java.lang.String, java.lang.String)[pri:0, instance:best.LoginLogoutTest@14bf9759]}]
+19/07/19 15:00:40 INFO best.AccountCreationPage: End
+19/07/19 15:00:55 INFO best.AccountCreationPage: Start
+19/07/19 15:01:02 INFO best.AccountCreationPage: Test has started running:logOutTest at:1563534062482
+19/07/19 15:01:08 INFO best.AccountCreationPage: Test was failure
+19/07/19 15:01:08 INFO best.AccountCreationPage: Passed tests: [ResultMap map={}]
+19/07/19 15:01:08 INFO best.AccountCreationPage: Failed tests:[ResultMap map={[TestResult name=logOutTest status=FAILURE method=LoginLogoutTest.logOutTest(java.lang.String, java.lang.String)[pri:0, instance:best.LoginLogoutTest@5f341870] output={null}]=LoginLogoutTest.logOutTest(java.lang.String, java.lang.String)[pri:0, instance:best.LoginLogoutTest@5f341870]}]
+19/07/19 15:01:08 INFO best.AccountCreationPage: End
+19/07/19 15:01:51 INFO best.AccountCreationPage: Start
+19/07/19 15:01:58 INFO best.AccountCreationPage: Test has started running:logOutTest at:1563534118313
+19/07/19 15:02:04 INFO best.AccountCreationPage: Test was success
+19/07/19 15:02:04 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=logOutTest status=SUCCESS method=LoginLogoutTest.logOutTest(java.lang.String, java.lang.String)[pri:0, instance:best.LoginLogoutTest@14bf9759] output={null}]=LoginLogoutTest.logOutTest(java.lang.String, java.lang.String)[pri:0, instance:best.LoginLogoutTest@14bf9759]}]
+19/07/19 15:02:04 INFO best.AccountCreationPage: Failed tests:[ResultMap map={}]
+19/07/19 15:02:04 INFO best.AccountCreationPage: End
+19/07/19 15:04:34 INFO best.AccountCreationPage: Start
+19/07/19 15:04:45 INFO best.AccountCreationPage: Test has started running:logInTest at:1563534285095
+19/07/19 15:04:49 INFO best.AccountCreationPage: Test was success
+19/07/19 15:04:49 INFO best.AccountCreationPage: Test has started running:logOutTest at:1563534289957
+19/07/19 15:04:52 INFO best.AccountCreationPage: Test was success
+19/07/19 15:04:52 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=logOutTest status=SUCCESS method=LoginLogoutTest.logOutTest()[pri:0, instance:best.LoginLogoutTest@598067a5] output={null}]=LoginLogoutTest.logOutTest()[pri:0, instance:best.LoginLogoutTest@598067a5], [TestResult name=logInTest status=SUCCESS method=LoginLogoutTest.logInTest(java.lang.String, java.lang.String)[pri:0, instance:best.LoginLogoutTest@598067a5] output={null}]=LoginLogoutTest.logInTest(java.lang.String, java.lang.String)[pri:0, instance:best.LoginLogoutTest@598067a5]}]
+19/07/19 15:04:52 INFO best.AccountCreationPage: Failed tests:[ResultMap map={}]
+19/07/19 15:04:52 INFO best.AccountCreationPage: End

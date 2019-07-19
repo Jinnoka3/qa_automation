@@ -11,7 +11,8 @@
 
             <class name="best.LoginLogoutTest">
                 <methods>
-                    <include name="loginLogoutTest" />
+                    <include name="logInTest" />
+                    <include name="logOutTest" />
                 </methods>
             </class>
 
