@@ -25,6 +25,6 @@ public class AccountCreationTest extends BaseTest{
         signInPage.signIn(accountData);
         accountCreationPage.accountCreate(accountData);
 
-            Assert.assertEquals("> My account", accountCreationPage.getInvalidData());
+        Assert.assertEquals("> My account", accountCreationPage.getInvalidData());
     }
 }

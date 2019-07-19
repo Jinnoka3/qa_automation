@@ -27,20 +27,13 @@
                 </methods>
             </class>
 
+            <!--<class name="best.LoloTest">
+                <methods>
+                    <include name="loloTest" />
+                </methods>
+            </class>-->
+
         </classes>
     </test>
-
-   <!-- <test name="signInAccount" verbose="2">
-        <classes>
-            <class name="best.VerificationAccountInfoTestuntInfoTest">
-                <methods>
-                    &lt;!&ndash;<include name="signInAccount" />
-                    <include name="signInAccount" />&ndash;&gt;
-                    <include name="editUserDataTest" />
-                </methods>
-            </class>
-
-        </classes>
-    </test>-->
 
 </suite>
