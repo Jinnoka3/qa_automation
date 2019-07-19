@@ -845,3 +845,65 @@
 19/07/19 15:04:52 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=logOutTest status=SUCCESS method=LoginLogoutTest.logOutTest()[pri:0, instance:best.LoginLogoutTest@598067a5] output={null}]=LoginLogoutTest.logOutTest()[pri:0, instance:best.LoginLogoutTest@598067a5], [TestResult name=logInTest status=SUCCESS method=LoginLogoutTest.logInTest(java.lang.String, java.lang.String)[pri:0, instance:best.LoginLogoutTest@598067a5] output={null}]=LoginLogoutTest.logInTest(java.lang.String, java.lang.String)[pri:0, instance:best.LoginLogoutTest@598067a5]}]
 19/07/19 15:04:52 INFO best.AccountCreationPage: Failed tests:[ResultMap map={}]
 19/07/19 15:04:52 INFO best.AccountCreationPage: End
+19/07/19 16:25:31 INFO best.AccountCreationPage: Start
+19/07/19 16:25:43 INFO best.AccountCreationPage: Test has started running:positiveHomePageTest at:1563539143042
+19/07/19 16:25:43 INFO best.AccountCreationPage: Test was success
+19/07/19 16:25:56 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=positiveHomePageTest status=SUCCESS method=HomeTest.positiveHomePageTest()[pri:0, instance:best.HomeTest@553f17c] output={null}]=HomeTest.positiveHomePageTest()[pri:0, instance:best.HomeTest@553f17c]}]
+19/07/19 16:25:56 INFO best.AccountCreationPage: Failed tests:[ResultMap map={}]
+19/07/19 16:25:56 INFO best.AccountCreationPage: End
+19/07/19 16:27:38 INFO best.AccountCreationPage: Start
+19/07/19 16:27:38 INFO best.AccountCreationPage: Test has started running:positiveHomePageTest at:1563539258339
+19/07/19 16:27:38 INFO best.AccountCreationPage: Test was skipped!
+19/07/19 16:27:38 INFO best.AccountCreationPage: Passed tests: [ResultMap map={}]
+19/07/19 16:27:38 INFO best.AccountCreationPage: Failed tests:[ResultMap map={}]
+19/07/19 16:27:38 INFO best.AccountCreationPage: End
+19/07/19 16:31:58 INFO best.AccountCreationPage: Start
+19/07/19 16:32:09 INFO best.AccountCreationPage: Test has started running:positiveHomePageTest at:1563539529081
+19/07/19 16:32:09 INFO best.AccountCreationPage: Test was success
+19/07/19 16:32:22 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=positiveHomePageTest status=SUCCESS method=HomeTest.positiveHomePageTest()[pri:0, instance:best.HomeTest@5f341870] output={null}]=HomeTest.positiveHomePageTest()[pri:0, instance:best.HomeTest@5f341870]}]
+19/07/19 16:32:22 INFO best.AccountCreationPage: Failed tests:[ResultMap map={}]
+19/07/19 16:32:22 INFO best.AccountCreationPage: End
+19/07/19 16:37:49 INFO best.AccountCreationPage: Start
+19/07/19 16:37:50 INFO best.AccountCreationPage: Test has started running:positiveHomePageTest at:1563539870210
+19/07/19 16:37:50 INFO best.AccountCreationPage: Test was skipped!
+19/07/19 16:37:50 INFO best.AccountCreationPage: Passed tests: [ResultMap map={}]
+19/07/19 16:37:50 INFO best.AccountCreationPage: Failed tests:[ResultMap map={}]
+19/07/19 16:37:50 INFO best.AccountCreationPage: End
+19/07/19 16:38:52 INFO best.AccountCreationPage: Start
+19/07/19 16:38:52 INFO best.AccountCreationPage: Test has started running:positiveHomePageTest at:1563539932400
+19/07/19 16:38:52 INFO best.AccountCreationPage: Test was skipped!
+19/07/19 16:38:52 INFO best.AccountCreationPage: Passed tests: [ResultMap map={}]
+19/07/19 16:38:52 INFO best.AccountCreationPage: Failed tests:[ResultMap map={}]
+19/07/19 16:38:52 INFO best.AccountCreationPage: End
+19/07/19 16:56:54 INFO best.AccountCreationPage: Start
+19/07/19 16:57:04 INFO best.AccountCreationPage: Test has started running:positiveHomePageTest at:1563541024846
+19/07/19 16:57:04 INFO best.AccountCreationPage: Test was success
+19/07/19 16:57:17 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=positiveHomePageTest status=SUCCESS method=HomeTest.positiveHomePageTest()[pri:0, instance:best.HomeTest@553f17c] output={null}]=HomeTest.positiveHomePageTest()[pri:0, instance:best.HomeTest@553f17c]}]
+19/07/19 16:57:17 INFO best.AccountCreationPage: Failed tests:[ResultMap map={}]
+19/07/19 16:57:17 INFO best.AccountCreationPage: End
+19/07/19 17:01:10 INFO best.AccountCreationPage: Start
+19/07/19 17:01:17 INFO best.AccountCreationPage: Test has started running:positiveHomePageTest at:1563541277616
+19/07/19 17:01:17 INFO best.AccountCreationPage: Test was success
+19/07/19 17:01:23 INFO best.AccountCreationPage: Test was failure
+19/07/19 17:01:30 INFO best.AccountCreationPage: Test was failure
+19/07/19 17:01:30 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=positiveHomePageTest status=SUCCESS method=HomeTest.positiveHomePageTest()[pri:0, instance:best.HomeTest@553f17c] output={null}]=HomeTest.positiveHomePageTest()[pri:0, instance:best.HomeTest@553f17c]}]
+19/07/19 17:01:30 INFO best.AccountCreationPage: Failed tests:[ResultMap map={[TestResult name=signInTest status=FAILURE method=SignInTest.signInTest(data_model.AccountData)[pri:0, instance:best.SignInTest@4f7d0008] output={null}]=SignInTest.signInTest(data_model.AccountData)[pri:0, instance:best.SignInTest@4f7d0008], [TestResult name=personalInfoTest status=FAILURE method=AccountCreationTest.personalInfoTest(data_model.AccountData)[pri:0, instance:best.AccountCreationTest@271053e1] output={null}]=AccountCreationTest.personalInfoTest(data_model.AccountData)[pri:0, instance:best.AccountCreationTest@271053e1]}]
+19/07/19 17:01:30 INFO best.AccountCreationPage: End
+19/07/19 17:01:46 INFO best.AccountCreationPage: Start
+19/07/19 17:01:52 INFO best.AccountCreationPage: Test has started running:positiveHomePageTest at:1563541312979
+19/07/19 17:01:53 INFO best.AccountCreationPage: Test was success
+19/07/19 17:01:59 INFO best.AccountCreationPage: Test was failure
+19/07/19 17:02:08 INFO best.AccountCreationPage: Test was failure
+19/07/19 17:02:08 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=positiveHomePageTest status=SUCCESS method=HomeTest.positiveHomePageTest()[pri:0, instance:best.HomeTest@4f7d0008] output={null}]=HomeTest.positiveHomePageTest()[pri:0, instance:best.HomeTest@4f7d0008]}]
+19/07/19 17:02:08 INFO best.AccountCreationPage: Failed tests:[ResultMap map={[TestResult name=signInTest status=FAILURE method=SignInTest.signInTest(data_model.AccountData)[pri:0, instance:best.SignInTest@271053e1] output={null}]=SignInTest.signInTest(data_model.AccountData)[pri:0, instance:best.SignInTest@271053e1], [TestResult name=personalInfoTest status=FAILURE method=AccountCreationTest.personalInfoTest(data_model.AccountData)[pri:0, instance:best.AccountCreationTest@589838eb] output={null}]=AccountCreationTest.personalInfoTest(data_model.AccountData)[pri:0, instance:best.AccountCreationTest@589838eb]}]
+19/07/19 17:02:08 INFO best.AccountCreationPage: End
+19/07/19 17:06:40 INFO best.AccountCreationPage: Start
+19/07/19 17:06:47 INFO best.AccountCreationPage: Test has started running:positiveHomePageTest at:1563541607981
+19/07/19 17:06:48 INFO best.AccountCreationPage: Test was success
+19/07/19 17:06:54 INFO best.AccountCreationPage: Test has started running:signInTest at:1563541614573
+19/07/19 17:06:56 INFO best.AccountCreationPage: Test was success
+19/07/19 17:07:03 INFO best.AccountCreationPage: Test has started running:personalInfoTest at:1563541623346
+19/07/19 17:07:10 INFO best.AccountCreationPage: Test was success
+19/07/19 17:07:10 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=personalInfoTest status=SUCCESS method=AccountCreationTest.personalInfoTest(data_model.AccountData)[pri:0, instance:best.AccountCreationTest@271053e1] output={null}]=AccountCreationTest.personalInfoTest(data_model.AccountData)[pri:0, instance:best.AccountCreationTest@271053e1], [TestResult name=positiveHomePageTest status=SUCCESS method=HomeTest.positiveHomePageTest()[pri:0, instance:best.HomeTest@553f17c] output={null}]=HomeTest.positiveHomePageTest()[pri:0, instance:best.HomeTest@553f17c], [TestResult name=signInTest status=SUCCESS method=SignInTest.signInTest(data_model.AccountData)[pri:0, instance:best.SignInTest@4f7d0008] output={null}]=SignInTest.signInTest(data_model.AccountData)[pri:0, instance:best.SignInTest@4f7d0008]}]
+19/07/19 17:07:10 INFO best.AccountCreationPage: Failed tests:[ResultMap map={}]
+19/07/19 17:07:10 INFO best.AccountCreationPage: End

@@ -2,6 +2,7 @@ package best;
 
 import best.data_pool.DataPool;
 import best.utils.ConfigFileReader;
+import data_model.AccountData;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
@@ -27,7 +28,7 @@ public class BaseTest {
     public void beforeClassMethod(ITestContext testContext) throws IOException {
         dataPool = new DataPool();
         HashMap<String,String> parameters = new HashMap<>( testContext.getCurrentXmlTest().getAllParameters());
-        dataPool.processDataFile(parameters.get( "dataFile"));
+        dataPool.processDataFile(parameters.get( "dataFile"), AccountData.class);
 
         System.setProperty("webdriver.chrome.driver", ConfigFileReader.readDriverPath());
         driver = new ChromeDriver();

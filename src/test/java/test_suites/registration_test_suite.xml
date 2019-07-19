@@ -3,6 +3,7 @@
 
 <suite name="Registration test suite">
     <parameter name="dataFile" value="src/test/data/data.json"/>
+   <!-- <parameter name="class" value="AccountData.class"/>-->
 
 
 

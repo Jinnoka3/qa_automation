@@ -1,5 +1,6 @@
 package best.data_pool;
 
+import com.fasterxml.jackson.annotation.JsonSubTypes;
 import data_model.AccountData;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -14,13 +15,13 @@ public class DataPool<T> {
 
     Collection<T> accountData;
 
-    public void processDataFile(String filePath){
+    public void processDataFile(String filePath, Class<T> clazz){
 
         accountData = new ArrayList<>();
 
         ObjectMapper objectMapper = new ObjectMapper();
         try {
-            T account = (T) objectMapper.readValue( new File( filePath), AccountData.class );
+            T account = (T) objectMapper.readValue(new File(filePath), clazz);
             accountData.add(account);
         } catch (IOException e) {
             e.printStackTrace();
