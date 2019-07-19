@@ -743,3 +743,35 @@
 19/07/19 14:31:11 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=signInTest status=SUCCESS method=SignInTest.signInTest(data_model.AccountData)[pri:0, instance:best.SignInTest@271053e1] output={null}]=SignInTest.signInTest(data_model.AccountData)[pri:0, instance:best.SignInTest@271053e1], [TestResult name=personalInfoTest status=SUCCESS method=AccountCreationTest.personalInfoTest(data_model.AccountData)[pri:0, instance:best.AccountCreationTest@589838eb] output={null}]=AccountCreationTest.personalInfoTest(data_model.AccountData)[pri:0, instance:best.AccountCreationTest@589838eb], [TestResult name=positiveHomePageTest status=SUCCESS method=HomeTest.positiveHomePageTest()[pri:0, instance:best.HomeTest@4f7d0008] output={null}]=HomeTest.positiveHomePageTest()[pri:0, instance:best.HomeTest@4f7d0008]}]
 19/07/19 14:31:11 INFO best.AccountCreationPage: Failed tests:[ResultMap map={}]
 19/07/19 14:31:11 INFO best.AccountCreationPage: End
+19/07/19 14:32:07 INFO best.AccountCreationPage: Start
+19/07/19 14:32:14 INFO best.AccountCreationPage: Test has started running:verificationUserDataTest at:1563532334706
+19/07/19 14:32:23 INFO best.AccountCreationPage: Test was success
+19/07/19 14:32:30 INFO best.AccountCreationPage: Test has started running:verificationUserAddressesTest at:1563532350039
+19/07/19 14:32:38 INFO best.AccountCreationPage: Test was success
+19/07/19 14:32:38 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=verificationUserDataTest status=SUCCESS method=VerificationInfoTest.verificationUserDataTest(data_model.AccountData)[pri:0, instance:best.VerificationInfoTest@3c0ecd4b] output={null}]=VerificationInfoTest.verificationUserDataTest(data_model.AccountData)[pri:0, instance:best.VerificationInfoTest@3c0ecd4b], [TestResult name=verificationUserAddressesTest status=SUCCESS method=VerificationAddressesTest.verificationUserAddressesTest(data_model.AccountData)[pri:0, instance:best.VerificationAddressesTest@14bf9759] output={null}]=VerificationAddressesTest.verificationUserAddressesTest(data_model.AccountData)[pri:0, instance:best.VerificationAddressesTest@14bf9759]}]
+19/07/19 14:32:38 INFO best.AccountCreationPage: Failed tests:[ResultMap map={}]
+19/07/19 14:32:38 INFO best.AccountCreationPage: End
+19/07/19 14:33:17 INFO best.AccountCreationPage: Start
+19/07/19 14:33:24 INFO best.AccountCreationPage: Test has started running:editUserDataTest at:1563532404220
+19/07/19 14:33:35 INFO best.AccountCreationPage: Test was success
+19/07/19 14:33:43 INFO best.AccountCreationPage: Test has started running:editAddressesTest at:1563532423944
+19/07/19 14:33:56 INFO best.AccountCreationPage: Test was success
+19/07/19 14:33:56 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=editUserDataTest status=SUCCESS method=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@14bf9759] output={null}]=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@14bf9759], [TestResult name=editAddressesTest status=SUCCESS method=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:best.EditAddressesTest@5f341870] output={null}]=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:best.EditAddressesTest@5f341870]}]
+19/07/19 14:33:56 INFO best.AccountCreationPage: Failed tests:[ResultMap map={}]
+19/07/19 14:33:56 INFO best.AccountCreationPage: End
+19/07/19 14:37:16 INFO best.AccountCreationPage: Start
+19/07/19 14:37:24 INFO best.AccountCreationPage: Test has started running:editUserDataTest at:1563532644399
+19/07/19 14:37:35 INFO best.AccountCreationPage: Test was success
+19/07/19 14:37:41 INFO best.AccountCreationPage: Test has started running:editAddressesTest at:1563532661795
+19/07/19 14:37:52 INFO best.AccountCreationPage: Test was success
+19/07/19 14:37:53 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=editAddressesTest status=SUCCESS method=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:best.EditAddressesTest@553f17c] output={null}]=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:best.EditAddressesTest@553f17c], [TestResult name=editUserDataTest status=SUCCESS method=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@5f341870] output={null}]=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@5f341870]}]
+19/07/19 14:37:53 INFO best.AccountCreationPage: Failed tests:[ResultMap map={}]
+19/07/19 14:37:53 INFO best.AccountCreationPage: End
+19/07/19 14:38:21 INFO best.AccountCreationPage: Start
+19/07/19 14:38:29 INFO best.AccountCreationPage: Test has started running:verificationUserDataTest at:1563532709049
+19/07/19 14:38:38 INFO best.AccountCreationPage: Test was success
+19/07/19 14:38:46 INFO best.AccountCreationPage: Test has started running:verificationUserAddressesTest at:1563532726746
+19/07/19 14:38:56 INFO best.AccountCreationPage: Test was success
+19/07/19 14:38:56 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=verificationUserAddressesTest status=SUCCESS method=VerificationAddressesTest.verificationUserAddressesTest(data_model.AccountData)[pri:0, instance:best.VerificationAddressesTest@553f17c] output={null}]=VerificationAddressesTest.verificationUserAddressesTest(data_model.AccountData)[pri:0, instance:best.VerificationAddressesTest@553f17c], [TestResult name=verificationUserDataTest status=SUCCESS method=VerificationInfoTest.verificationUserDataTest(data_model.AccountData)[pri:0, instance:best.VerificationInfoTest@5f341870] output={null}]=VerificationInfoTest.verificationUserDataTest(data_model.AccountData)[pri:0, instance:best.VerificationInfoTest@5f341870]}]
+19/07/19 14:38:56 INFO best.AccountCreationPage: Failed tests:[ResultMap map={}]
+19/07/19 14:38:56 INFO best.AccountCreationPage: End

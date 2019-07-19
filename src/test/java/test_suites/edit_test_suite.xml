@@ -2,9 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="Edit test suite">
-    <parameter name="dataFile" value="src/test/data/data.json"/>
 
     <test name="Edit" verbose="2">
+        <parameter name="dataFile" value="src/test/data/data.json"/>
         <classes>
 
             <class name="best.EditInfoTest">
