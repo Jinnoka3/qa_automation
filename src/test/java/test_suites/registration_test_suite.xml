@@ -25,12 +25,6 @@
                 </methods>
             </class>
 
-            <!--<class name="best.LoloTest">
-                <methods>
-                    <include name="loloTest" />
-                </methods>
-            </class>-->
-
         </classes>
     </test>
 

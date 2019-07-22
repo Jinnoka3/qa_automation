@@ -114,20 +114,20 @@ public class AccountCreationPage extends BasePage{
         password.sendKeys(pswrd);
     }
 
-    /*public void sendDate(String dt) {
+    public void sendDate(String dt) {
         Select dropdown = new Select(date);
-        dropdown.selectByValue(dt);
+        dropdown.selectByValue(String.valueOf(dt));
     }
 
     public void sendMonth(String mnth) {
         Select dropdown = new Select(month);
-        dropdown.selectByVisibleText(mnth);
+        dropdown.selectByValue(String.valueOf(mnth));
     }
 
     public void sendYear(String y) {
         Select dropdown = new Select(year);
-        dropdown.selectByValue(y);
-    }*/
+        dropdown.selectByValue(String.valueOf(y));
+    }
 
     public void clickNewsletter(){
         newsletter.click();
@@ -164,8 +164,9 @@ public class AccountCreationPage extends BasePage{
     }
 
     public void sendState(String st) {
+        state.click();
         Select dropdown = new Select(state);
-        dropdown.selectByValue(String.valueOf(st));
+        dropdown.selectByVisibleText(String.valueOf(st));
     }
 
     public void sendZip(String z) {
@@ -173,8 +174,9 @@ public class AccountCreationPage extends BasePage{
     }
 
     public void sendCountry(String cntr) {
+        country.click();
         Select dropdown = new Select(country);
-        dropdown.selectByValue(String.valueOf(cntr));
+        dropdown.selectByVisibleText(String.valueOf(cntr));
     }
 
     public void sendAdditionalInfo(String inf) {
@@ -209,9 +211,12 @@ public class AccountCreationPage extends BasePage{
         sendEmailSecondPage(accountData.getEmail());
         sendPassword(accountData.getPassword());
 
-        /*sendDate(accountData.getDate());
+        sendDate(accountData.getDate());
         sendMonth(accountData.getMonth());
-        sendYear(accountData.getYear());*/
+        sendYear(accountData.getYear());
+
+        clickNewsletter();
+        clickSpecialOffers();
 
         firstNameInAdress(accountData.getFirstName());
         lastNameInAdress(accountData.getLastName());

@@ -38,7 +38,7 @@ public class VerificationAddressesTest extends BaseTest{
         softAssert.assertTrue(myAddressesPage.verificationSecondAddress(accountData));
         softAssert.assertTrue(myAddressesPage.verificationCity(accountData));
         softAssert.assertTrue(myAddressesPage.verificationZip(accountData));
-        //softAssert.assertTrue(myAddressesPage.verificationCountry(accountData));
+        softAssert.assertTrue(myAddressesPage.verificationCountry(accountData));
         softAssert.assertTrue(myAddressesPage.verificationPhone(accountData));
         softAssert.assertTrue(myAddressesPage.verificationMobile(accountData));
         softAssert.assertAll();

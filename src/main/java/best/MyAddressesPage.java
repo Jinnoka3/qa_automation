@@ -83,9 +83,9 @@ public class MyAddressesPage extends AccountCreationPage{
         return zip.getText().contentEquals(accountData.getZip());
     }
 
-    /*public boolean verificationCountry(AccountData accountData){
+    public boolean verificationCountry(AccountData accountData){
         return country.getText().contentEquals(accountData.getCountry());
-    }*/
+    }
 
     public boolean verificationPhone(AccountData accountData){
         return addressPhone.getText().contentEquals(accountData.getPhone());

@@ -41,6 +41,7 @@ public class BaseTest {
 
     @AfterClass
     public void afterClassMethod(){
+
         driver.close();
     }
 }

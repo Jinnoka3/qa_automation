@@ -22,7 +22,7 @@ public class SimpleTestListener implements ITestListener {
 
     @Override
     public void onTestFailure(ITestResult iTestResult) {
-        LOGGER.info("Test was failure");
+        LOGGER.error("Test was failure");
     }
 
     @Override
