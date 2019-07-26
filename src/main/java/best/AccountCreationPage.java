@@ -96,17 +96,17 @@ public class AccountCreationPage extends BasePage {
     }
 
     public void accountCreate(AccountData accountData) {
-        send(customerFirstName, accountData.getFirstName());
-        send(customerLastName, accountData.getLastName());
+        send(customerFirstName, accountData.getUserInfo().getFirstName());
+        send(customerLastName, accountData.getUserInfo().getLastName());
         send(email, accountData.getEmail());
         send(password, accountData.getPassword());
-        send(adressLine1, accountData.getAddress1());
-        send(city, accountData.getCity());
-        select(state, accountData.getState());
-        send(zip, accountData.getZip());
-        select(country, accountData.getCountry());
-        send(mobilePhone, accountData.getMobile());
-        send(anAdressAlias, accountData.getAlias());
+        send(adressLine1, accountData.getUserAddress().getAddress1());
+        send(city, accountData.getUserAddress().getCity());
+        select(state, accountData.getUserAddress().getState());
+        send(zip, accountData.getUserAddress().getZip());
+        select(country, accountData.getUserAddress().getCountry());
+        send(mobilePhone, accountData.getUserAddress().getMobile());
+        send(anAdressAlias, accountData.getUserAddress().getAlias());
     }
 
     public void register(){

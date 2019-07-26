@@ -14,44 +14,14 @@ public class AccountData {
     Date dat = new Date();
     long now = dat.getTime();
 
-
-    private String gender;
-    private String firstName;
-    private String lastName;
     private String email;
-    private String newEmail;
-    private String newAddress1;
-
-
-    //private String wrongEmail;
-
     private String password;
 
-    private String newPassword;
-
-    private String date;
-    private String month;
-    private String year;
-
-    private String company;
-    private String address1;
-    private String address2;
-    private String city;
-    private String state;
-    private String zip;
-
-    private String wrongZip;
-
-
-    private String country;
-    private String info;
-    private String phone;
-    private String mobile;
-    private String alias;
-
+    private UserInfo userInfo;
+    private UserAddress userAddress;
 
     public AccountData() {
         this.email = "koko" + now + "@gmail.com";
-        this.newEmail = "misha" + now + "@gmail.com";
+        //this.newEmail = "misha" + now + "@gmail.com";
     }
 }

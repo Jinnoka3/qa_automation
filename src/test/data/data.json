@@ -1,20 +1,25 @@
 {
-  "gender":"2",
-  "firstName":"Daria",
-  "lastName":"Kalinina",
-  "password":"12345",
-  "date":"9",
-  "month":"1",
-  "year":"1996",
-  "company":"Sperasoft",
-  "address1":"Bulvar 30-letiya Pobedi",
-  "address2":"15A",
-  "city":"Volgograd",
-  "state":"Alaska",
-  "zip":"00000",
-  "country":"United States",
-  "info":"Hello",
-  "phone":"342512",
-  "mobile":"98093243",
-  "alias":"Unknown Address"
+  "password": "12345",
+
+  "userAddress": {
+    "company": "secret",
+    "address1": "Street street",
+    "address2": "5",
+    "city": "Volgograd",
+    "zip": "12345",
+    "country": "United States",
+    "state": "Alaska",
+    "info": "Hello",
+    "phone": "56856",
+    "mobile": "86856568",
+    "alias": "Address"
+  },
+  "userInfo": {
+    "firstName": "Daria",
+    "lastName": "Kalinina",
+    "date": "9",
+    "month": "1",
+    "year": "1996"
+  }
+
 }

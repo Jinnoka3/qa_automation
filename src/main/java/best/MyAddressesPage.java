@@ -55,7 +55,7 @@ public class MyAddressesPage extends AccountCreationPage{
         super(driver);
     }
 
-    public boolean verificationFirstName(AccountData accountData){
+    /*public boolean verificationFirstName(AccountData accountData){
         return addressFirstName.getText().contentEquals(accountData.getFirstName());
     }
 
@@ -112,5 +112,5 @@ public class MyAddressesPage extends AccountCreationPage{
         this.getAdressLine1().sendKeys(account.getNewAddress1());
 
         clickSave();
-    }
+    }*/
 }

@@ -35,33 +35,7 @@ public class MyPersonalInfoPage extends AccountCreationPage{
         save.click();
     }
 
-    public boolean verificationGender(AccountData accountData){
-        return  (this.getGender().getAttribute("value")).contentEquals(accountData.getGender());
-    }
 
-    public boolean verificationName(AccountData accountData){
-        return  (this.getFirstNameInAdressForm().getAttribute("value")).contentEquals(accountData.getFirstName());
-    }
-
-    public boolean verificationLastName(AccountData accountData){
-        return  (this.getLastNameInAdressForm().getAttribute("value")).contentEquals(accountData.getLastName());
-    }
-
-    /*public boolean verificationEmail(AccountData accountData){
-        return  (this.getEmailSecondPage().getAttribute("value")).contentEquals(accountData.getEmail());
-    }*/
-
-    public boolean verificationDate(AccountData accountData){
-        return  (this.getDate().getAttribute("value")).contentEquals(accountData.getDate());
-    }
-
-    public boolean verificationMonth(AccountData accountData){
-        return  (this.getMonth().getAttribute("value")).contentEquals(accountData.getMonth());
-    }
-
-    public boolean verificationYear(AccountData accountData){
-        return  (this.getYear().getAttribute("value")).contentEquals(accountData.getYear());
-    }
 
     /*public boolean editInfo(AccountData acc) throws IOException {
 
