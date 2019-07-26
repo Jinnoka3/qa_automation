@@ -47,9 +47,9 @@ public class MyPersonalInfoPage extends AccountCreationPage{
         return  (this.getLastNameInAdressForm().getAttribute("value")).contentEquals(accountData.getLastName());
     }
 
-    public boolean verificationEmail(AccountData accountData){
+    /*public boolean verificationEmail(AccountData accountData){
         return  (this.getEmailSecondPage().getAttribute("value")).contentEquals(accountData.getEmail());
-    }
+    }*/
 
     public boolean verificationDate(AccountData accountData){
         return  (this.getDate().getAttribute("value")).contentEquals(accountData.getDate());
@@ -63,7 +63,7 @@ public class MyPersonalInfoPage extends AccountCreationPage{
         return  (this.getYear().getAttribute("value")).contentEquals(accountData.getYear());
     }
 
-    public boolean editInfo(AccountData acc) throws IOException {
+    /*public boolean editInfo(AccountData acc) throws IOException {
 
         ObjectMapper objectMapper = new ObjectMapper();
         AccountData account = objectMapper.readValue( new File(ConfigFileReader.readJson()), AccountData.class );
@@ -82,5 +82,5 @@ public class MyPersonalInfoPage extends AccountCreationPage{
         confirmation.sendKeys(account.getNewPassword());
         clickSave();
         return messageSuccessUpdate.isDisplayed();
-    }
+    }*/
 }

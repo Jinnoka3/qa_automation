@@ -7,17 +7,17 @@
     <test name="Registration" verbose="2">
         <classes>
 
-            <class name="best.HomeTest">
+           <!-- <class name="best.HomeTest">
                 <methods>
                     <include name="positiveHomePageTest" />
                 </methods>
-            </class>
+            </class>-->
 
-            <class name="best.SignInTest">
+            <!--<class name="best.SignInTest">
                 <methods>
                     <include name="signInTest" />
                 </methods>
-            </class>
+            </class>-->
 
             <class name="best.AccountCreationTest">
                 <methods>

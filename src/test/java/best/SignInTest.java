@@ -20,9 +20,11 @@ public class SignInTest extends BaseTest {
 
         signInPage = PageFactory.initElements(driver, SignInPage.class);
 
-        signInPage.signIn(accountData);
+        signInPage.clickSignIn();
+        signInPage.sendEmailForCreateAnAccount(accountData.getEmail());
+        signInPage.clickCreateAnAccount();
 
-        Assert.assertEquals("Authentication", signInPage.getTitle());
+        Assert.assertEquals("Login - My Store", signInPage.getTitle());
     }
 }
 

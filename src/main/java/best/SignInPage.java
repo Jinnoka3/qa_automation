@@ -7,51 +7,73 @@ import org.openqa.selenium.support.FindBy;
 
 public class SignInPage extends BasePage{
 
-    private WebDriver driver;
-
     public SignInPage(WebDriver driver){
         super(driver);
     }
 
     @FindBy(xpath = "//input[@id='email_create']")
-    private WebElement emailFirstPage;
+    private WebElement emailForCreateAnAccount;
 
     @FindBy(xpath = "//*[@id=\"SubmitCreate\"]/span")
-    private WebElement createAnAccount;
+    private WebElement buttonCreateAnAccount;
 
+    ////////////////////////////
     @FindBy(xpath = "//*[@id=\"create_account_error\"]/ol/li")
     private WebElement invalidEmail;
 
     @FindBy(xpath = "//*[@id=\"columns\"]/div[1]/span[2]")
     private WebElement titleCreateAnAccount;
+    /////////////////////////////
 
     @FindBy(xpath = "//input[@id='email']")
-    private WebElement emailRegistered;
+    private WebElement emailAlreadyRegistered;
 
     @FindBy(xpath = "//input[@id='passwd']")
-    private WebElement passwordRegistered;
+    private WebElement passwordAlreadyRegistered;
 
     @FindBy(xpath = "//p[@class='submit']//span[1]")
-    private WebElement signIn;
+    private WebElement buttonSignIn;
 
-    public void sendEmailFirstPage(String emailFirst) {
-        emailFirstPage.sendKeys(emailFirst);
-    }
-
-    public void sendEmail(String email) {
-        emailRegistered.sendKeys(email);
-    }
-
-    public void sendPassword(String password) {
-        passwordRegistered.sendKeys(password);
-    }
-
-    public void clickSignIn(){
-        signIn.click();
+    public void sendEmailForCreateAnAccount(String email) {
+        send(emailForCreateAnAccount, email);
     }
 
     public void clickCreateAnAccount(){
-        createAnAccount.click();
+        click(buttonCreateAnAccount);
+    }
+
+    public void alreadyRegistered(String email, String password){
+        send(emailAlreadyRegistered, email);
+        send(passwordAlreadyRegistered, password);
+    }
+
+    public void clickSignInAlreadyRegistered(){
+        click(buttonSignIn);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*public void sendPassword(String password) {
+        passwordAlreadyRegistered.sendKeys(password);
+    }
+
+    public void clickSignIn(){
+        buttonSignIn.click();
     }
 
     public boolean getInvalidEmail(){
@@ -78,5 +100,5 @@ public class SignInPage extends BasePage{
     @Override
     public String getTitle(){
         return titleCreateAnAccount.getText();
-    }
+    }*/
 }

@@ -3,6 +3,7 @@ package best;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 
 public abstract class BasePage {
 
@@ -18,6 +19,9 @@ public abstract class BasePage {
     @FindBy(xpath = "//a[@class='logout']")
     private WebElement signOut;
 
+    @FindBy(xpath = "//a[@class='account']")
+    private WebElement myAccount;
+
     public String getTitle(){
         return driver.getTitle();
     }
@@ -28,5 +32,24 @@ public abstract class BasePage {
 
     public void clickSignOut(){
         signOut.click();
+    }
+
+    public void clickMyAccount(){
+        myAccount.click();
+    }
+
+    public void send(WebElement webElement, String text){
+        webElement.clear();
+        webElement.sendKeys(text);
+    }
+
+    public void click(WebElement webElement){
+        webElement.click();
+    }
+
+    public void select(WebElement webElement, String value){
+        Select dropdown = new Select(webElement);
+        click(webElement);
+        dropdown.selectByVisibleText(String.valueOf(value));
     }
 }

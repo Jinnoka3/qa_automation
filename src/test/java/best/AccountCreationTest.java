@@ -22,9 +22,13 @@ public class AccountCreationTest extends BaseTest{
         signInPage = PageFactory.initElements(driver, SignInPage.class);
         accountCreationPage = PageFactory.initElements(driver, AccountCreationPage.class);
 
-        signInPage.signIn(accountData);
-        accountCreationPage.accountCreate(accountData);
+        signInPage.clickSignIn();
 
-        Assert.assertEquals("> My account", accountCreationPage.getInvalidData());
+        signInPage.sendEmailForCreateAnAccount(accountData.getEmail());
+        signInPage.clickCreateAnAccount();
+
+        accountCreationPage.accountCreate(accountData);
+        accountCreationPage.register();
+        Assert.assertEquals("My account - My Store", accountCreationPage.getTitle());
     }
 }
