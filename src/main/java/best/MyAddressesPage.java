@@ -3,6 +3,7 @@ package best;
 import best.utils.ConfigFileReader;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import data_model.AccountData;
+import lombok.Getter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,6 +11,7 @@ import org.openqa.selenium.support.FindBy;
 import java.io.File;
 import java.io.IOException;
 
+@Getter
 public class MyAddressesPage extends AccountCreationPage{
 
     @FindBy(xpath = "//*[@id=\"center_column\"]/div[1]/div/div/ul/li[2]/span[1]")

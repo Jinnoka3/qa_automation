@@ -1,6 +1,28 @@
 {
-  "firstName":"Misha",
-  "lastName":"Kaliberdin",
-  "newPassword":"123456",
-  "newAddress1":"Pyatigorskaya"
+  "password": "67890",
+
+  "userInfo": {
+    "gender": "1",
+    "firstName": "Misha",
+    "lastName": "Kalinina",
+    "day": "9",
+    "month": "1",
+    "year": "1996",
+    "newsletter": false,
+    "specialOffers": true
+  },
+
+  "userAddress": {
+    "company": "Sperasoft",
+    "address1": "Bulvar",
+    "address2": "15",
+    "city": "Volgograd",
+    "zip": "00000",
+    "country": "United States",
+    "state": "Alaska",
+    "info": "Hello",
+    "phone": "56856",
+    "mobile": "86856568",
+    "alias": "Address"
+  }
 }

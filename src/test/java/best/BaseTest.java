@@ -30,6 +30,8 @@ public class BaseTest {
         //HashMap<String,String> parameters = new HashMap<>( testContext.getCurrentXmlTest().getAllParameters());
         //dataPool.processDataFile(parameters.get( "dataFile"), AccountData.class);
 
+        dataPool.fillNewDataPool("dataToReplaceFile", testContext, AccountData.class);
+
         System.setProperty("webdriver.chrome.driver", ConfigFileReader.readDriverPath());
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(ConfigFileReader.readImplicitlyWait(), TimeUnit.SECONDS);

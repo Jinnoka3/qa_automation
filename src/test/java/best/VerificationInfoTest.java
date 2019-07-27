@@ -1,7 +1,9 @@
 package best;
 
 import data_model.AccountData;
+import data_model.UserInfo;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -21,25 +23,37 @@ public class VerificationInfoTest extends BaseTest {
     @Test(dataProvider = "personalInformation")
     public void verificationUserDataTest(AccountData accountData) {
 
-        /*signInPage = PageFactory.initElements(driver, SignInPage.class);
+        signInPage = PageFactory.initElements(driver, SignInPage.class);
         accountCreationPage = PageFactory.initElements(driver, AccountCreationPage.class);
         myAccountPage = PageFactory.initElements(driver, MyAccountPage.class);
         myPersonalInfoPage = PageFactory.initElements(driver, MyPersonalInfoPage.class);
 
-        signInPage.signIn(accountData);
+        signInPage.clickSignIn();
+        signInPage.sendEmailForCreateAnAccount(accountData.getEmail());
+        signInPage.clickCreateAnAccount();
+
         accountCreationPage.accountCreate(accountData);
+        accountCreationPage.register();
 
         myAccountPage.clickPersonalInfo();
+        verifyPersonalInformation(accountData);
 
+        //System.out.println(myPersonalInfoPage.getUserInformation());
+
+        }
+    private void verifyPersonalInformation(AccountData accountData){
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(myPersonalInfoPage.verificationGender(accountData));
-        softAssert.assertTrue(myPersonalInfoPage.verificationName(accountData));
-        softAssert.assertTrue(myPersonalInfoPage.verificationLastName(accountData));
-        softAssert.assertTrue(myPersonalInfoPage.verificationEmail(accountData));
-        softAssert.assertTrue(myPersonalInfoPage.verificationDate(accountData));
-        softAssert.assertTrue(myPersonalInfoPage.verificationMonth(accountData));
-        softAssert.assertTrue(myPersonalInfoPage.verificationYear(accountData));
-        softAssert.assertAll();*/
+
+        softAssert.assertEquals(
+                myPersonalInfoPage.getFirstNameAttribute(),
+                accountData.getUserInfo().getFirstName());
+        softAssert.assertEquals(
+                myPersonalInfoPage.getLastNameAttribute(),
+                accountData.getUserInfo().getLastName());
+        softAssert.assertEquals(
+                myPersonalInfoPage.getEmailAttribute(),
+                accountData.getEmail());
+        softAssert.assertAll();
     }
 }
 

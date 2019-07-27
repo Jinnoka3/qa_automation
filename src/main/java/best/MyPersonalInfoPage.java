@@ -3,6 +3,9 @@ package best;
 import best.utils.ConfigFileReader;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import data_model.AccountData;
+import data_model.UserAddress;
+import data_model.UserInfo;
+import lombok.Getter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,7 +13,12 @@ import org.openqa.selenium.support.FindBy;
 import java.io.File;
 import java.io.IOException;
 
+@Getter
 public class MyPersonalInfoPage extends AccountCreationPage{
+
+    public MyPersonalInfoPage(WebDriver driver) {
+        super(driver);
+    }
 
     @FindBy(xpath = "//input[@id='old_passwd']")
     private WebElement currentPassword;
@@ -27,34 +35,38 @@ public class MyPersonalInfoPage extends AccountCreationPage{
     @FindBy(xpath = "//p[@class='alert alert-success']")
     private WebElement messageSuccessUpdate;
 
-    public MyPersonalInfoPage(WebDriver driver) {
-        super(driver);
+
+  /*  public UserInfo getUserInformation(){
+
+        return new UserInfo(
+
+               //getAttribute(getMale().isSelected() ? getMale() : getFemale()),
+                "2",
+                        getFirstNameAttribute(),
+                        getLastNameAttribute(),
+                        getDayAttribute(),
+                        getMonthAttribute(),
+                        getYearAttribute(),
+                        false,
+                        true
+        );
     }
 
-    public void clickSave(){
-        save.click();
-    }
-
-
-
-    /*public boolean editInfo(AccountData acc) throws IOException {
-
-        ObjectMapper objectMapper = new ObjectMapper();
-        AccountData account = objectMapper.readValue( new File(ConfigFileReader.readJson()), AccountData.class );
-
-        this.getFirstNameInAdressForm().clear();
-        this.getFirstNameInAdressForm().sendKeys(account.getFirstName());
-
-        this.getLastNameInAdressForm().clear();
-        this.getLastNameInAdressForm().sendKeys(account.getLastName());
-
-        this.getEmailSecondPage().clear();
-        this.getEmailSecondPage().sendKeys(account.getNewEmail());
-
-        currentPassword.sendKeys(acc.getPassword());
-        newPassword.sendKeys(account.getNewPassword());
-        confirmation.sendKeys(account.getNewPassword());
-        clickSave();
-        return messageSuccessUpdate.isDisplayed();
+    public boolean verificationUserInfo(AccountData accountData){
+        if(accountData.getUserInfo().equals(getUserInformation()) && accountData.getEmail().contentEquals(getEmailAttribute())){
+            return true;
+        }
+        else
+            return false;
     }*/
+
+    public void editUserInformation(AccountData accountData) {
+
+       /* ObjectMapper objectMapper = new ObjectMapper();
+        AccountData account = objectMapper.readValue( new File(ConfigFileReader.readJson()), AccountData.class );*/
+
+       sendToForm(getFirstNameInAdressForm(), accountData.getUserInfo().getFirstName());
+
+
+    }
 }

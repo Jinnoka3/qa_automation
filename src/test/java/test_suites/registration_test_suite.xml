@@ -13,17 +13,17 @@
                 </methods>
             </class>-->
 
-            <!--<class name="best.SignInTest">
+            <class name="best.SignInTest">
                 <methods>
                     <include name="signInTest" />
                 </methods>
-            </class>-->
+            </class>
 
-            <class name="best.AccountCreationTest">
+            <!--<class name="best.AccountCreationTest">
                 <methods>
                     <include name="personalInfoTest" />
                 </methods>
-            </class>
+            </class>-->
 
         </classes>
     </test>

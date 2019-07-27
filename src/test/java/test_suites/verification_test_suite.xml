@@ -13,11 +13,11 @@
                 </methods>
             </class>
 
-            <class name="best.VerificationAddressesTest">
+           <!-- <class name="best.VerificationAddressesTest">
                 <methods>
                     <include name="verificationUserAddressesTest" />
                 </methods>
-            </class>
+            </class>-->
 
         </classes>
     </test>

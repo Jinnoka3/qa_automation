@@ -23,7 +23,22 @@ public class EditInfoTest extends BaseTest {
     }
 
     @Test(dataProvider = "personalInformation")
-    public void editUserDataTest(AccountData accountData) throws IOException {
+    public void editUserDataTest(AccountData accountData, AccountData accountData2) {
+
+        signInPage = PageFactory.initElements(driver, SignInPage.class);
+        accountCreationPage = PageFactory.initElements(driver, AccountCreationPage.class);
+        myAccountPage = PageFactory.initElements(driver, MyAccountPage.class);
+        myPersonalInfoPage = PageFactory.initElements(driver, MyPersonalInfoPage.class);
+
+        signInPage.clickSignIn();
+        signInPage.sendEmailForCreateAnAccount(accountData.getEmail());
+        signInPage.clickCreateAnAccount();
+
+        accountCreationPage.accountCreate(accountData);
+        accountCreationPage.register();
+
+        myAccountPage.clickPersonalInfo();
+        myPersonalInfoPage.editUserInformation(accountData2);
 
        /* signInPage = PageFactory.initElements(driver, SignInPage.class);
         accountCreationPage = PageFactory.initElements(driver, AccountCreationPage.class);

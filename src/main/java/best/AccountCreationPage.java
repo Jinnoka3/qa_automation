@@ -98,6 +98,38 @@ public class AccountCreationPage extends BasePage {
         return invalidData.getText();
     }
 
+    public String getMaleAttribute(){
+        return getAttribute(male);
+    }
+
+    public String getFemaleAttribute(){
+        return getAttribute(female);
+    }
+
+    public String getFirstNameAttribute(){
+        return getAttribute(firstNameInAdressForm);
+    }
+
+    public String getLastNameAttribute(){
+        return getAttribute(lastNameInAdressForm);
+    }
+
+    public String getEmailAttribute(){
+        return getAttribute(email);
+    }
+
+    public String  getDayAttribute(){
+        return getAttribute(day);
+    }
+
+    public String  getMonthAttribute(){
+        return getAttribute(month);
+    }
+
+    public String getYearAttribute(){
+        return getAttribute(year);
+    }
+
     public void selectGender(String gender){
         click(gender.equals("1") ? male : female);
     }

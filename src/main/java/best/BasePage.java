@@ -64,4 +64,8 @@ public abstract class BasePage {
             click(webElement);
         }
     }
+
+    public String getAttribute(WebElement webElement){
+        return webElement.getAttribute("value");
+    }
 }

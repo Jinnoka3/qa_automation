@@ -5,6 +5,7 @@
 
     <test name="Edit" verbose="2">
         <parameter name="dataFile" value="src/test/data/data.json"/>
+        <parameter name="dataToReplaceFile" value="src/test/data/new_data.json"/>
         <classes>
 
             <class name="best.EditInfoTest">
@@ -13,12 +14,12 @@
                 </methods>
             </class>
 
-            <class name="best.EditAddressesTest">
+            <!--<class name="best.EditAddressesTest">
 
                 <methods>
                     <include name="editAddressesTest" />
                 </methods>
-            </class>
+            </class>-->
 
         </classes>
     </test>

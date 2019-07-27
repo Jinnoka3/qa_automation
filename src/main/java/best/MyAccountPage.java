@@ -1,11 +1,13 @@
 package best;
 
 import data_model.AccountData;
+import lombok.Getter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+@Getter
 public class MyAccountPage extends BasePage {
 
     public MyAccountPage(WebDriver driver) {
@@ -22,32 +24,10 @@ public class MyAccountPage extends BasePage {
     private WebElement personalInfo;
 
     public void clickMyAddresses(){
-        addresses.click();
+        click(addresses);
     }
 
     public void clickPersonalInfo(){
-        personalInfo.click();
+        click(personalInfo);
     }
-
-    public void verificationInfo(){
-        clickPersonalInfo();
-
-
-    }
-
-    public void verificationAddresses(){
-        clickMyAddresses();
-
-    }
-
-    public void editInfo(){
-        clickPersonalInfo();
-
-    }
-
-    public void editAddresses(){
-        clickMyAddresses();
-
-    }
-
 }

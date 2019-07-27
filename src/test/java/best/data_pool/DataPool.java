@@ -44,14 +44,14 @@ public class DataPool<T> {
 
     public Object[][] getData() {
 
-        Object[][] data = new Object[ accountData.size() ][ 1 ];
+        Object[][] data = new Object[ 1 ][ accountData.size() ];
 
         Iterator<T> it = accountData.iterator();
 
 
         int i = 0;
         while( it.hasNext() ) {
-            data[ i ][ 0 ] = it.next();
+            data[ 0 ][ i ] = it.next();
             i++;
         }
 

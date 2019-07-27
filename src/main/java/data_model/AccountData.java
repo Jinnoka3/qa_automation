@@ -2,13 +2,17 @@ package data_model;
 
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.testng.annotations.DataProvider;
 
 import java.util.Date;
 
-@Data
+@Getter
 
+@AllArgsConstructor
 public class AccountData {
 
     Date dat = new Date();
