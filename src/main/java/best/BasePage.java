@@ -38,7 +38,7 @@ public abstract class BasePage {
         myAccount.click();
     }
 
-    public void send(WebElement webElement, String text){
+    public void sendToForm(WebElement webElement, String text){
         webElement.clear();
         webElement.sendKeys(text);
     }
@@ -47,9 +47,21 @@ public abstract class BasePage {
         webElement.click();
     }
 
-    public void select(WebElement webElement, String value){
+    public void selectByText(WebElement webElement, String text){
         Select dropdown = new Select(webElement);
         click(webElement);
-        dropdown.selectByVisibleText(String.valueOf(value));
+        dropdown.selectByVisibleText(String.valueOf(text));
+    }
+
+    public void selectByValue(WebElement webElement, String value){
+        Select dropdown = new Select(webElement);
+        click(webElement);
+        dropdown.selectByValue(String.valueOf(value));
+    }
+
+    public void selectOption(WebElement webElement, boolean option){
+        if(option){
+            click(webElement);
+        }
     }
 }

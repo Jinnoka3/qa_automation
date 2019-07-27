@@ -16,8 +16,11 @@ public class AccountCreationPage extends BasePage {
         super(driver);
     }
 
-    @FindBy(xpath = "//*[@id=\"id_gender2\"]")
-    private WebElement gender;
+    @FindBy(xpath = "//input[@id='id_gender1']")
+    private WebElement male;
+
+    @FindBy(xpath = "//input[@id='id_gender2']")
+    private WebElement female;
 
     @FindBy(xpath = "//*[@id=\"customer_firstname\"]")
     private WebElement customerFirstName;
@@ -31,19 +34,19 @@ public class AccountCreationPage extends BasePage {
     @FindBy(xpath = "//input[@id='passwd']")
     private WebElement password;
 
-    @FindBy(xpath = "//*[@id=\"days\"]")
-    private WebElement date;
+    @FindBy(xpath = "//select[@id='days']")
+    private WebElement day;
 
-    @FindBy(xpath = "//*[@id=\"months\"]")
+    @FindBy(xpath = "//select[@id='months']")
     private WebElement month;
 
-    @FindBy(xpath = "//*[@id=\"years\"]")
+    @FindBy(xpath = "//select[@id='years']")
     private WebElement year;
 
-    @FindBy(xpath = "//*[@id=\"newsletter\"]")
+    @FindBy(xpath = "//input[@id='newsletter']")
     private WebElement newsletter;
 
-    @FindBy(xpath = "//*[@id=\"optin\"]")
+    @FindBy(xpath = "//input[@id='optin']")
     private WebElement specialOffers;
 
     @FindBy(xpath = "//input[@id='firstname']")
@@ -95,18 +98,38 @@ public class AccountCreationPage extends BasePage {
         return invalidData.getText();
     }
 
+    public void selectGender(String gender){
+        click(gender.equals("1") ? male : female);
+    }
+
     public void accountCreate(AccountData accountData) {
-        send(customerFirstName, accountData.getUserInfo().getFirstName());
-        send(customerLastName, accountData.getUserInfo().getLastName());
-        send(email, accountData.getEmail());
-        send(password, accountData.getPassword());
-        send(adressLine1, accountData.getUserAddress().getAddress1());
-        send(city, accountData.getUserAddress().getCity());
-        select(state, accountData.getUserAddress().getState());
-        send(zip, accountData.getUserAddress().getZip());
-        select(country, accountData.getUserAddress().getCountry());
-        send(mobilePhone, accountData.getUserAddress().getMobile());
-        send(anAdressAlias, accountData.getUserAddress().getAlias());
+        selectGender(accountData.getUserInfo().getGender());
+        sendToForm(customerFirstName, accountData.getUserInfo().getFirstName());
+        sendToForm(customerLastName, accountData.getUserInfo().getLastName());
+
+        sendToForm(email, accountData.getEmail());
+        sendToForm(password, accountData.getPassword());
+
+        selectByValue(day, accountData.getUserInfo().getDay());
+        selectByValue(month, accountData.getUserInfo().getMonth());
+        selectByValue(year, accountData.getUserInfo().getYear());
+
+        selectOption(newsletter, accountData.getUserInfo().isNewsletter());
+        selectOption(specialOffers, accountData.getUserInfo().isSpecialOffers());
+
+        sendToForm(company, accountData.getUserAddress().getCompany());
+        sendToForm(adressLine1, accountData.getUserAddress().getAddress1());
+        sendToForm(adressLine2, accountData.getUserAddress().getAddress2());
+
+        sendToForm(city, accountData.getUserAddress().getCity());
+        selectByText(state, accountData.getUserAddress().getState());
+        sendToForm(zip, accountData.getUserAddress().getZip());
+        selectByText(country, accountData.getUserAddress().getCountry());
+
+        sendToForm(additionalInformation, accountData.getUserAddress().getInfo());
+        sendToForm(homePhone, accountData.getUserAddress().getPhone());
+        sendToForm(mobilePhone, accountData.getUserAddress().getMobile());
+        sendToForm(anAdressAlias, accountData.getUserAddress().getAlias());
     }
 
     public void register(){

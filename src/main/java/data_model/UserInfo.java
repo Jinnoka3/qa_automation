@@ -9,8 +9,10 @@ public class UserInfo {
     private String firstName;
     private String lastName;
 
-
-    private String date;
+    private String day;
     private String month;
     private String year;
+
+    private boolean newsletter;
+    private boolean specialOffers;
 }

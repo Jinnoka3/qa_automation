@@ -35,7 +35,7 @@ public class SignInPage extends BasePage{
     private WebElement buttonSignIn;
 
     public void sendEmailForCreateAnAccount(String email) {
-        send(emailForCreateAnAccount, email);
+        sendToForm(emailForCreateAnAccount, email);
     }
 
     public void clickCreateAnAccount(){
@@ -43,8 +43,8 @@ public class SignInPage extends BasePage{
     }
 
     public void alreadyRegistered(String email, String password){
-        send(emailAlreadyRegistered, email);
-        send(passwordAlreadyRegistered, password);
+        sendToForm(emailAlreadyRegistered, email);
+        sendToForm(passwordAlreadyRegistered, password);
     }
 
     public void clickSignInAlreadyRegistered(){

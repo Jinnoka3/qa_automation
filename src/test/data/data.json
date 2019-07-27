@@ -1,25 +1,28 @@
 {
   "password": "12345",
 
+  "userInfo": {
+    "gender": "2",
+    "firstName": "Daria",
+    "lastName": "Kalinina",
+    "day": "9",
+    "month": "1",
+    "year": "1996",
+    "newsletter": false,
+    "specialOffers": true
+  },
+
   "userAddress": {
-    "company": "secret",
-    "address1": "Street street",
-    "address2": "5",
+    "company": "Sperasoft",
+    "address1": "Bulvar",
+    "address2": "15",
     "city": "Volgograd",
-    "zip": "12345",
+    "zip": "00000",
     "country": "United States",
     "state": "Alaska",
     "info": "Hello",
     "phone": "56856",
     "mobile": "86856568",
     "alias": "Address"
-  },
-  "userInfo": {
-    "firstName": "Daria",
-    "lastName": "Kalinina",
-    "date": "9",
-    "month": "1",
-    "year": "1996"
   }
-
 }
