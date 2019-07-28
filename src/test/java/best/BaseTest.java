@@ -8,9 +8,7 @@ import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.ITestContext;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Listeners;
+import org.testng.annotations.*;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -26,11 +24,9 @@ public class BaseTest {
 
     @BeforeClass
     public void beforeClassMethod(ITestContext testContext) throws IOException {
-        dataPool = new DataPool("dataFile", testContext, AccountData.class);
-        //HashMap<String,String> parameters = new HashMap<>( testContext.getCurrentXmlTest().getAllParameters());
-        //dataPool.processDataFile(parameters.get( "dataFile"), AccountData.class);
+        //dataPool = new DataPool("dataFile", testContext, AccountData.class);
 
-        dataPool.fillNewDataPool("dataToReplaceFile", testContext, AccountData.class);
+        //dataPool.fillNewDataPool("dataToReplaceFile", testContext, AccountData.class);
 
         System.setProperty("webdriver.chrome.driver", ConfigFileReader.readDriverPath());
         driver = new ChromeDriver();
@@ -41,7 +37,7 @@ public class BaseTest {
 
     }
 
-    @AfterClass
+    @AfterSuite
     public void afterClassMethod(){
 
         //driver.close();

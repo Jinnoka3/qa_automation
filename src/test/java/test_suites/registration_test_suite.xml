@@ -2,16 +2,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="Registration test suite">
-    <parameter name="dataFile" value="src/test/data/data.json"/>
 
     <test name="Registration" verbose="2">
+        <parameter name="dataFile" value="src/test/data/data.json"/>
         <classes>
-
-           <!-- <class name="best.HomeTest">
-                <methods>
-                    <include name="positiveHomePageTest" />
-                </methods>
-            </class>-->
 
             <class name="best.SignInTest">
                 <methods>
@@ -19,11 +13,11 @@
                 </methods>
             </class>
 
-            <!--<class name="best.AccountCreationTest">
+            <class name="best.AccountCreationTest">
                 <methods>
                     <include name="personalInfoTest" />
                 </methods>
-            </class>-->
+            </class>
 
         </classes>
     </test>

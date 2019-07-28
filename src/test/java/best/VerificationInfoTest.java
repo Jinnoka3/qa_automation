@@ -1,9 +1,12 @@
 package best;
 
+import best.data_pool.DataPool;
 import data_model.AccountData;
 import data_model.UserInfo;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.ITestContext;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -14,6 +17,11 @@ public class VerificationInfoTest extends BaseTest {
     private AccountCreationPage accountCreationPage;
     private MyAccountPage myAccountPage;
     private MyPersonalInfoPage myPersonalInfoPage;
+
+    @BeforeSuite
+    protected void beforeSuite( ITestContext testContext ) {
+        dataPool = new DataPool("dataFile", testContext, AccountData.class);
+    }
 
     @DataProvider(name = "personalInformation")
     public Object[][] dataProviderNewUser() {

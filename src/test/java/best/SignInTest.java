@@ -1,14 +1,23 @@
 package best;
 
+import best.data_pool.DataPool;
 import data_model.AccountData;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.ITestContext;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class SignInTest extends BaseTest {
 
     private SignInPage signInPage;
+
+    @BeforeClass
+    protected void beforeSuite( ITestContext testContext ) {
+        dataPool = new DataPool("dataFile", testContext, AccountData.class);
+    }
 
     @DataProvider(name = "personalInformation")
     public Object[][] dataProviderNewUser() {

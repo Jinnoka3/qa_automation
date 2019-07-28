@@ -187,7 +187,9 @@ public class MyPersonalInfoPage extends AccountCreationPage{
 
         selectOption(getNewsletter(), accountData.getUserInfo().isNewsletter());
         selectOption(getSpecialOffers(), accountData.getUserInfo().isSpecialOffers());
+    }
 
-
+    public void saveUpdate(){
+        click(save);
     }
 }

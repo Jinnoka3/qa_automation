@@ -18,6 +18,12 @@ public class EditInfoTest extends BaseTest {
     private MyAccountPage myAccountPage;
     private MyPersonalInfoPage myPersonalInfoPage;
 
+    @BeforeSuite
+    protected void beforeSuite( ITestContext testContext ) {
+        dataPool = new DataPool("dataFile", testContext, AccountData.class);
+        dataPool.fillNewDataPool("dataToReplaceFile", testContext, AccountData.class);
+    }
+
     @DataProvider(name = "personalInformation")
     public Object[][] dataProviderNewUser() {
         return dataPool.getData();
@@ -40,6 +46,7 @@ public class EditInfoTest extends BaseTest {
 
         myAccountPage.clickPersonalInfo();
         myPersonalInfoPage.editUserInformation(accountData, accountData2);
+        myPersonalInfoPage.saveUpdate();
 
        /* signInPage = PageFactory.initElements(driver, SignInPage.class);
         accountCreationPage = PageFactory.initElements(driver, AccountCreationPage.class);
