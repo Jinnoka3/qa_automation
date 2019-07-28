@@ -1927,3 +1927,9 @@
 19/07/28 12:13:27 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=editUserDataTest status=SUCCESS method=EditInfoTest.editUserDataTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.EditInfoTest@17c386de] output={null}]=EditInfoTest.editUserDataTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.EditInfoTest@17c386de]}]
 19/07/28 12:13:27 INFO best.AccountCreationPage: Failed tests:[ResultMap map={}]
 19/07/28 12:13:27 INFO best.AccountCreationPage: End
+19/07/28 12:21:16 INFO best.AccountCreationPage: Start
+19/07/28 12:21:23 INFO best.AccountCreationPage: Test has started running:editUserDataTest at:1564305683405
+19/07/28 12:21:32 INFO best.AccountCreationPage: Test was success
+19/07/28 12:21:32 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=editUserDataTest status=SUCCESS method=EditInfoTest.editUserDataTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.EditInfoTest@2c34f934] output={null}]=EditInfoTest.editUserDataTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.EditInfoTest@2c34f934]}]
+19/07/28 12:21:32 INFO best.AccountCreationPage: Failed tests:[ResultMap map={}]
+19/07/28 12:21:32 INFO best.AccountCreationPage: End

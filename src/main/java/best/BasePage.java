@@ -60,7 +60,10 @@ public abstract class BasePage {
     }
 
     public void selectOption(WebElement webElement, boolean option){
-        if(option){
+        if(!webElement.isSelected() && option){
+            click(webElement);
+        }
+        else if(webElement.isSelected() && !option){
             click(webElement);
         }
     }
