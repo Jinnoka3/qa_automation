@@ -51,7 +51,7 @@ public class DataPool<T> {
 
         int i = 0;
         while( it.hasNext() ) {
-            data[ 0 ][ i ] = it.next();
+            data[0][ i ] = it.next();
             i++;
         }
 

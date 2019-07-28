@@ -1,28 +1,29 @@
 {
-  "password": "67890",
+  "email": "misha555@gmail.com",
+  "password": "678904545874584",
 
   "userInfo": {
     "gender": "1",
     "firstName": "Misha",
-    "lastName": "Kalinina",
-    "day": "9",
-    "month": "1",
-    "year": "1996",
+    "lastName": "Misha",
+    "day": "1",
+    "month": "5",
+    "year": "2019",
     "newsletter": false,
-    "specialOffers": true
+    "specialOffers": false
   },
 
   "userAddress": {
     "company": "Sperasoft",
-    "address1": "Bulvar",
-    "address2": "15",
+    "address1": "8 Vozdushnaya",
+    "address2": "9",
     "city": "Volgograd",
-    "zip": "00000",
+    "zip": "11111",
     "country": "United States",
-    "state": "Alaska",
-    "info": "Hello",
-    "phone": "56856",
-    "mobile": "86856568",
-    "alias": "Address"
+    "state": "Georgia",
+    "info": "Hi",
+    "phone": "475457",
+    "mobile": "9967845745",
+    "alias": "New Address"
   }
 }

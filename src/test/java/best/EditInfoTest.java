@@ -1,11 +1,12 @@
 package best;
 
+import best.data_pool.DataPool;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import data_model.AccountData;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import org.testng.ITestContext;
+import org.testng.annotations.*;
 
 import java.io.File;
 import java.io.IOException;
@@ -38,7 +39,7 @@ public class EditInfoTest extends BaseTest {
         accountCreationPage.register();
 
         myAccountPage.clickPersonalInfo();
-        myPersonalInfoPage.editUserInformation(accountData2);
+        myPersonalInfoPage.editUserInformation(accountData, accountData2);
 
        /* signInPage = PageFactory.initElements(driver, SignInPage.class);
         accountCreationPage = PageFactory.initElements(driver, AccountCreationPage.class);

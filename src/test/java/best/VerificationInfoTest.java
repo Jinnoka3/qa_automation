@@ -36,12 +36,12 @@ public class VerificationInfoTest extends BaseTest {
         accountCreationPage.register();
 
         myAccountPage.clickPersonalInfo();
-        verifyPersonalInformation(accountData);
+        Assert.assertTrue(myPersonalInfoPage.verificationAllUserInfo(accountData));
 
         //System.out.println(myPersonalInfoPage.getUserInformation());
 
         }
-    private void verifyPersonalInformation(AccountData accountData){
+    /*private void verifyPersonalInformation(AccountData accountData){
         SoftAssert softAssert = new SoftAssert();
 
         softAssert.assertEquals(
@@ -54,6 +54,6 @@ public class VerificationInfoTest extends BaseTest {
                 myPersonalInfoPage.getEmailAttribute(),
                 accountData.getEmail());
         softAssert.assertAll();
-    }
+    }*/
 }
 

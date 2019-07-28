@@ -10,7 +10,7 @@ import org.testng.annotations.DataProvider;
 
 import java.util.Date;
 
-@Getter
+@Data
 
 @AllArgsConstructor
 public class AccountData {
