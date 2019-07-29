@@ -21,24 +21,8 @@ public class MyAddressesPage extends AccountCreationPage{
     }
 
 
-    @FindBy(css = "li span.address_name")
-    List<WebElement> addressesNames;
-
-    @FindBy(css = "li span.address_company")
-    List<WebElement> addressesCompanies;
-
-    @FindBy(css = "li span.address_address1")
-    List<WebElement> addressesAddresses1;
-
-    @FindBy(css = "li span.address_address2")
-    List<WebElement> addressesAddresses2;
-
-    @FindBy(css = "li span.address_phone")
-    List<WebElement> addressesPhone;
-
-    @FindBy(css = "li span.address_phone_mobile")
-    List<WebElement> addressesPhoneMobile;
-
+    @FindBy(css = "a[title = \"Update\"]")
+    List<WebElement> updateButtons;
 
     public void find(List<WebElement> webElementsList) {
         for (WebElement webElement : webElementsList) {

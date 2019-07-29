@@ -23,4 +23,9 @@ public class UserAddress {
     private String phone;
     private String mobile;
     private String alias;
+
+    public int compareTo(UserAddress comparedWith){
+        return this.toString().compareTo(comparedWith.toString());
+    }
+
 }

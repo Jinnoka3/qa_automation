@@ -57,12 +57,20 @@ public class MyPersonalInfoPage extends AccountCreationPage{
         );
     }
 
-    public boolean verificationAllFields(AccountData accountData){
+    /*public boolean verificationAllFields(AccountData accountData){
         if(!accountData.getUserInfo().equals(getUserInfoFromPage())){
             LOGGER.error("Page element \"" + "Something isn't equals" + "\" isn't shown");
             return false;
         }
        return true;
+    }*/
+
+    public boolean verificationAllFields(AccountData accountData){
+        if(!accountData.getUserInfo().equals(getUserInfoFromPage())){
+            LOGGER.error("Page element \"" + "Something isn't equals" + "\" isn't shown");
+            return false;
+        }
+        return true;
     }
 
     public String verificationUserGender(){

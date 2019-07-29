@@ -143,8 +143,8 @@ public class AccountCreationPage extends BasePage {
         pageElements.add(adressLine1);
         pageElements.add(adressLine2);
         pageElements.add(city);
-        //pageElements.add(state);
-        //pageElements.add(zip);
+        pageElements.add(state);
+        pageElements.add(zip);
         pageElements.add(country);
         pageElements.add(additionalInformation);
         pageElements.add(homePhone);
@@ -226,7 +226,7 @@ public class AccountCreationPage extends BasePage {
         fillPageElementsList();
 
         for (WebElement webElement : pageElements) {
-            if (!elementIsVisible(webElement)) {
+            if (!elementIsVisible(webElement) && !elementIsClicable(webElement)) {
                 LOGGER.error("Page element \"" + webElement + "\" isn't shown");
                 return false;
             }

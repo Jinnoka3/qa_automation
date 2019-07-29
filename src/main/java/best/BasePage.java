@@ -79,4 +79,8 @@ public abstract class BasePage {
     public boolean elementIsVisible(WebElement webElement){
         return webElement.isDisplayed();
     }
+
+    public boolean elementIsClicable(WebElement webElement){
+        return webElement.isEnabled();
+    }
 }

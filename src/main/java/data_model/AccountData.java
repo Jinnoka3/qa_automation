@@ -29,4 +29,8 @@ public class AccountData {
     public AccountData() {
         this.email = "koko" + now + "@gmail.com";
     }
+
+    public int compareTo(AccountData comparedWith){
+        return this.email.compareTo(comparedWith.email);
+    }
 }

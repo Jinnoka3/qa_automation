@@ -48,6 +48,6 @@ public class VerificationAddressesTest extends BaseTest{
             addNewAddressPage.saveNewAddress();
         }
 
-        myAddressesPage.findAddresses();
+        //myAddressesPage.findAddresses();
     }
 }
