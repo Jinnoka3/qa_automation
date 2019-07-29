@@ -47,5 +47,7 @@ public class VerificationAddressesTest extends BaseTest{
             addNewAddressPage.addNewAddress(i, accountData);
             addNewAddressPage.saveNewAddress();
         }
+
+        myAddressesPage.findAddresses();
     }
 }

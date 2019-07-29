@@ -3375,3 +3375,45 @@
 19/07/29 10:57:39 INFO best.BaseTest: Passed tests: [ResultMap map={[TestResult name=editUserDataTest status=SUCCESS method=EditInfoTest.editUserDataTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.EditInfoTest@2ed0fbae] output={null}]=EditInfoTest.editUserDataTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.EditInfoTest@2ed0fbae]}]
 19/07/29 10:57:39 INFO best.BaseTest: Failed tests:[ResultMap map={}]
 19/07/29 10:57:39 INFO best.BaseTest: End
+19/07/29 13:51:23 INFO best.BaseTest: Start
+19/07/29 13:51:35 INFO best.BaseTest: Test has started running:verificationUserAddressesTest at:1564393895291
+19/07/29 13:51:55 INFO best.BaseTest: Test was success
+19/07/29 13:51:55 INFO best.BaseTest: Passed tests: [ResultMap map={[TestResult name=verificationUserAddressesTest status=SUCCESS method=VerificationAddressesTest.verificationUserAddressesTest(data_model.AccountData)[pri:0, instance:best.VerificationAddressesTest@4f7d0008] output={null}]=VerificationAddressesTest.verificationUserAddressesTest(data_model.AccountData)[pri:0, instance:best.VerificationAddressesTest@4f7d0008]}]
+19/07/29 13:51:55 INFO best.BaseTest: Failed tests:[ResultMap map={}]
+19/07/29 13:51:55 INFO best.BaseTest: End
+19/07/29 13:52:42 INFO best.BaseTest: Start
+19/07/29 13:52:49 INFO best.BaseTest: Test has started running:verificationUserAddressesTest at:1564393969917
+19/07/29 13:53:08 INFO best.BaseTest: Test was success
+19/07/29 13:53:08 INFO best.BaseTest: Passed tests: [ResultMap map={[TestResult name=verificationUserAddressesTest status=SUCCESS method=VerificationAddressesTest.verificationUserAddressesTest(data_model.AccountData)[pri:0, instance:best.VerificationAddressesTest@553f17c] output={null}]=VerificationAddressesTest.verificationUserAddressesTest(data_model.AccountData)[pri:0, instance:best.VerificationAddressesTest@553f17c]}]
+19/07/29 13:53:08 INFO best.BaseTest: Failed tests:[ResultMap map={}]
+19/07/29 13:53:08 INFO best.BaseTest: End
+19/07/29 13:57:49 INFO best.BaseTest: Start
+19/07/29 13:57:59 INFO best.BaseTest: Test has started running:verificationUserAddressesTest at:1564394279649
+19/07/29 13:58:29 INFO best.BaseTest: Test was success
+19/07/29 13:58:29 INFO best.BaseTest: Passed tests: [ResultMap map={[TestResult name=verificationUserAddressesTest status=SUCCESS method=VerificationAddressesTest.verificationUserAddressesTest(data_model.AccountData)[pri:0, instance:best.VerificationAddressesTest@4f7d0008] output={null}]=VerificationAddressesTest.verificationUserAddressesTest(data_model.AccountData)[pri:0, instance:best.VerificationAddressesTest@4f7d0008]}]
+19/07/29 13:58:29 INFO best.BaseTest: Failed tests:[ResultMap map={}]
+19/07/29 13:58:29 INFO best.BaseTest: End
+19/07/29 14:02:01 INFO best.BaseTest: Start
+19/07/29 14:02:09 INFO best.BaseTest: Test has started running:verificationUserAddressesTest at:1564394529747
+19/07/29 14:02:38 INFO best.BaseTest: Test was success
+19/07/29 14:02:38 INFO best.BaseTest: Passed tests: [ResultMap map={[TestResult name=verificationUserAddressesTest status=SUCCESS method=VerificationAddressesTest.verificationUserAddressesTest(data_model.AccountData)[pri:0, instance:best.VerificationAddressesTest@3c0ecd4b] output={null}]=VerificationAddressesTest.verificationUserAddressesTest(data_model.AccountData)[pri:0, instance:best.VerificationAddressesTest@3c0ecd4b]}]
+19/07/29 14:02:38 INFO best.BaseTest: Failed tests:[ResultMap map={}]
+19/07/29 14:02:38 INFO best.BaseTest: End
+19/07/29 14:06:08 INFO best.BaseTest: Start
+19/07/29 14:06:19 INFO best.BaseTest: Test has started running:verificationUserAddressesTest at:1564394779857
+19/07/29 14:06:39 INFO best.BaseTest: Test was success
+19/07/29 14:06:39 INFO best.BaseTest: Passed tests: [ResultMap map={[TestResult name=verificationUserAddressesTest status=SUCCESS method=VerificationAddressesTest.verificationUserAddressesTest(data_model.AccountData)[pri:0, instance:best.VerificationAddressesTest@271053e1] output={null}]=VerificationAddressesTest.verificationUserAddressesTest(data_model.AccountData)[pri:0, instance:best.VerificationAddressesTest@271053e1]}]
+19/07/29 14:06:39 INFO best.BaseTest: Failed tests:[ResultMap map={}]
+19/07/29 14:06:39 INFO best.BaseTest: End
+19/07/29 14:19:27 INFO best.BaseTest: Start
+19/07/29 14:19:36 INFO best.BaseTest: Test has started running:verificationUserAddressesTest at:1564395576038
+19/07/29 14:19:56 INFO best.BaseTest: Test was success
+19/07/29 14:19:56 INFO best.BaseTest: Passed tests: [ResultMap map={[TestResult name=verificationUserAddressesTest status=SUCCESS method=VerificationAddressesTest.verificationUserAddressesTest(data_model.AccountData)[pri:0, instance:best.VerificationAddressesTest@5f341870] output={null}]=VerificationAddressesTest.verificationUserAddressesTest(data_model.AccountData)[pri:0, instance:best.VerificationAddressesTest@5f341870]}]
+19/07/29 14:19:56 INFO best.BaseTest: Failed tests:[ResultMap map={}]
+19/07/29 14:19:56 INFO best.BaseTest: End
+19/07/29 14:43:17 INFO best.BaseTest: Start
+19/07/29 14:43:29 INFO best.BaseTest: Test has started running:verificationUserAddressesTest at:1564397009510
+19/07/29 14:43:49 INFO best.BaseTest: Test was success
+19/07/29 14:43:49 INFO best.BaseTest: Passed tests: [ResultMap map={[TestResult name=verificationUserAddressesTest status=SUCCESS method=VerificationAddressesTest.verificationUserAddressesTest(data_model.AccountData)[pri:0, instance:best.VerificationAddressesTest@4f7d0008] output={null}]=VerificationAddressesTest.verificationUserAddressesTest(data_model.AccountData)[pri:0, instance:best.VerificationAddressesTest@4f7d0008]}]
+19/07/29 14:43:49 INFO best.BaseTest: Failed tests:[ResultMap map={}]
+19/07/29 14:43:49 INFO best.BaseTest: End

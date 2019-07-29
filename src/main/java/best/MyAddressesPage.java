@@ -10,12 +10,40 @@ import org.openqa.selenium.support.FindBy;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 public class MyAddressesPage extends AccountCreationPage{
 
     public MyAddressesPage(WebDriver driver) {
         super(driver);
+    }
+
+
+    @FindBy(css = "li span.address_name")
+    List<WebElement> addressesNames;
+
+    @FindBy(css = "li span.address_company")
+    List<WebElement> addressesCompanies;
+
+    @FindBy(css = "li span.address_address1")
+    List<WebElement> addressesAddresses1;
+
+    @FindBy(css = "li span.address_address2")
+    List<WebElement> addressesAddresses2;
+
+    @FindBy(css = "li span.address_phone")
+    List<WebElement> addressesPhone;
+
+    @FindBy(css = "li span.address_phone_mobile")
+    List<WebElement> addressesPhoneMobile;
+
+
+    public void find(List<WebElement> webElementsList) {
+        for (WebElement webElement : webElementsList) {
+            System.out.println(webElement.getText());
+        }
     }
 
     @FindBy(xpath = "//*[@id=\"center_column\"]/div[1]/div/div/ul/li[2]/span[1]")
