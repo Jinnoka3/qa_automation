@@ -2,6 +2,8 @@ package best;
 
 import data_model.AccountData;
 import lombok.Getter;
+import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,12 +11,37 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Getter
 public class AccountCreationPage extends BasePage {
 
     public AccountCreationPage(WebDriver driver) {
         super(driver);
     }
+
+    static final Logger LOGGER = Logger.getLogger(AccountCreationPage.class);
+
+    final static String MESSAGE_ERROR_FIRSTNAME = "firstname is too long. Maximum length: 32";
+    final static String MESSAGE_ERROR_LASTNAME = "lastname is too long. Maximum length: 32";
+    final static String MESSAGE_ERROR_EMAIL = "email is invalid.";
+    final static String MESSAGE_ERROR_PASSWORD = "passwd is invalid.";
+    final static String MESSAGE_ERROR_PASSWORD2 = "passwd is required.";
+
+    final static String MESSAGE_ERROR_ADDRESS1 = "address1 is too long. Maximum length: 128";
+    final static String MESSAGE_ERROR_ZIP = "The Zip/Postal code you've entered is invalid. It must follow this format: 00000";
+    final static String MESSAGE_ERROR_STATE = "This country requires you to choose a State.";
+    final static String MESSAGE_ERROR_COUNTRY = "Country is invalid";
+    final static String MESSAGE_ERROR_CITY = "city is too long. Maximum length: 64";
+    final static String MESSAGE_ERROR_MOBILE = "phone_mobile is invalid.";
+
+    private ArrayList<String> baseError = new ArrayList<>();
+
+    private ArrayList<WebElement> pageElements = new ArrayList<>();
+
+    @FindBy(css = "div.alert li")
+    List<WebElement> userError;
 
     @FindBy(xpath = "//input[@id='id_gender1']")
     private WebElement male;
@@ -55,7 +82,7 @@ public class AccountCreationPage extends BasePage {
     @FindBy(xpath = " //input[@id='lastname']")
     private WebElement lastNameInAdressForm;
 
-    @FindBy(xpath = "//*[@id=\"company\"]")
+    @FindBy(xpath = "//input[@id='company']")
     private WebElement company;
 
     @FindBy(xpath = "//*[@id=\"address1\"]")
@@ -67,13 +94,13 @@ public class AccountCreationPage extends BasePage {
     @FindBy(xpath = "//*[@id=\"city\"]")
     private WebElement city;
 
-    @FindBy(xpath = "//*[@id=\"id_state\"]")
+    @FindBy(xpath = "//select[@id='id_state']")
     private WebElement state;
 
-    @FindBy(xpath = "//*[@id=\"postcode\"]")
+    @FindBy(xpath = "//input[@id='postcode']")
     private WebElement zip;
 
-    @FindBy(xpath = "//*[@id=\"id_country\"]")
+    @FindBy(xpath = "//select[@id='id_country']")
     private WebElement country;
 
     @FindBy(xpath = "//*[@id=\"other\"]")
@@ -98,36 +125,63 @@ public class AccountCreationPage extends BasePage {
         return invalidData.getText();
     }
 
-    public String getMaleAttribute(){
-        return getAttribute(male);
+    public void fillPageElementsList(){
+        pageElements.add(male);
+        pageElements.add(female);
+        pageElements.add(customerFirstName);
+        pageElements.add(customerLastName);
+        pageElements.add(email);
+        pageElements.add(password);
+        pageElements.add(day);
+        pageElements.add(month);
+        pageElements.add(year);
+        pageElements.add(newsletter);
+        pageElements.add(specialOffers);
+        pageElements.add(firstNameInAdressForm);
+        pageElements.add(lastNameInAdressForm);
+        pageElements.add(company);
+        pageElements.add(adressLine1);
+        pageElements.add(adressLine2);
+        pageElements.add(city);
+        //pageElements.add(state);
+        //pageElements.add(zip);
+        pageElements.add(country);
+        pageElements.add(additionalInformation);
+        pageElements.add(homePhone);
+        pageElements.add(mobilePhone);
+        pageElements.add(anAdressAlias);
+        pageElements.add(register);
+
     }
 
-    public String getFemaleAttribute(){
-        return getAttribute(female);
+    public void fillErrorArrayList(){
+        baseError.add(MESSAGE_ERROR_FIRSTNAME);
+        baseError.add(MESSAGE_ERROR_LASTNAME);
+
+        baseError.add(MESSAGE_ERROR_EMAIL);
+        baseError.add(MESSAGE_ERROR_PASSWORD);
+        baseError.add(MESSAGE_ERROR_PASSWORD2);
+
+        baseError.add(MESSAGE_ERROR_ADDRESS1);
+        baseError.add(MESSAGE_ERROR_CITY);
+        baseError.add(MESSAGE_ERROR_STATE);
+        baseError.add(MESSAGE_ERROR_ZIP);
+        baseError.add(MESSAGE_ERROR_COUNTRY);
+        baseError.add(MESSAGE_ERROR_MOBILE);
     }
 
-    public String getFirstNameAttribute(){
-        return getAttribute(firstNameInAdressForm);
-    }
+    public boolean findError() {
 
-    public String getLastNameAttribute(){
-        return getAttribute(lastNameInAdressForm);
-    }
+        fillErrorArrayList();
 
-    public String getEmailAttribute(){
-        return getAttribute(email);
-    }
-
-    public String  getDayAttribute(){
-        return getAttribute(day);
-    }
-
-    public String  getMonthAttribute(){
-        return getAttribute(month);
-    }
-
-    public String getYearAttribute(){
-        return getAttribute(year);
+        for (WebElement webElement : userError) {
+            if (!baseError.contains(webElement.getText())) {
+                LOGGER.error("Error message: \"" + webElement.getText() + "\" isn't exist");
+                return false;
+            }
+        }
+        LOGGER.info("All error messages are exist");
+        return true;
     }
 
     public void selectGender(String gender){
@@ -149,22 +203,35 @@ public class AccountCreationPage extends BasePage {
         selectOption(newsletter, accountData.getUserInfo().isNewsletter());
         selectOption(specialOffers, accountData.getUserInfo().isSpecialOffers());
 
-        sendToForm(company, accountData.getUserAddress().getCompany());
-        sendToForm(adressLine1, accountData.getUserAddress().getAddress1());
-        sendToForm(adressLine2, accountData.getUserAddress().getAddress2());
+        sendToForm(company, accountData.getAddressMap().get(0).getCompany());
+        sendToForm(adressLine1, accountData.getAddressMap().get(0).getAddress1());
+        sendToForm(adressLine2, accountData.getAddressMap().get(0).getAddress2());
 
-        sendToForm(city, accountData.getUserAddress().getCity());
-        selectByText(state, accountData.getUserAddress().getState());
-        sendToForm(zip, accountData.getUserAddress().getZip());
-        selectByText(country, accountData.getUserAddress().getCountry());
+        sendToForm(city, accountData.getAddressMap().get(0).getCity());
+        selectByText(state, accountData.getAddressMap().get(0).getState());
+        sendToForm(zip, accountData.getAddressMap().get(0).getZip());
+        selectByText(country, accountData.getAddressMap().get(0).getCountry());
 
-        sendToForm(additionalInformation, accountData.getUserAddress().getInfo());
-        sendToForm(homePhone, accountData.getUserAddress().getPhone());
-        sendToForm(mobilePhone, accountData.getUserAddress().getMobile());
-        sendToForm(anAdressAlias, accountData.getUserAddress().getAlias());
+        sendToForm(additionalInformation, accountData.getAddressMap().get(0).getInfo());
+        sendToForm(homePhone, accountData.getAddressMap().get(0).getPhone());
+        sendToForm(mobilePhone, accountData.getAddressMap().get(0).getMobile());
+        sendToForm(anAdressAlias, accountData.getAddressMap().get(0).getAlias());
     }
 
     public void register(){
         click(register);
+    }
+
+    public boolean correctPageElementsAreShown(){
+        fillPageElementsList();
+
+        for (WebElement webElement : pageElements) {
+            if (!elementIsVisible(webElement)) {
+                LOGGER.error("Page element \"" + webElement + "\" isn't shown");
+                return false;
+            }
+        }
+        LOGGER.info("All page elements is shown");
+        return true;
     }
 }

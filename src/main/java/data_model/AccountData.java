@@ -8,10 +8,12 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.testng.annotations.DataProvider;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 @Data
-
 @AllArgsConstructor
 public class AccountData {
 
@@ -22,10 +24,9 @@ public class AccountData {
     private String password;
 
     private UserInfo userInfo;
-    private UserAddress userAddress;
+    private ArrayList<UserAddress> addressMap = new ArrayList<>();
 
     public AccountData() {
         this.email = "koko" + now + "@gmail.com";
-        //this.newEmail = "misha" + now + "@gmail.com";
     }
 }

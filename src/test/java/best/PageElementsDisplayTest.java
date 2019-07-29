@@ -6,11 +6,10 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class AccountCreationTest extends BaseTest{
+public class PageElementsDisplayTest extends BaseTest{
 
     private SignInPage signInPage;
     private AccountCreationPage accountCreationPage;
@@ -28,15 +27,13 @@ public class AccountCreationTest extends BaseTest{
     }
 
     @Test(dataProvider = "personalInformation")
-    public void personalInfoTest(AccountData accountData){
+    public void pageElementShown(AccountData accountData){
 
         signInPage.clickSignIn();
 
         signInPage.sendEmailForCreateAnAccount(accountData.getEmail());
         signInPage.clickCreateAnAccount();
 
-        accountCreationPage.accountCreate(accountData);
-        accountCreationPage.register();
-        Assert.assertEquals("My account - My Store", accountCreationPage.getTitle());
+        Assert.assertTrue(accountCreationPage.correctPageElementsAreShown());
     }
 }

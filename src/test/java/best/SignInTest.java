@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -16,7 +16,8 @@ public class SignInTest extends BaseTest {
 
     @BeforeClass
     protected void beforeSuite( ITestContext testContext ) {
-        dataPool = new DataPool("dataFile", testContext, AccountData.class);
+        dataPool = new DataPool<>("dataFile", testContext, AccountData.class);
+        signInPage = PageFactory.initElements(driver, SignInPage.class);
     }
 
     @DataProvider(name = "personalInformation")
@@ -27,13 +28,12 @@ public class SignInTest extends BaseTest {
     @Test(dataProvider = "personalInformation")
     public void signInTest(AccountData accountData) {
 
-        signInPage = PageFactory.initElements(driver, SignInPage.class);
-
         signInPage.clickSignIn();
         signInPage.sendEmailForCreateAnAccount(accountData.getEmail());
         signInPage.clickCreateAnAccount();
 
         Assert.assertEquals("Login - My Store", signInPage.getTitle());
+
     }
 }
 

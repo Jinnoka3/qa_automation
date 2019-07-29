@@ -1,19 +1,33 @@
 {
-  "password": "123455685685468",
+  "email": "lolologmailcom",
+  "password": "",
 
   "userInfo": {
-    "gender": "1",
-    "firstName": "Misha",
-    "lastName": "Misha",
-    "day": "7",
-    "month": "3",
-    "year": "2019",
-    "newsletter": false,
-    "specialOffers": false
+    "gender": "2",
+    "firstName": "yyyyyttttttttttttttttttttttttttttttttttttttttttttttttttttttuuuuuuuuuuuuuuuuu",
+    "lastName": "bjl",
+    "day": "9",
+    "month": "1",
+    "year": "1996",
+    "newsletter": true,
+    "specialOffers": true
   },
 
   "addressMap":
   [
+    {
+      "company": "Sperasoft",
+      "address1": "Bulvar",
+      "address2": "15",
+      "city": "Volgograd",
+      "zip": "00000",
+      "country": "United States",
+      "state": "-",
+      "info": "Hello",
+      "phone": "56856666",
+      "mobile": "dfhgshgs",
+      "alias": "New Address"
+    },
     {
       "company": "Magnit",
       "address1": "Bulvar",
@@ -25,20 +39,7 @@
       "info": "Hello",
       "phone": "56856",
       "mobile": "86856568",
-      "alias": "New Address Misha"
-    },
-    {
-      "company": "Sperasoft",
-      "address1": "Bulvar",
-      "address2": "15",
-      "city": "Volgograd",
-      "zip": "00000",
-      "country": "United States",
-      "state": "Alaska",
-      "info": "Hello",
-      "phone": "56856",
-      "mobile": "86856568",
-      "alias": "Newww Address Misha"
+      "alias": "Newww Address"
     },
     {
       "company": "Company",
@@ -51,7 +52,7 @@
       "info": "Hello",
       "phone": "56856",
       "mobile": "86856568",
-      "alias": "Newww Address Company Misha"
+      "alias": "Newww Address Company"
     }
   ]
 }

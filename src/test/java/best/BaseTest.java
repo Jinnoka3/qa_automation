@@ -17,16 +17,13 @@ import java.util.concurrent.TimeUnit;
 @Listeners(SimpleTestListener.class)
 public class BaseTest {
 
-    static final Logger LOGGER = Logger.getLogger(AccountCreationPage.class);
+    static Logger LOGGER = Logger.getLogger(BaseTest.class);
     WebDriver driver;
 
     DataPool dataPool;
 
     @BeforeClass
     public void beforeClassMethod(ITestContext testContext) throws IOException {
-        //dataPool = new DataPool("dataFile", testContext, AccountData.class);
-
-        //dataPool.fillNewDataPool("dataToReplaceFile", testContext, AccountData.class);
 
         System.setProperty("webdriver.chrome.driver", ConfigFileReader.readDriverPath());
         driver = new ChromeDriver();
@@ -37,9 +34,8 @@ public class BaseTest {
 
     }
 
-    @AfterSuite
+    @AfterClass
     public void afterClassMethod(){
-
         //driver.close();
     }
 }

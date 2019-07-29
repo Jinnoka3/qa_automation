@@ -27,14 +27,16 @@ public class LoginLogoutTest extends BaseTest{
 
         signInPage = PageFactory.initElements(driver, SignInPage.class);
 
+        signInPage.clickSignIn();
         signInPage.alreadyRegistered(email, password);
-        Assert.assertEquals("My account", signInPage.getTitle());
+        signInPage.clickSignInAlreadyRegistered();
+        Assert.assertEquals("My account - My Store", signInPage.getTitle());
     }
 
     @Test()
     public void logOutTest() {
 
         signInPage.clickSignOut();
-        Assert.assertEquals("Authentication", signInPage.getTitle());
+        Assert.assertEquals("Login - My Store", signInPage.getTitle());
     }
 }

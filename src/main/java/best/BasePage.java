@@ -71,4 +71,12 @@ public abstract class BasePage {
     public String getAttribute(WebElement webElement){
         return webElement.getAttribute("value");
     }
+
+    public String getError(WebElement webElement){
+        return webElement.getText();
+    }
+
+    public boolean elementIsVisible(WebElement webElement){
+        return webElement.isDisplayed();
+    }
 }

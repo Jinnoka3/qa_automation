@@ -2,10 +2,10 @@ package best;
 
 import best.data_pool.DataPool;
 import data_model.AccountData;
-import data_model.UserInfo;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.ITestContext;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -18,9 +18,13 @@ public class VerificationInfoTest extends BaseTest {
     private MyAccountPage myAccountPage;
     private MyPersonalInfoPage myPersonalInfoPage;
 
-    @BeforeSuite
-    protected void beforeSuite( ITestContext testContext ) {
-        dataPool = new DataPool("dataFile", testContext, AccountData.class);
+    @BeforeClass
+    protected void beforeSuite(ITestContext testContext) {
+        dataPool = new DataPool<>("dataFile", testContext, AccountData.class);
+        signInPage = PageFactory.initElements(driver, SignInPage.class);
+        accountCreationPage = PageFactory.initElements(driver, AccountCreationPage.class);
+        myAccountPage = PageFactory.initElements(driver, MyAccountPage.class);
+        myPersonalInfoPage = PageFactory.initElements(driver, MyPersonalInfoPage.class);
     }
 
     @DataProvider(name = "personalInformation")
@@ -31,11 +35,6 @@ public class VerificationInfoTest extends BaseTest {
     @Test(dataProvider = "personalInformation")
     public void verificationUserDataTest(AccountData accountData) {
 
-        signInPage = PageFactory.initElements(driver, SignInPage.class);
-        accountCreationPage = PageFactory.initElements(driver, AccountCreationPage.class);
-        myAccountPage = PageFactory.initElements(driver, MyAccountPage.class);
-        myPersonalInfoPage = PageFactory.initElements(driver, MyPersonalInfoPage.class);
-
         signInPage.clickSignIn();
         signInPage.sendEmailForCreateAnAccount(accountData.getEmail());
         signInPage.clickCreateAnAccount();
@@ -44,24 +43,11 @@ public class VerificationInfoTest extends BaseTest {
         accountCreationPage.register();
 
         myAccountPage.clickPersonalInfo();
-        Assert.assertTrue(myPersonalInfoPage.verificationAllUserInfo(accountData));
-
-        //System.out.println(myPersonalInfoPage.getUserInformation());
-
-        }
-    /*private void verifyPersonalInformation(AccountData accountData){
-        SoftAssert softAssert = new SoftAssert();
-
-        softAssert.assertEquals(
-                myPersonalInfoPage.getFirstNameAttribute(),
-                accountData.getUserInfo().getFirstName());
-        softAssert.assertEquals(
-                myPersonalInfoPage.getLastNameAttribute(),
-                accountData.getUserInfo().getLastName());
-        softAssert.assertEquals(
-                myPersonalInfoPage.getEmailAttribute(),
-                accountData.getEmail());
-        softAssert.assertAll();
-    }*/
+        myPersonalInfoPage.getAllAttribute();
+        /*SoftAssert asert = new SoftAssert();
+        asert.assertTrue(myPersonalInfoPage.verificationUserEmail(accountData));
+        Assert.assertTrue(myPersonalInfoPage.verificationAllFields(accountData));
+        asert.assertAll();*/
+    }
 }
 

@@ -1,15 +1,10 @@
 package best;
 
 import best.data_pool.DataPool;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import data_model.AccountData;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.annotations.*;
-
-import java.io.File;
-import java.io.IOException;
 
 public class EditInfoTest extends BaseTest {
 
@@ -18,10 +13,14 @@ public class EditInfoTest extends BaseTest {
     private MyAccountPage myAccountPage;
     private MyPersonalInfoPage myPersonalInfoPage;
 
-    @BeforeSuite
+    @BeforeClass
     protected void beforeSuite( ITestContext testContext ) {
-        dataPool = new DataPool("dataFile", testContext, AccountData.class);
+        dataPool = new DataPool<>("dataFile", testContext, AccountData.class);
         dataPool.fillNewDataPool("dataToReplaceFile", testContext, AccountData.class);
+        signInPage = PageFactory.initElements(driver, SignInPage.class);
+        accountCreationPage = PageFactory.initElements(driver, AccountCreationPage.class);
+        myAccountPage = PageFactory.initElements(driver, MyAccountPage.class);
+        myPersonalInfoPage = PageFactory.initElements(driver, MyPersonalInfoPage.class);
     }
 
     @DataProvider(name = "personalInformation")
@@ -31,11 +30,6 @@ public class EditInfoTest extends BaseTest {
 
     @Test(dataProvider = "personalInformation")
     public void editUserDataTest(AccountData accountData, AccountData accountData2) {
-
-        signInPage = PageFactory.initElements(driver, SignInPage.class);
-        accountCreationPage = PageFactory.initElements(driver, AccountCreationPage.class);
-        myAccountPage = PageFactory.initElements(driver, MyAccountPage.class);
-        myPersonalInfoPage = PageFactory.initElements(driver, MyPersonalInfoPage.class);
 
         signInPage.clickSignIn();
         signInPage.sendEmailForCreateAnAccount(accountData.getEmail());
@@ -47,17 +41,6 @@ public class EditInfoTest extends BaseTest {
         myAccountPage.clickPersonalInfo();
         myPersonalInfoPage.editUserInformation(accountData, accountData2);
         myPersonalInfoPage.saveUpdate();
-
-       /* signInPage = PageFactory.initElements(driver, SignInPage.class);
-        accountCreationPage = PageFactory.initElements(driver, AccountCreationPage.class);
-        myAccountPage = PageFactory.initElements(driver, MyAccountPage.class);
-        myPersonalInfoPage = PageFactory.initElements(driver, MyPersonalInfoPage.class);
-
-        signInPage.signIn(accountData);
-        accountCreationPage.accountCreate(accountData);
-
-        myAccountPage.clickPersonalInfo();
-
-        Assert.assertTrue(myPersonalInfoPage.editInfo(accountData), "No update");*/
+       // Assert.assertTrue(myPersonalInfoPage.editInfo(accountData), "No update");
     }
 }

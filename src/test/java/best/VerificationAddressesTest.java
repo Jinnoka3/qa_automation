@@ -1,16 +1,30 @@
 package best;
 
+import best.data_pool.DataPool;
 import data_model.AccountData;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.ITestContext;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 
 public class VerificationAddressesTest extends BaseTest{
     private SignInPage signInPage;
     private AccountCreationPage accountCreationPage;
     private MyAccountPage myAccountPage;
     private MyAddressesPage myAddressesPage;
+    private AddNewAddressPage addNewAddressPage;
+
+    @BeforeClass
+    protected void beforeSuite( ITestContext testContext ) {
+        dataPool = new DataPool<>("dataFile", testContext, AccountData.class);
+        signInPage = PageFactory.initElements(driver, SignInPage.class);
+        accountCreationPage = PageFactory.initElements(driver, AccountCreationPage.class);
+        myAccountPage = PageFactory.initElements(driver, MyAccountPage.class);
+        myAddressesPage = PageFactory.initElements(driver, MyAddressesPage.class);
+        addNewAddressPage = PageFactory.initElements(driver, AddNewAddressPage.class);
+    }
 
     @DataProvider(name = "personalInformation")
     public Object[][] dataProviderNewUser() {
@@ -20,27 +34,18 @@ public class VerificationAddressesTest extends BaseTest{
     @Test(dataProvider = "personalInformation")
     public void verificationUserAddressesTest(AccountData accountData) {
 
-       /* signInPage = PageFactory.initElements(driver, SignInPage.class);
-        accountCreationPage = PageFactory.initElements(driver, AccountCreationPage.class);
-        myAccountPage = PageFactory.initElements(driver, MyAccountPage.class);
-        myAddressesPage = PageFactory.initElements(driver, MyAddressesPage.class);
+        signInPage.clickSignIn();
+        signInPage.sendEmailForCreateAnAccount(accountData.getEmail());
+        signInPage.clickCreateAnAccount();
 
-        signInPage.signIn(accountData);
         accountCreationPage.accountCreate(accountData);
-
+        accountCreationPage.register();
         myAccountPage.clickMyAddresses();
 
-        SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(myAddressesPage.verificationFirstName(accountData));
-        softAssert.assertTrue(myAddressesPage.verificationLastName(accountData));
-        softAssert.assertTrue(myAddressesPage.verificationCompany(accountData));
-        softAssert.assertTrue(myAddressesPage.verificationFirstAddress(accountData));
-        softAssert.assertTrue(myAddressesPage.verificationSecondAddress(accountData));
-        softAssert.assertTrue(myAddressesPage.verificationCity(accountData));
-        softAssert.assertTrue(myAddressesPage.verificationZip(accountData));
-        softAssert.assertTrue(myAddressesPage.verificationCountry(accountData));
-        softAssert.assertTrue(myAddressesPage.verificationPhone(accountData));
-        softAssert.assertTrue(myAddressesPage.verificationMobile(accountData));
-        softAssert.assertAll();*/
+        for (int i = 1; i < accountData.getAddressMap().size(); i++) {
+            myAddressesPage.clickAddNewAddress();
+            addNewAddressPage.addNewAddress(i, accountData);
+            addNewAddressPage.saveNewAddress();
+        }
     }
 }

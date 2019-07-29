@@ -14,6 +14,10 @@ import java.io.IOException;
 @Getter
 public class MyAddressesPage extends AccountCreationPage{
 
+    public MyAddressesPage(WebDriver driver) {
+        super(driver);
+    }
+
     @FindBy(xpath = "//*[@id=\"center_column\"]/div[1]/div/div/ul/li[2]/span[1]")
     private WebElement addressFirstName;
 
@@ -50,12 +54,15 @@ public class MyAddressesPage extends AccountCreationPage{
     @FindBy(xpath = "//span[contains(text(),'Update')]")
     private WebElement update;
 
-    @FindBy(xpath = "//span[contains(text(),'Save')]")
-    private WebElement save;
+    @FindBy(xpath = "//span[contains(text(),'Add a new address')]")
+    private  WebElement addNewAddress;
 
-    public MyAddressesPage(WebDriver driver) {
-        super(driver);
+    public void clickAddNewAddress(){
+        click(addNewAddress);
     }
+
+
+
 
     /*public boolean verificationFirstName(AccountData accountData){
         return addressFirstName.getText().contentEquals(accountData.getFirstName());

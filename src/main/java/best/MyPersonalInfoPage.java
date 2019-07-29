@@ -13,6 +13,7 @@ import org.openqa.selenium.support.FindBy;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 
 @Getter
 public class MyPersonalInfoPage extends AccountCreationPage{
@@ -38,76 +39,77 @@ public class MyPersonalInfoPage extends AccountCreationPage{
     @FindBy(xpath = "//p[@class='alert alert-success']")
     private WebElement messageSuccessUpdate;
 
+    private ArrayList<String> elementAttributes;
 
-    public boolean verificationUserGender(AccountData accountData){
+    public ArrayList<String> getAllAttribute(){
+        for (WebElement webElement : getPageElements()) {
+            elementAttributes = new ArrayList<>();
+            elementAttributes.add(getAttribute(webElement));
+        }
+        System.out.println(elementAttributes);
+        return elementAttributes;
+    }
+
+    public String getMaleAttribute(){
+        return getAttribute(getMale());
+    }
+
+    public String getFemaleAttribute(){
+        return getAttribute(getFemale());
+    }
+
+    public String getFirstNameAttribute(){
+        return getAttribute(getFirstNameInAdressForm());
+    }
+
+    public String getLastNameAttribute(){
+        return getAttribute(getLastNameInAdressForm());
+    }
+
+    public String getEmailAttribute(){
+        return getAttribute(getEmail());
+    }
+
+    public String  getDayAttribute(){
+        return getAttribute(getDay());
+    }
+
+    public String  getMonthAttribute(){
+        return getAttribute(getMonth());
+    }
+
+    public String getYearAttribute(){
+        return getAttribute(getYear());
+    }
+
+    public UserInfo getUserInfoFromPage(){
+
+        return new UserInfo(
+                verificationUserGender(),
+                getFirstNameAttribute(),
+                getLastNameAttribute(),
+                getDayAttribute(),
+                getMonthAttribute(),
+                getYearAttribute(),
+                getNewsletter().isSelected(),
+                getSpecialOffers().isSelected()
+        );
+    }
+
+    public boolean verificationAllFields(AccountData accountData){
+        if(!accountData.getUserInfo().equals(getUserInfoFromPage())){
+            LOGGER.error("Page element \"" + "Something isn't equals" + "\" isn't shown");
+            return false;
+        }
+       return true;
+    }
+
+    public String verificationUserGender(){
         if(getMale().isSelected()){
-            if(getMaleAttribute().contentEquals(accountData.getUserInfo().getGender())){
-                LOGGER.info("Gender verification is successful");
-                return true;
-            }
-            else{
-                LOGGER.error("Gender verification isn't successful");
-                return false;
-            }
+            return getMaleAttribute();
         }
-        else if(getFemale().isSelected()){
-            if(getFemaleAttribute().contentEquals(accountData.getUserInfo().getGender())){
-                LOGGER.info("Gender verification is successful");
-                return true;
-            }
-            else{
-                LOGGER.error("Gender verification isn't successful");
-                return false;
-            }
-        }
-        else {
-            LOGGER.error("Gender verification isn't successful");
-            return false;
-        }
-    }
-
-    public boolean verificationNewsletterOption(AccountData accountData){
-        if(getNewsletter().isSelected() == accountData.getUserInfo().isNewsletter()){
-                LOGGER.info("Newsletter option verification is successful");
-                return true;
-            }
-            else{
-                LOGGER.error("Newsletter option verification isn't successful");
-                return false;
-            }
-    }
-
-    public boolean verificationSpecialOffersOption(AccountData accountData){
-        if(getSpecialOffers().isSelected() == accountData.getUserInfo().isSpecialOffers()){
-            LOGGER.info("Special Offers Option verification is successful");
-            return true;
-        }
-        else{
-            LOGGER.error("Special Offers Option verification isn't successful");
-            return false;
-        }
-    }
-
-    public boolean verificationUserFirstName(AccountData accountData){
-        if(getFirstNameAttribute().contentEquals(accountData.getUserInfo().getFirstName())){
-            LOGGER.info("First name verification is successful");
-            return true;
-        }
-        else {
-            LOGGER.error("First name verification isn't successful");
-            return false;
-        }
-    }
-
-    public boolean verificationUserLastName(AccountData accountData){
-        if(getLastNameAttribute().contentEquals(accountData.getUserInfo().getLastName())){
-            LOGGER.info("Last name verification is successful");
-            return true;
-        }
-        else {
-            LOGGER.error("Last name verification isn't successful");
-            return false;
-        }
+        else
+            return getFemaleAttribute();
     }
 
     public boolean verificationUserEmail(AccountData accountData){
@@ -121,56 +123,8 @@ public class MyPersonalInfoPage extends AccountCreationPage{
         }
     }
 
-    public boolean verificationUserDayOfBirth(AccountData accountData){
-        if(getDayAttribute().contentEquals(accountData.getUserInfo().getDay())){
-            LOGGER.info("Day verification is successful");
-            return true;
-        }
-        else {
-            LOGGER.error("Day verification isn't successful");
-            return false;
-        }
-    }
-
-    public boolean verificationUserMonthOfBirth(AccountData accountData){
-        if(getMonthAttribute().contentEquals(accountData.getUserInfo().getMonth())){
-            LOGGER.info("Month verification is successful");
-            return true;
-        }
-        else {
-            LOGGER.error("Month verification isn't successful");
-            return false;
-        }
-    }
-
-    public boolean verificationUserYearOfBirth(AccountData accountData){
-        if(getYearAttribute().contentEquals(accountData.getUserInfo().getYear())){
-            LOGGER.info("Year verification is successful");
-            return true;
-        }
-        else {
-            LOGGER.error("Year verification isn't successful");
-            return false;
-        }
-    }
-
-    public boolean verificationAllUserInfo(AccountData accountData){
-        if(verificationUserFirstName(accountData) && verificationUserLastName(accountData)
-        && verificationUserEmail(accountData) && verificationUserDayOfBirth(accountData)
-        && verificationUserMonthOfBirth(accountData) && verificationUserYearOfBirth(accountData)
-        && verificationUserGender(accountData) && verificationNewsletterOption(accountData)
-        && verificationSpecialOffersOption(accountData)){
-            return true;
-        }
-        else {
-            return false;
-        }
-    }
-
     public void editUserInformation(AccountData oldData, AccountData accountData) {
 
-       /* ObjectMapper objectMapper = new ObjectMapper();
-        AccountData account = objectMapper.readValue( new File(ConfigFileReader.readJson()), AccountData.class );*/
        selectGender(accountData.getUserInfo().getGender());
        sendToForm(getFirstNameInAdressForm(), accountData.getUserInfo().getFirstName());
        sendToForm(getLastNameInAdressForm(), accountData.getUserInfo().getLastName());

@@ -6,7 +6,6 @@
     <parameter name="password" value="123456"/>
 
     <test name="Edit" verbose="2">
-        <parameter name="dataFile" value="src/test/data/data.json"/>
         <classes>
 
             <class name="best.LoginLogoutTest">

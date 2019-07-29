@@ -37,6 +37,7 @@ public class DataPool<T> {
         try {
             T data = objectMapper.readValue( new File( filePath ), dataClass );
             accountData.add( data );
+            System.out.println();
         } catch (IOException e) {
             e.printStackTrace();
         }
