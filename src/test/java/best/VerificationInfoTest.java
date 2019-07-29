@@ -43,11 +43,11 @@ public class VerificationInfoTest extends BaseTest {
         accountCreationPage.register();
 
         myAccountPage.clickPersonalInfo();
-        myPersonalInfoPage.getAllAttribute();
-        /*SoftAssert asert = new SoftAssert();
+
+        SoftAssert asert = new SoftAssert();
         asert.assertTrue(myPersonalInfoPage.verificationUserEmail(accountData));
         Assert.assertTrue(myPersonalInfoPage.verificationAllFields(accountData));
-        asert.assertAll();*/
+        asert.assertAll();
     }
 }
 

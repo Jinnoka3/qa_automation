@@ -3,6 +3,7 @@ package best;
 import best.data_pool.DataPool;
 import data_model.AccountData;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.annotations.*;
 
@@ -41,6 +42,7 @@ public class EditInfoTest extends BaseTest {
         myAccountPage.clickPersonalInfo();
         myPersonalInfoPage.editUserInformation(accountData, accountData2);
         myPersonalInfoPage.saveUpdate();
-       // Assert.assertTrue(myPersonalInfoPage.editInfo(accountData), "No update");
+
+        Assert.assertEquals("Your personal information has been successfully updated.", myPersonalInfoPage.getMessageSuccessUpdate());
     }
 }

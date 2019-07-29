@@ -39,58 +39,19 @@ public class MyPersonalInfoPage extends AccountCreationPage{
     @FindBy(xpath = "//p[@class='alert alert-success']")
     private WebElement messageSuccessUpdate;
 
-    private ArrayList<String> elementAttributes;
-
-    public ArrayList<String> getAllAttribute(){
-        for (WebElement webElement : getPageElements()) {
-            elementAttributes = new ArrayList<>();
-            elementAttributes.add(getAttribute(webElement));
-        }
-        System.out.println(elementAttributes);
-        return elementAttributes;
-    }
-
-    public String getMaleAttribute(){
-        return getAttribute(getMale());
-    }
-
-    public String getFemaleAttribute(){
-        return getAttribute(getFemale());
-    }
-
-    public String getFirstNameAttribute(){
-        return getAttribute(getFirstNameInAdressForm());
-    }
-
-    public String getLastNameAttribute(){
-        return getAttribute(getLastNameInAdressForm());
-    }
-
-    public String getEmailAttribute(){
-        return getAttribute(getEmail());
-    }
-
-    public String  getDayAttribute(){
-        return getAttribute(getDay());
-    }
-
-    public String  getMonthAttribute(){
-        return getAttribute(getMonth());
-    }
-
-    public String getYearAttribute(){
-        return getAttribute(getYear());
+    public String getMessageSuccessUpdate(){
+        return messageSuccessUpdate.getText();
     }
 
     public UserInfo getUserInfoFromPage(){
 
         return new UserInfo(
                 verificationUserGender(),
-                getFirstNameAttribute(),
-                getLastNameAttribute(),
-                getDayAttribute(),
-                getMonthAttribute(),
-                getYearAttribute(),
+                getAttribute(getFirstNameInAdressForm()),
+                getAttribute(getLastNameInAdressForm()),
+                getAttribute(getDay()),
+                getAttribute(getMonth()),
+                getAttribute(getYear()),
                 getNewsletter().isSelected(),
                 getSpecialOffers().isSelected()
         );
@@ -106,14 +67,14 @@ public class MyPersonalInfoPage extends AccountCreationPage{
 
     public String verificationUserGender(){
         if(getMale().isSelected()){
-            return getMaleAttribute();
+            return getAttribute(getMale());
         }
         else
-            return getFemaleAttribute();
+            return getAttribute(getFemale());
     }
 
     public boolean verificationUserEmail(AccountData accountData){
-        if(getEmailAttribute().contentEquals(accountData.getEmail())){
+        if(getAttribute(getEmail()).contentEquals(accountData.getEmail())){
             LOGGER.info("Email verification is successful");
             return true;
         }

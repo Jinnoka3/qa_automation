@@ -36,12 +36,12 @@ public class AccountCreationPage extends BasePage {
     final static String MESSAGE_ERROR_CITY = "city is too long. Maximum length: 64";
     final static String MESSAGE_ERROR_MOBILE = "phone_mobile is invalid.";
 
-    private ArrayList<String> baseError = new ArrayList<>();
+    private ArrayList<String> baseErrors = new ArrayList<>();
 
     private ArrayList<WebElement> pageElements = new ArrayList<>();
 
     @FindBy(css = "div.alert li")
-    List<WebElement> userError;
+    List<WebElement> userErrors;
 
     @FindBy(xpath = "//input[@id='id_gender1']")
     private WebElement male;
@@ -49,7 +49,7 @@ public class AccountCreationPage extends BasePage {
     @FindBy(xpath = "//input[@id='id_gender2']")
     private WebElement female;
 
-    @FindBy(xpath = "//*[@id=\"customer_firstname\"]")
+    @FindBy(xpath = "//input[@id='customer_firstname']")
     private WebElement customerFirstName;
 
     @FindBy(xpath = "//*[@id=\"customer_lastname\"]")
@@ -155,27 +155,27 @@ public class AccountCreationPage extends BasePage {
     }
 
     public void fillErrorArrayList(){
-        baseError.add(MESSAGE_ERROR_FIRSTNAME);
-        baseError.add(MESSAGE_ERROR_LASTNAME);
+        baseErrors.add(MESSAGE_ERROR_FIRSTNAME);
+        baseErrors.add(MESSAGE_ERROR_LASTNAME);
 
-        baseError.add(MESSAGE_ERROR_EMAIL);
-        baseError.add(MESSAGE_ERROR_PASSWORD);
-        baseError.add(MESSAGE_ERROR_PASSWORD2);
+        baseErrors.add(MESSAGE_ERROR_EMAIL);
+        baseErrors.add(MESSAGE_ERROR_PASSWORD);
+        baseErrors.add(MESSAGE_ERROR_PASSWORD2);
 
-        baseError.add(MESSAGE_ERROR_ADDRESS1);
-        baseError.add(MESSAGE_ERROR_CITY);
-        baseError.add(MESSAGE_ERROR_STATE);
-        baseError.add(MESSAGE_ERROR_ZIP);
-        baseError.add(MESSAGE_ERROR_COUNTRY);
-        baseError.add(MESSAGE_ERROR_MOBILE);
+        baseErrors.add(MESSAGE_ERROR_ADDRESS1);
+        baseErrors.add(MESSAGE_ERROR_CITY);
+        baseErrors.add(MESSAGE_ERROR_STATE);
+        baseErrors.add(MESSAGE_ERROR_ZIP);
+        baseErrors.add(MESSAGE_ERROR_COUNTRY);
+        baseErrors.add(MESSAGE_ERROR_MOBILE);
     }
 
     public boolean findError() {
 
         fillErrorArrayList();
 
-        for (WebElement webElement : userError) {
-            if (!baseError.contains(webElement.getText())) {
+        for (WebElement webElement : userErrors) {
+            if (!baseErrors.contains(webElement.getText())) {
                 LOGGER.error("Error message: \"" + webElement.getText() + "\" isn't exist");
                 return false;
             }
