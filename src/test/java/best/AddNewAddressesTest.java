@@ -3,28 +3,26 @@ package best;
 import best.data_pool.DataPool;
 import data_model.AccountData;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 
-public class VerificationInfoTest extends BaseTest {
-
+public class AddNewAddressesTest extends BaseTest{
     private SignInPage signInPage;
     private AccountCreationPage accountCreationPage;
     private MyAccountPage myAccountPage;
-    private MyPersonalInfoPage myPersonalInfoPage;
+    private MyAddressesPage myAddressesPage;
+    private AddNewAddressPage addNewAddressPage;
 
     @BeforeClass
-    protected void beforeSuite(ITestContext testContext) {
+    protected void beforeSuite( ITestContext testContext ) {
         dataPool = new DataPool<>("dataFile", testContext, AccountData.class);
         signInPage = PageFactory.initElements(driver, SignInPage.class);
         accountCreationPage = PageFactory.initElements(driver, AccountCreationPage.class);
         myAccountPage = PageFactory.initElements(driver, MyAccountPage.class);
-        myPersonalInfoPage = PageFactory.initElements(driver, MyPersonalInfoPage.class);
+        myAddressesPage = PageFactory.initElements(driver, MyAddressesPage.class);
+        addNewAddressPage = PageFactory.initElements(driver, AddNewAddressPage.class);
     }
 
     @DataProvider(name = "personalInformation")
@@ -33,7 +31,7 @@ public class VerificationInfoTest extends BaseTest {
     }
 
     @Test(dataProvider = "personalInformation")
-    public void verificationUserDataTest(AccountData accountData) {
+    public void addNewAddressesTest(AccountData accountData) {
 
         signInPage.clickSignIn();
         signInPage.sendEmailForCreateAnAccount(accountData.getEmail());
@@ -41,13 +39,14 @@ public class VerificationInfoTest extends BaseTest {
 
         accountCreationPage.accountCreate(accountData);
         accountCreationPage.register();
+        myAccountPage.clickMyAddresses();
 
-        myAccountPage.clickPersonalInfo();
+        for (int i = 1; i < accountData.getAddressMap().size(); i++) {
+            myAddressesPage.clickAddNewAddress();
+            addNewAddressPage.addNewAddress(i, accountData);
+            addNewAddressPage.saveNewAddress();
+        }
 
-        SoftAssert asert = new SoftAssert();
-        asert.assertTrue(myPersonalInfoPage.verificationEmail(accountData));
-        Assert.assertTrue(myPersonalInfoPage.verificationAllFields(accountData));
-        asert.assertAll();
+        //myAddressesPage.findAddresses();
     }
 }
-

@@ -18,8 +18,6 @@ import java.util.ArrayList;
 @Getter
 public class MyPersonalInfoPage extends AccountCreationPage{
 
-    static final Logger LOGGER = Logger.getLogger(MyPersonalInfoPage.class);
-
     public MyPersonalInfoPage(WebDriver driver) {
         super(driver);
     }
@@ -57,20 +55,17 @@ public class MyPersonalInfoPage extends AccountCreationPage{
         );
     }
 
-    /*public boolean verificationAllFields(AccountData accountData){
-        if(!accountData.getUserInfo().equals(getUserInfoFromPage())){
-            LOGGER.error("Page element \"" + "Something isn't equals" + "\" isn't shown");
-            return false;
-        }
-       return true;
-    }*/
+    public AccountData getUserEmailFromPage(){
+
+        return AccountData.builder(getAttribute(getEmail())).password("").userInfo(getUserInfoFromPage()).addressMap(new ArrayList<UserAddress>()).build();
+    }
 
     public boolean verificationAllFields(AccountData accountData){
-        if(!accountData.getUserInfo().equals(getUserInfoFromPage())){
-            LOGGER.error("Page element \"" + "Something isn't equals" + "\" isn't shown");
-            return false;
-        }
-        return true;
+        return accountData.getUserInfo().compareTo(getUserInfoFromPage()) == 0;
+    }
+
+    public boolean verificationEmail(AccountData accountData){
+        return accountData.compareTo(getUserEmailFromPage()) == 0;
     }
 
     public String verificationUserGender(){
@@ -79,17 +74,6 @@ public class MyPersonalInfoPage extends AccountCreationPage{
         }
         else
             return getAttribute(getFemale());
-    }
-
-    public boolean verificationUserEmail(AccountData accountData){
-        if(getAttribute(getEmail()).contentEquals(accountData.getEmail())){
-            LOGGER.info("Email verification is successful");
-            return true;
-        }
-        else {
-            LOGGER.error("Email verification isn't successful");
-            return false;
-        }
     }
 
     public void editUserInformation(AccountData oldData, AccountData accountData) {

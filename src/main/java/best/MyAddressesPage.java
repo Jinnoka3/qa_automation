@@ -76,6 +76,13 @@ public class MyAddressesPage extends AccountCreationPage{
 
 
 
+
+
+
+
+
+
+
     /*public boolean verificationFirstName(AccountData accountData){
         return addressFirstName.getText().contentEquals(accountData.getFirstName());
     }
