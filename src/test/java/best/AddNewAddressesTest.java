@@ -9,10 +9,11 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class AddNewAddressesTest extends BaseTest{
+
     private SignInPage signInPage;
     private AccountCreationPage accountCreationPage;
     private MyAccountPage myAccountPage;
-    private MyAddressesPage myAddressesPage;
+
     private AddNewAddressPage addNewAddressPage;
 
     @BeforeClass
@@ -21,7 +22,7 @@ public class AddNewAddressesTest extends BaseTest{
         signInPage = PageFactory.initElements(driver, SignInPage.class);
         accountCreationPage = PageFactory.initElements(driver, AccountCreationPage.class);
         myAccountPage = PageFactory.initElements(driver, MyAccountPage.class);
-        myAddressesPage = PageFactory.initElements(driver, MyAddressesPage.class);
+
         addNewAddressPage = PageFactory.initElements(driver, AddNewAddressPage.class);
     }
 
@@ -41,12 +42,12 @@ public class AddNewAddressesTest extends BaseTest{
         accountCreationPage.register();
         myAccountPage.clickMyAddresses();
 
-        for (int i = 1; i < accountData.getAddressMap().size(); i++) {
-            myAddressesPage.clickAddNewAddress();
-            addNewAddressPage.addNewAddress(i, accountData);
-            addNewAddressPage.saveNewAddress();
-        }
+        //for (int i = 0; i < accountData.getAddressMap().size(); i++) {
 
-        //myAddressesPage.findAddresses();
+            addNewAddressPage.addNewAddress(accountData);
+            //addNewAddressPage.saveNewAddress();
+       // }
+
+        //myAddressesPage.print();
     }
 }

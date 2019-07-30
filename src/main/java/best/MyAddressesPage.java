@@ -7,6 +7,7 @@ import lombok.Getter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import java.io.File;
 import java.io.IOException;
@@ -20,17 +21,19 @@ public class MyAddressesPage extends AccountCreationPage{
         super(driver);
     }
 
-
     @FindBy(css = "a[title = \"Update\"]")
     List<WebElement> updateButtons;
 
-    public void find(List<WebElement> webElementsList) {
-        for (WebElement webElement : webElementsList) {
-            System.out.println(webElement.getText());
-        }
+    @FindBy(xpath = "//span[contains(text(),'Add a new address')]")
+    private  WebElement addNewAddress;
+
+    public void clickAddNewAddress(){
+        click(addNewAddress);
     }
 
-    @FindBy(xpath = "//*[@id=\"center_column\"]/div[1]/div/div/ul/li[2]/span[1]")
+    }
+
+    /*@FindBy(xpath = "//*[@id=\"center_column\"]/div[1]/div/div/ul/li[2]/span[1]")
     private WebElement addressFirstName;
 
     @FindBy(xpath = "//*[@id=\"center_column\"]/div[1]/div/div/ul/li[2]/span[2]")
@@ -67,11 +70,9 @@ public class MyAddressesPage extends AccountCreationPage{
     private WebElement update;
 
     @FindBy(xpath = "//span[contains(text(),'Add a new address')]")
-    private  WebElement addNewAddress;
+    private  WebElement addNewAddress;*/
 
-    public void clickAddNewAddress(){
-        click(addNewAddress);
-    }
+
 
 
 
@@ -141,4 +142,4 @@ public class MyAddressesPage extends AccountCreationPage{
 
         clickSave();
     }*/
-}
+

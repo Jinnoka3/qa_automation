@@ -42,11 +42,11 @@ public class VerificationAddressesTest extends BaseTest{
         accountCreationPage.register();
         myAccountPage.clickMyAddresses();
 
-        for (int i = 1; i < accountData.getAddressMap().size(); i++) {
+        /*for (int i = 1; i < accountData.getAddressMap().size(); i++) {
             myAddressesPage.clickAddNewAddress();
-            addNewAddressPage.addNewAddress(i, accountData);
+            addNewAddressPage.addNewAddress(accountData);
             addNewAddressPage.saveNewAddress();
-        }
+        }*/
 
         //myAddressesPage.findAddresses();
     }
