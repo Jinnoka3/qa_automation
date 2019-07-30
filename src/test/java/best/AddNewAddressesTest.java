@@ -42,12 +42,6 @@ public class AddNewAddressesTest extends BaseTest{
         accountCreationPage.register();
         myAccountPage.clickMyAddresses();
 
-        //for (int i = 0; i < accountData.getAddressMap().size(); i++) {
-
-            addNewAddressPage.addNewAddress(accountData);
-            //addNewAddressPage.saveNewAddress();
-       // }
-
-        //myAddressesPage.print();
+        addNewAddressPage.addNewAddress(accountData);
     }
 }

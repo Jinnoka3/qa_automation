@@ -12,7 +12,6 @@ import java.util.List;
 
 public class AddNewAddressPage extends  AccountCreationPage {
     WebDriver driver;
-    private MyAddressesPage myAddressesPage;
 
     public AddNewAddressPage(WebDriver driver) {
         super(driver);
@@ -30,6 +29,10 @@ public class AddNewAddressPage extends  AccountCreationPage {
     @FindBy(css = "a[title = \"Update\"]")
     List<WebElement> updateButtons;
 
+    public void clickAddNewAddress(){
+        click(addNewAddress);
+    }
+
     private boolean aliasIsOnThePage(String alias, List<WebElement> webElements){
         for(WebElement web : webElements){
             //System.out.println(web.getText());
@@ -42,9 +45,7 @@ public class AddNewAddressPage extends  AccountCreationPage {
         return false;
     }
 
-    public void clickAddNewAddress(){
-        click(addNewAddress);
-    }
+
 
     private ArrayList<String> aliseArray = new ArrayList<>();
 
@@ -55,14 +56,18 @@ public class AddNewAddressPage extends  AccountCreationPage {
     }
     public void addNewAddress(AccountData accountData) {
 
-        //addNewAddressPage = PageFactory.initElements(driver, AddNewAddressPage.class);
-
+        //MyAddressesPage myAddressesPage = PageFactory.initElements(driver, MyAddressesPage.class);
+        //AddNewAddressPage addNewAddressPage = PageFactory.initElements(driver, AddNewAddressPage.class);
         addAlisesArray(accountData);
         for (int i = 0; i < aliseArray.size(); i++) {
+
             aliasIsOnThePage(accountData.getAddressMap().get(i).getAlias(), aliasTitles);
 
             if (!aliasIsOnThePage(accountData.getAddressMap().get(i).getAlias(), aliasTitles)) {
 
+                //addNewAddressPage = PageFactory.initElements(driver, AddNewAddressPage.class);
+
+                //myAddressesPage.clickAddNewAddress();
                 clickAddNewAddress();
                 sendToForm(getFirstNameInAdressForm(), accountData.getUserInfo().getFirstName());
                 sendToForm(getLastNameInAdressForm(), accountData.getUserInfo().getLastName());
