@@ -7,17 +7,17 @@
         <parameter name="dataFile" value="src/test/data/data.json"/>
         <classes>
 
-            <class name="best.VerificationInfoTest">
+           <!-- <class name="best.VerificationInfoTest">
                 <methods>
                     <include name="verificationUserDataTest" />
                 </methods>
-            </class>
+            </class>-->
 
-            <!--<class name="best.VerificationAddressesTest">
+            <class name="best.VerificationAddressesTest">
                 <methods>
                     <include name="verificationUserAddressesTest" />
                 </methods>
-            </class>-->
+            </class>
 
         </classes>
     </test>

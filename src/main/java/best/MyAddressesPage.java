@@ -20,6 +20,10 @@ public class MyAddressesPage extends AccountCreationPage {
     public MyAddressesPage(WebDriver driver) {
         super(driver);
     }
+
+    @FindBy(css = "div.col-sm-6")
+    private List<WebElement> addresses;
+
     @FindBy(xpath = "//span[contains(text(),'Add a new address')]")
     private  WebElement addNewAddress;
 
@@ -28,5 +32,9 @@ public class MyAddressesPage extends AccountCreationPage {
 
     public void clickAddNewAddress(){
         click(addNewAddress);
+    }
+
+    public void print(AccountData accountData){
+        System.out.println(accountData.toString());
     }
 }

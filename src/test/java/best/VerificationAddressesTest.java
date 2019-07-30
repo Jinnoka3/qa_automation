@@ -44,6 +44,7 @@ public class VerificationAddressesTest extends BaseTest{
 
 
         addNewAddressPage.addNewAddress(accountData);
+        myAddressesPage.print(accountData);
 
 
         //addNewAddressPage.addNewAddress(accountData);

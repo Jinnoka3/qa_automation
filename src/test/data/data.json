@@ -15,6 +15,8 @@
   "addressMap":
   [
     {
+      "addressFirstName": "Daria",
+      "addressLastName": "Kalinina",
       "company": "Magnit",
       "address1": "Bulvar",
       "address2": "15",
@@ -28,6 +30,8 @@
       "alias": "First"
     },
     {
+      "addressFirstName": "Daria",
+      "addressLastName": "Kalinina",
       "company": "Sperasoft",
       "address1": "Bulvar",
       "address2": "15",
@@ -41,6 +45,8 @@
       "alias": "Second"
     },
     {
+      "addressFirstName": "Daria",
+      "addressLastName": "Kalinina",
       "company": "Company",
       "address1": "Bulvar",
       "address2": "15",
@@ -54,6 +60,8 @@
       "alias": "Third"
     },
     {
+      "addressFirstName": "Daria",
+      "addressLastName": "Kalinina",
       "company": "Company",
       "address1": "Bulvar",
       "address2": "15",

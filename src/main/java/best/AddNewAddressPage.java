@@ -36,16 +36,14 @@ public class AddNewAddressPage extends  AccountCreationPage {
     private boolean aliasIsOnThePage(String alias, List<WebElement> webElements){
         for(WebElement web : webElements){
             //System.out.println(web.getText());
-            System.out.println(alias);
-            System.out.println(web.getText());
+            //System.out.println(alias);
+            //System.out.println(web.getText());
             if(alias.toUpperCase().compareTo(web.getText()) == 0){
                 return true;
             }
         }
         return false;
     }
-
-
 
     private ArrayList<String> aliseArray = new ArrayList<>();
 
@@ -69,8 +67,8 @@ public class AddNewAddressPage extends  AccountCreationPage {
 
                 //myAddressesPage.clickAddNewAddress();
                 clickAddNewAddress();
-                sendToForm(getFirstNameInAdressForm(), accountData.getUserInfo().getFirstName());
-                sendToForm(getLastNameInAdressForm(), accountData.getUserInfo().getLastName());
+                sendToForm(getFirstNameInAdressForm(), accountData.getAddressMap().get(i).getAddressFirstName());
+                sendToForm(getLastNameInAdressForm(), accountData.getAddressMap().get(i).getAddressLastName());
                 sendToForm(getCompany(), accountData.getAddressMap().get(i).getCompany());
                 sendToForm(getCompany(), accountData.getAddressMap().get(i).getCompany());
 

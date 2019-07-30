@@ -37,6 +37,10 @@ public class AccountData implements Comparable <AccountData>{
     }
 
     @Override
+    public String toString(){
+        return addressMap.toString();
+    }
+    @Override
     public int compareTo(AccountData comparedWith){
         int i = this.email.compareTo(comparedWith.email);
         if (i != 0) {

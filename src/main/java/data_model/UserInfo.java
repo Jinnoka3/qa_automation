@@ -26,6 +26,11 @@ public class UserInfo implements Comparable <UserInfo>{
     private boolean specialOffers;
 
     @Override
+    public String toString(){
+        return firstName + " " + lastName + "\n";
+    }
+
+    @Override
     public int compareTo(UserInfo o) {
 
         int i = gender.compareTo(o.gender);
