@@ -13,7 +13,7 @@ public class AddNewAddressesTest extends BaseTest{
     private SignInPage signInPage;
     private AccountCreationPage accountCreationPage;
     private MyAccountPage myAccountPage;
-
+    private MyAddressesPage myAddressesPage;
     private AddNewAddressPage addNewAddressPage;
 
     @BeforeClass
@@ -22,7 +22,7 @@ public class AddNewAddressesTest extends BaseTest{
         signInPage = PageFactory.initElements(driver, SignInPage.class);
         accountCreationPage = PageFactory.initElements(driver, AccountCreationPage.class);
         myAccountPage = PageFactory.initElements(driver, MyAccountPage.class);
-
+        myAddressesPage = PageFactory.initElements(driver, MyAddressesPage.class);
         addNewAddressPage = PageFactory.initElements(driver, AddNewAddressPage.class);
     }
 

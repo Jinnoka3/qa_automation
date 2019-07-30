@@ -15,23 +15,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Getter
-public class MyAddressesPage extends AccountCreationPage{
+public class MyAddressesPage extends AccountCreationPage {
 
     public MyAddressesPage(WebDriver driver) {
         super(driver);
     }
 
-    @FindBy(css = "a[title = \"Update\"]")
-    List<WebElement> updateButtons;
 
-    @FindBy(xpath = "//span[contains(text(),'Add a new address')]")
-    private  WebElement addNewAddress;
-
-    public void clickAddNewAddress(){
-        click(addNewAddress);
-    }
-
-    }
+}
 
     /*@FindBy(xpath = "//*[@id=\"center_column\"]/div[1]/div/div/ul/li[2]/span[1]")
     private WebElement addressFirstName;

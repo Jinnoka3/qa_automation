@@ -40,8 +40,9 @@ public class VerificationAddressesTest extends BaseTest{
 
         accountCreationPage.accountCreate(accountData);
         accountCreationPage.register();
-        myAccountPage.clickMyAddresses();
 
+
+        addNewAddressPage.addNewAddress(accountData);
         /*for (int i = 1; i < accountData.getAddressMap().size(); i++) {
             myAddressesPage.clickAddNewAddress();
             addNewAddressPage.addNewAddress(accountData);

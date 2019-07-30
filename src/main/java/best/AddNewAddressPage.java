@@ -1,6 +1,7 @@
 package best;
 
 import data_model.AccountData;
+import data_model.UserAddress;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -23,53 +24,66 @@ public class AddNewAddressPage extends  AccountCreationPage {
     @FindBy(css = "h3")
     List<WebElement> aliasTitles;
 
-    private ArrayList<String> aliseArray = new ArrayList<>();
+    @FindBy(xpath = "//span[contains(text(),'Add a new address')]")
+    private  WebElement addNewAddress;
 
-    public void findElements(List<WebElement> webElementsList) {
-        for (WebElement webElement : webElementsList) {
-            System.out.println(webElement.getText());
+    @FindBy(css = "a[title = \"Update\"]")
+    List<WebElement> updateButtons;
+
+    private boolean aliasIsOnThePage(String alias, List<WebElement> webElements){
+        for(WebElement web : webElements){
+            //System.out.println(web.getText());
+            System.out.println(alias);
+            System.out.println(web.getText());
+            if(alias.toUpperCase().compareTo(web.getText()) == 0){
+                return true;
+            }
         }
+        return false;
     }
+
+    public void clickAddNewAddress(){
+        click(addNewAddress);
+    }
+
+    private ArrayList<String> aliseArray = new ArrayList<>();
 
     public void addAlisesArray(AccountData accountData){
         for (int i = 0; i < accountData.getAddressMap().size(); i++) {
             aliseArray.add(accountData.getAddressMap().get(i).getAlias());
         }
-        //System.out.println(alisesArray);
     }
     public void addNewAddress(AccountData accountData) {
-        //myAddressesPage = PageFactory.initElements(driver, MyAddressesPage.class);
+
         //addNewAddressPage = PageFactory.initElements(driver, AddNewAddressPage.class);
 
-        findElements(aliasTitles);
         addAlisesArray(accountData);
-        for (int i = 1; i < accountData.getAddressMap().size(); i++) {
-            //for (WebElement webElement : aliasTitles) {
-                //if (aliseArray.contains(webElement.getText())) {
-            myAddressesPage.clickAddNewAddress();
-                    //myAddressesPage.clickAddNewAddress();
+        for (int i = 0; i < aliseArray.size(); i++) {
+            aliasIsOnThePage(accountData.getAddressMap().get(i).getAlias(), aliasTitles);
 
-                    sendToForm(getFirstNameInAdressForm(), accountData.getUserInfo().getFirstName());
-                    sendToForm(getLastNameInAdressForm(), accountData.getUserInfo().getLastName());
-                    sendToForm(getCompany(), accountData.getAddressMap().get(i).getCompany());
-                    sendToForm(getCompany(), accountData.getAddressMap().get(i).getCompany());
+            if (!aliasIsOnThePage(accountData.getAddressMap().get(i).getAlias(), aliasTitles)) {
 
-                    sendToForm(getAdressLine1(), accountData.getAddressMap().get(i).getAddress1());
-                    sendToForm(getAdressLine2(), accountData.getAddressMap().get(i).getAddress2());
+                clickAddNewAddress();
+                sendToForm(getFirstNameInAdressForm(), accountData.getUserInfo().getFirstName());
+                sendToForm(getLastNameInAdressForm(), accountData.getUserInfo().getLastName());
+                sendToForm(getCompany(), accountData.getAddressMap().get(i).getCompany());
+                sendToForm(getCompany(), accountData.getAddressMap().get(i).getCompany());
 
-                    sendToForm(getCity(), accountData.getAddressMap().get(i).getCity());
-                    selectByText(getState(), accountData.getAddressMap().get(i).getState());
-                    sendToForm(getZip(), accountData.getAddressMap().get(i).getZip());
-                    selectByText(getCountry(), accountData.getAddressMap().get(i).getCountry());
+                sendToForm(getAdressLine1(), accountData.getAddressMap().get(i).getAddress1());
+                sendToForm(getAdressLine2(), accountData.getAddressMap().get(i).getAddress2());
 
-                    sendToForm(getAdditionalInformation(), accountData.getAddressMap().get(i).getInfo());
-                    sendToForm(getHomePhone(), accountData.getAddressMap().get(i).getPhone());
-                    sendToForm(getMobilePhone(), accountData.getAddressMap().get(i).getMobile());
-                    sendToForm(getAnAdressAlias(), accountData.getAddressMap().get(i).getAlias());
-                    //addNewAddressPage.saveNewAddress();
-            saveNewAddress();
-               // }
-           // }
+                sendToForm(getCity(), accountData.getAddressMap().get(i).getCity());
+                selectByText(getState(), accountData.getAddressMap().get(i).getState());
+                sendToForm(getZip(), accountData.getAddressMap().get(i).getZip());
+                selectByText(getCountry(), accountData.getAddressMap().get(i).getCountry());
+
+                sendToForm(getAdditionalInformation(), accountData.getAddressMap().get(i).getInfo());
+                sendToForm(getHomePhone(), accountData.getAddressMap().get(i).getPhone());
+                sendToForm(getMobilePhone(), accountData.getAddressMap().get(i).getMobile());
+                sendToForm(getAnAdressAlias(), accountData.getAddressMap().get(i).getAlias());
+                //addNewAddressPage.saveNewAddress();
+                saveNewAddress();
+            }
         }
     }
 
