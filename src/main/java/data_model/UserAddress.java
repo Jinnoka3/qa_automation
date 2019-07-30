@@ -44,5 +44,4 @@ public class UserAddress {
     public int compareTo(UserAddress comparedWith){
         return this.toString().compareTo(comparedWith.toString());
     }
-
 }

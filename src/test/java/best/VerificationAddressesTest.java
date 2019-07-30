@@ -3,6 +3,7 @@ package best;
 import best.data_pool.DataPool;
 import data_model.AccountData;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
@@ -44,8 +45,8 @@ public class VerificationAddressesTest extends BaseTest{
 
 
         addNewAddressPage.addNewAddress(accountData);
-        myAddressesPage.print(accountData);
 
+        Assert.assertTrue(myAddressesPage.verificationAddresses(accountData));
 
         //addNewAddressPage.addNewAddress(accountData);
         /*for (int i = 1; i < accountData.getAddressMap().size(); i++) {

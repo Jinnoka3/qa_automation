@@ -40,13 +40,20 @@ public class AccountData implements Comparable <AccountData>{
     public String toString(){
         return addressMap.toString();
     }
+
     @Override
     public int compareTo(AccountData comparedWith){
-        int i = this.email.compareTo(comparedWith.email);
+        /*int i = this.email.compareTo(comparedWith.email);
         if (i != 0) {
             LOGGER.error("Emails aren't equal");
             return i;
         }
-        return 0;
+        return 0;*/
+        return this.toString().compareTo(comparedWith.toString());
+    }
+
+    public int compareString(UserAddress comparedWith)
+    {
+        return this.toString().compareTo(comparedWith.toString());
     }
 }

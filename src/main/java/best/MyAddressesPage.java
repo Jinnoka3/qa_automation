@@ -3,6 +3,7 @@ package best;
 import best.utils.ConfigFileReader;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import data_model.AccountData;
+import data_model.UserAddress;
 import lombok.Getter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -25,16 +26,40 @@ public class MyAddressesPage extends AccountCreationPage {
     private List<WebElement> addresses;
 
     @FindBy(xpath = "//span[contains(text(),'Add a new address')]")
-    private  WebElement addNewAddress;
+    private WebElement addNewAddress;
 
     @FindBy(css = "div.alert li")
     List<WebElement> userErrors;
 
-    public void clickAddNewAddress(){
+    public void clickAddNewAddress() {
         click(addNewAddress);
     }
 
-    public void print(AccountData accountData){
+    public void print(AccountData accountData) {
         System.out.println(accountData.toString());
+    }
+
+    public String addressesFromToString() {
+        String text = "";
+        for (WebElement webElement : addresses) {
+            text += webElement.getText() + "\n";
+        }
+        return text;
+    }
+
+    public String addressesFromUser(AccountData accountData) {
+        String text = "";
+        for(UserAddress address : accountData.getAddressMap()){
+            text+=address+"\n";
+        }
+        return text;
+    }
+
+    public boolean verificationAddresses(AccountData accountData){
+        /*System.out.println(addressesFromUser(accountData).compareTo(addressesFromToString()));
+        System.out.println(addressesFromUser(accountData));
+        System.out.println("-------------");*/
+        System.out.println(addressesFromToString());
+        return addressesFromUser(accountData).compareTo(addressesFromToString()) == 0;
     }
 }

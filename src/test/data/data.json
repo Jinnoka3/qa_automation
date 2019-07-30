@@ -58,21 +58,6 @@
       "phone": "56856",
       "mobile": "86856568",
       "alias": "Third"
-    },
-    {
-      "addressFirstName": "Daria",
-      "addressLastName": "Kalinina",
-      "company": "Company",
-      "address1": "Bulvar",
-      "address2": "15",
-      "city": "Volgograd",
-      "zip": "00000",
-      "country": "United States",
-      "state": "Alaska",
-      "info": "Hello",
-      "phone": "56856",
-      "mobile": "86856568",
-      "alias": "Second"
     }
   ]
 }
