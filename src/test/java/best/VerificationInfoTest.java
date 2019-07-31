@@ -47,6 +47,8 @@ public class VerificationInfoTest extends BaseTest {
         SoftAssert asert = new SoftAssert();
         asert.assertTrue(myPersonalInfoPage.verificationEmail(accountData));
         Assert.assertTrue(myPersonalInfoPage.verificationAllFields(accountData));
+        Assert.assertTrue(myPersonalInfoPage.verificationNewsletter(accountData));
+        Assert.assertTrue(myPersonalInfoPage.verificationSpecialOffers(accountData));
         asert.assertAll();
     }
 }

@@ -8,18 +8,18 @@
         <parameter name="dataToReplaceFile" value="src/test/data/new_data.json"/>
         <classes>
 
-            <!--<class name="best.EditInfoTest">
+            <class name="best.EditInfoTest">
                 <methods>
                     <include name="editUserDataTest" />
                 </methods>
-            </class>-->
+            </class>
 
-            <!--<class name="best.AddNewAddressesTest">
+            <class name="best.AddNewAddressesTest">
 
                 <methods>
                     <include name="addNewAddressesTest" />
                 </methods>
-            </class>-->
+            </class>
 
             <class name="best.UpdateAddressesTest">
 

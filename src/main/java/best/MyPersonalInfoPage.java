@@ -18,6 +18,7 @@ import java.util.ArrayList;
 @Getter
 public class MyPersonalInfoPage extends AccountCreationPage{
 
+    static final Logger LOGGER = Logger.getLogger(MyPersonalInfoPage.class);
     public MyPersonalInfoPage(WebDriver driver) {
         super(driver);
     }
@@ -66,6 +67,23 @@ public class MyPersonalInfoPage extends AccountCreationPage{
 
     public boolean verificationEmail(AccountData accountData){
         return accountData.compareTo(getUserEmailFromPage()) == 0;
+    }
+
+    public boolean verificationNewsletter(AccountData accountData){
+        if(!accountData.getUserInfo().isNewsletter() == getUserInfoFromPage().isNewsletter())
+        {
+            LOGGER.error("Newsletters aren't equal");
+            return false;
+        }
+        return true;
+    }
+
+    public boolean verificationSpecialOffers(AccountData accountData){
+        if(!accountData.getUserInfo().isSpecialOffers() == getUserInfoFromPage().isSpecialOffers()){
+            LOGGER.error("Special Offers aren't equal");
+            return false;
+        }
+        return true;
     }
 
     public String verificationUserGender(){
