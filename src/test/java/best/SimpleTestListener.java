@@ -1,5 +1,8 @@
 package best;
 
+import io.qameta.allure.Attachment;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -10,6 +13,13 @@ import static best.BaseTest.LOGGER;
 
 public class SimpleTestListener implements ITestListener {
 
+    //WebDriver driver;
+
+    @Attachment(value = "Page screenshot", type = "image/png")
+    public byte[] saveAllureScreenshot(WebDriver driver) {
+        return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+    }
+
     @Override
     public void onTestStart(ITestResult iTestResult) {
         LOGGER.info("Test has started running:"  + iTestResult.getMethod().getMethodName() + " at:" + iTestResult.getStartMillis());
@@ -17,6 +27,7 @@ public class SimpleTestListener implements ITestListener {
 
     @Override
     public void onTestSuccess(ITestResult iTestResult) {
+        //saveAllureScreenshot(driver);
         LOGGER.info("Test was success");
     }
 
