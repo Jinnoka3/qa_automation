@@ -28,9 +28,6 @@ public class MyAddressesPage extends AccountCreationPage {
     @FindBy(xpath = "//span[contains(text(),'Add a new address')]")
     private WebElement addNewAddress;
 
-    @FindBy(css = "div.alert li")
-    List<WebElement> userErrors;
-
     public void clickAddNewAddress() {
         click(addNewAddress);
     }

@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AddNewAddressPage extends  AccountCreationPage {
-    WebDriver driver;
+    //WebDriver driver;
 
     public AddNewAddressPage(WebDriver driver) {
         super(driver);
@@ -23,15 +23,9 @@ public class AddNewAddressPage extends  AccountCreationPage {
     @FindBy(css = "h3")
     List<WebElement> aliasTitles;
 
-    @FindBy(xpath = "//span[contains(text(),'Add a new address')]")
-    private  WebElement addNewAddress;
 
     @FindBy(css = "a[title = \"Update\"]")
     List<WebElement> updateButtons;
-
-    public void clickAddNewAddress(){
-        click(addNewAddress);
-    }
 
     private boolean aliasIsOnThePage(String alias, List<WebElement> webElements){
         for(WebElement web : webElements){
@@ -54,19 +48,16 @@ public class AddNewAddressPage extends  AccountCreationPage {
     }
     public void addNewAddress(AccountData accountData) {
 
-        //MyAddressesPage myAddressesPage = PageFactory.initElements(driver, MyAddressesPage.class);
-        //AddNewAddressPage addNewAddressPage = PageFactory.initElements(driver, AddNewAddressPage.class);
         addAlisesArray(accountData);
-        for (int i = 0; i < aliseArray.size(); i++) {
 
-            aliasIsOnThePage(accountData.getAddressMap().get(i).getAlias(), aliasTitles);
+        for (int i = 0; i < aliseArray.size(); i++) {
 
             if (!aliasIsOnThePage(accountData.getAddressMap().get(i).getAlias(), aliasTitles)) {
 
-                //addNewAddressPage = PageFactory.initElements(driver, AddNewAddressPage.class);
+                MyAddressesPage myAddressesPage = PageFactory.initElements(driver, MyAddressesPage.class);
+                myAddressesPage.clickAddNewAddress();
 
-                //myAddressesPage.clickAddNewAddress();
-                clickAddNewAddress();
+
                 sendToForm(getFirstNameInAdressForm(), accountData.getAddressMap().get(i).getAddressFirstName());
                 sendToForm(getLastNameInAdressForm(), accountData.getAddressMap().get(i).getAddressLastName());
                 sendToForm(getCompany(), accountData.getAddressMap().get(i).getCompany());
@@ -84,8 +75,9 @@ public class AddNewAddressPage extends  AccountCreationPage {
                 sendToForm(getHomePhone(), accountData.getAddressMap().get(i).getPhone());
                 sendToForm(getMobilePhone(), accountData.getAddressMap().get(i).getMobile());
                 sendToForm(getAnAdressAlias(), accountData.getAddressMap().get(i).getAlias());
-                //addNewAddressPage.saveNewAddress();
-                saveNewAddress();
+
+                AddNewAddressPage addNewAddressPage = PageFactory.initElements(driver, AddNewAddressPage.class);
+                addNewAddressPage.saveNewAddress();
             }
         }
     }

@@ -4104,3 +4104,159 @@
 19/07/30 19:24:08 INFO best.BaseTest: Passed tests: [ResultMap map={[TestResult name=verificationUserAddressesTest status=SUCCESS method=VerificationAddressesTest.verificationUserAddressesTest(data_model.AccountData)[pri:0, instance:best.VerificationAddressesTest@4f7d0008] output={null}]=VerificationAddressesTest.verificationUserAddressesTest(data_model.AccountData)[pri:0, instance:best.VerificationAddressesTest@4f7d0008]}]
 19/07/30 19:24:08 INFO best.BaseTest: Failed tests:[ResultMap map={}]
 19/07/30 19:24:08 INFO best.BaseTest: End
+19/07/31 12:45:04 INFO best.BaseTest: Start
+19/07/31 12:45:17 INFO best.BaseTest: Test has started running:addNewAddressesTest at:1564562717181
+19/07/31 12:45:39 INFO best.BaseTest: Test was success
+19/07/31 12:45:39 INFO best.BaseTest: Passed tests: [ResultMap map={[TestResult name=addNewAddressesTest status=SUCCESS method=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@553f17c] output={null}]=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@553f17c]}]
+19/07/31 12:45:39 INFO best.BaseTest: Failed tests:[ResultMap map={}]
+19/07/31 12:45:39 INFO best.BaseTest: End
+19/07/31 12:56:32 INFO best.BaseTest: Start
+19/07/31 12:56:42 INFO best.BaseTest: Test has started running:addNewAddressesTest at:1564563402861
+19/07/31 12:56:52 ERROR best.BaseTest: Test was failure
+19/07/31 12:56:52 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 12:56:52 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=addNewAddressesTest status=FAILURE method=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@553f17c] output={null}]=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@553f17c]}]
+19/07/31 12:56:52 INFO best.BaseTest: End
+19/07/31 12:59:57 INFO best.BaseTest: Start
+19/07/31 13:00:05 INFO best.BaseTest: Test has started running:addNewAddressesTest at:1564563605919
+19/07/31 13:00:15 ERROR best.BaseTest: Test was failure
+19/07/31 13:00:15 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 13:00:15 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=addNewAddressesTest status=FAILURE method=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@14bf9759] output={null}]=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@14bf9759]}]
+19/07/31 13:00:15 INFO best.BaseTest: End
+19/07/31 13:00:35 INFO best.BaseTest: Start
+19/07/31 13:00:43 INFO best.BaseTest: Test has started running:addNewAddressesTest at:1564563643963
+19/07/31 13:00:54 INFO best.BaseTest: Test was success
+19/07/31 13:00:54 INFO best.BaseTest: Passed tests: [ResultMap map={[TestResult name=addNewAddressesTest status=SUCCESS method=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@14bf9759] output={null}]=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@14bf9759]}]
+19/07/31 13:00:54 INFO best.BaseTest: Failed tests:[ResultMap map={}]
+19/07/31 13:00:54 INFO best.BaseTest: End
+19/07/31 13:01:49 INFO best.BaseTest: Start
+19/07/31 13:02:00 INFO best.BaseTest: Test has started running:addNewAddressesTest at:1564563720660
+19/07/31 13:02:32 ERROR best.BaseTest: Test was failure
+19/07/31 13:02:32 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 13:02:32 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=addNewAddressesTest status=FAILURE method=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@553f17c] output={null}]=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@553f17c]}]
+19/07/31 13:02:32 INFO best.BaseTest: End
+19/07/31 13:05:43 INFO best.BaseTest: Start
+19/07/31 13:05:50 INFO best.BaseTest: Test has started running:addNewAddressesTest at:1564563950405
+19/07/31 13:06:31 ERROR best.BaseTest: Test was failure
+19/07/31 13:06:31 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 13:06:31 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=addNewAddressesTest status=FAILURE method=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@553f17c] output={null}]=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@553f17c]}]
+19/07/31 13:06:31 INFO best.BaseTest: End
+19/07/31 13:08:55 INFO best.BaseTest: Start
+19/07/31 13:09:05 INFO best.BaseTest: Test has started running:addNewAddressesTest at:1564564145966
+19/07/31 13:09:47 ERROR best.BaseTest: Test was failure
+19/07/31 13:09:47 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 13:09:47 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=addNewAddressesTest status=FAILURE method=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@553f17c] output={null}]=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@553f17c]}]
+19/07/31 13:09:47 INFO best.BaseTest: End
+19/07/31 13:10:30 INFO best.BaseTest: Start
+19/07/31 13:10:38 INFO best.BaseTest: Test has started running:addNewAddressesTest at:1564564238592
+19/07/31 13:11:19 ERROR best.BaseTest: Test was failure
+19/07/31 13:11:19 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 13:11:19 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=addNewAddressesTest status=FAILURE method=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@14bf9759] output={null}]=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@14bf9759]}]
+19/07/31 13:11:19 INFO best.BaseTest: End
+19/07/31 13:12:01 INFO best.BaseTest: Start
+19/07/31 13:12:08 INFO best.BaseTest: Test has started running:addNewAddressesTest at:1564564328751
+19/07/31 13:12:29 ERROR best.BaseTest: Test was failure
+19/07/31 13:12:29 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 13:12:29 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=addNewAddressesTest status=FAILURE method=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@14bf9759] output={null}]=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@14bf9759]}]
+19/07/31 13:12:29 INFO best.BaseTest: End
+19/07/31 13:15:06 INFO best.BaseTest: Start
+19/07/31 13:15:16 INFO best.BaseTest: Test has started running:addNewAddressesTest at:1564564516722
+19/07/31 13:15:37 ERROR best.BaseTest: Test was failure
+19/07/31 13:15:37 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 13:15:37 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=addNewAddressesTest status=FAILURE method=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@553f17c] output={null}]=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@553f17c]}]
+19/07/31 13:15:37 INFO best.BaseTest: End
+19/07/31 13:17:33 INFO best.BaseTest: Start
+19/07/31 13:17:40 INFO best.BaseTest: Test has started running:addNewAddressesTest at:1564564660601
+19/07/31 13:18:01 ERROR best.BaseTest: Test was failure
+19/07/31 13:18:01 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 13:18:01 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=addNewAddressesTest status=FAILURE method=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@5f341870] output={null}]=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@5f341870]}]
+19/07/31 13:18:01 INFO best.BaseTest: End
+19/07/31 13:19:14 INFO best.BaseTest: Start
+19/07/31 13:19:22 INFO best.BaseTest: Test has started running:addNewAddressesTest at:1564564762205
+19/07/31 13:20:07 ERROR best.BaseTest: Test was failure
+19/07/31 13:20:07 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 13:20:07 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=addNewAddressesTest status=FAILURE method=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@4f7d0008] output={null}]=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@4f7d0008]}]
+19/07/31 13:20:07 INFO best.BaseTest: End
+19/07/31 13:20:54 INFO best.BaseTest: Start
+19/07/31 13:21:04 INFO best.BaseTest: Test has started running:addNewAddressesTest at:1564564864186
+19/07/31 13:21:47 ERROR best.BaseTest: Test was failure
+19/07/31 13:21:47 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 13:21:47 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=addNewAddressesTest status=FAILURE method=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@4f7d0008] output={null}]=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@4f7d0008]}]
+19/07/31 13:21:47 INFO best.BaseTest: End
+19/07/31 13:24:27 INFO best.BaseTest: Start
+19/07/31 13:24:34 INFO best.BaseTest: Test has started running:addNewAddressesTest at:1564565074689
+19/07/31 13:24:58 ERROR best.BaseTest: Test was failure
+19/07/31 13:24:58 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 13:24:58 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=addNewAddressesTest status=FAILURE method=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@4f7d0008] output={null}]=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@4f7d0008]}]
+19/07/31 13:24:58 INFO best.BaseTest: End
+19/07/31 13:25:06 INFO best.BaseTest: Start
+19/07/31 13:25:13 INFO best.BaseTest: Test has started running:addNewAddressesTest at:1564565113632
+19/07/31 13:25:33 ERROR best.BaseTest: Test was failure
+19/07/31 13:25:33 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 13:25:33 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=addNewAddressesTest status=FAILURE method=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@553f17c] output={null}]=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@553f17c]}]
+19/07/31 13:25:33 INFO best.BaseTest: End
+19/07/31 13:29:18 INFO best.BaseTest: Start
+19/07/31 13:29:28 INFO best.BaseTest: Test has started running:addNewAddressesTest at:1564565368607
+19/07/31 13:29:49 ERROR best.BaseTest: Test was failure
+19/07/31 13:29:49 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 13:29:49 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=addNewAddressesTest status=FAILURE method=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@598067a5] output={null}]=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@598067a5]}]
+19/07/31 13:29:49 INFO best.BaseTest: End
+19/07/31 13:31:08 INFO best.BaseTest: Start
+19/07/31 13:31:14 INFO best.BaseTest: Test has started running:addNewAddressesTest at:1564565474904
+19/07/31 13:31:56 ERROR best.BaseTest: Test was failure
+19/07/31 13:31:56 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 13:31:56 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=addNewAddressesTest status=FAILURE method=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@5f341870] output={null}]=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@5f341870]}]
+19/07/31 13:31:56 INFO best.BaseTest: End
+19/07/31 13:32:33 INFO best.BaseTest: Start
+19/07/31 13:32:40 INFO best.BaseTest: Test has started running:addNewAddressesTest at:1564565560653
+19/07/31 13:32:55 ERROR best.BaseTest: Test was failure
+19/07/31 13:32:55 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 13:32:55 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=addNewAddressesTest status=FAILURE method=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@553f17c] output={null}]=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@553f17c]}]
+19/07/31 13:32:55 INFO best.BaseTest: End
+19/07/31 13:33:05 INFO best.BaseTest: Start
+19/07/31 13:33:15 INFO best.BaseTest: Test has started running:addNewAddressesTest at:1564565595016
+19/07/31 13:33:57 ERROR best.BaseTest: Test was failure
+19/07/31 13:33:57 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 13:33:57 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=addNewAddressesTest status=FAILURE method=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@553f17c] output={null}]=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@553f17c]}]
+19/07/31 13:33:57 INFO best.BaseTest: End
+19/07/31 13:34:11 INFO best.BaseTest: Start
+19/07/31 13:34:18 INFO best.BaseTest: Test has started running:addNewAddressesTest at:1564565658216
+19/07/31 13:34:37 ERROR best.BaseTest: Test was failure
+19/07/31 13:34:37 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 13:34:37 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=addNewAddressesTest status=FAILURE method=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@553f17c] output={null}]=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@553f17c]}]
+19/07/31 13:34:37 INFO best.BaseTest: End
+19/07/31 13:36:17 INFO best.BaseTest: Start
+19/07/31 13:36:25 INFO best.BaseTest: Test has started running:addNewAddressesTest at:1564565785827
+19/07/31 13:36:45 ERROR best.BaseTest: Test was failure
+19/07/31 13:36:45 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 13:36:45 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=addNewAddressesTest status=FAILURE method=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@553f17c] output={null}]=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@553f17c]}]
+19/07/31 13:36:45 INFO best.BaseTest: End
+19/07/31 13:38:04 INFO best.BaseTest: Start
+19/07/31 13:38:12 INFO best.BaseTest: Test has started running:addNewAddressesTest at:1564565892647
+19/07/31 13:38:53 ERROR best.BaseTest: Test was failure
+19/07/31 13:38:53 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 13:38:53 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=addNewAddressesTest status=FAILURE method=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@553f17c] output={null}]=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@553f17c]}]
+19/07/31 13:38:53 INFO best.BaseTest: End
+19/07/31 13:39:30 INFO best.BaseTest: Start
+19/07/31 13:39:38 INFO best.BaseTest: Test has started running:addNewAddressesTest at:1564565978025
+19/07/31 13:39:57 INFO best.BaseTest: Test was success
+19/07/31 13:39:57 INFO best.BaseTest: Passed tests: [ResultMap map={[TestResult name=addNewAddressesTest status=SUCCESS method=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@4f7d0008] output={null}]=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@4f7d0008]}]
+19/07/31 13:39:57 INFO best.BaseTest: Failed tests:[ResultMap map={}]
+19/07/31 13:39:57 INFO best.BaseTest: End
+19/07/31 13:40:26 INFO best.BaseTest: Start
+19/07/31 13:40:35 INFO best.BaseTest: Test has started running:addNewAddressesTest at:1564566035156
+19/07/31 13:40:54 INFO best.BaseTest: Test was success
+19/07/31 13:40:54 INFO best.BaseTest: Passed tests: [ResultMap map={[TestResult name=addNewAddressesTest status=SUCCESS method=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@553f17c] output={null}]=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@553f17c]}]
+19/07/31 13:40:54 INFO best.BaseTest: Failed tests:[ResultMap map={}]
+19/07/31 13:40:54 INFO best.BaseTest: End
+19/07/31 13:41:17 INFO best.BaseTest: Start
+19/07/31 13:41:23 INFO best.BaseTest: Test has started running:addNewAddressesTest at:1564566083422
+19/07/31 13:41:42 INFO best.BaseTest: Test was success
+19/07/31 13:41:42 INFO best.BaseTest: Passed tests: [ResultMap map={[TestResult name=addNewAddressesTest status=SUCCESS method=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@553f17c] output={null}]=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@553f17c]}]
+19/07/31 13:41:42 INFO best.BaseTest: Failed tests:[ResultMap map={}]
+19/07/31 13:41:42 INFO best.BaseTest: End
+19/07/31 13:43:11 INFO best.BaseTest: Start
+19/07/31 13:43:18 INFO best.BaseTest: Test has started running:addNewAddressesTest at:1564566198307
+19/07/31 13:43:38 INFO best.BaseTest: Test was success
+19/07/31 13:43:38 INFO best.BaseTest: Passed tests: [ResultMap map={[TestResult name=addNewAddressesTest status=SUCCESS method=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@553f17c] output={null}]=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@553f17c]}]
+19/07/31 13:43:38 INFO best.BaseTest: Failed tests:[ResultMap map={}]
+19/07/31 13:43:38 INFO best.BaseTest: End

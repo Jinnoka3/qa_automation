@@ -3,12 +3,13 @@ package best;
 import best.data_pool.DataPool;
 import data_model.AccountData;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class AddNewAddressesTest extends BaseTest{
+public class UpdateAddressesTest extends BaseTest {
 
     private SignInPage signInPage;
     private AccountCreationPage accountCreationPage;
@@ -32,7 +33,7 @@ public class AddNewAddressesTest extends BaseTest{
     }
 
     @Test(dataProvider = "personalInformation")
-    public void addNewAddressesTest(AccountData accountData) {
+    public void verificationUserAddressesTest(AccountData accountData) {
 
         signInPage.clickSignIn();
         signInPage.sendEmailForCreateAnAccount(accountData.getEmail());
@@ -42,7 +43,20 @@ public class AddNewAddressesTest extends BaseTest{
         accountCreationPage.register();
         myAccountPage.clickMyAddresses();
 
-        //myAddressesPage.clickAddNewAddress();
         addNewAddressPage.addNewAddress(accountData);
+
+        //myAddressesPage.updateAddresses(accountData);
+
+
+        //Assert.assertTrue(myAddressesPage.verificationAddresses(accountData));
+
+        //addNewAddressPage.addNewAddress(accountData);
+        /*for (int i = 1; i < accountData.getAddressMap().size(); i++) {
+            myAddressesPage.clickAddNewAddress();
+            addNewAddressPage.addNewAddress(accountData);
+            addNewAddressPage.saveNewAddress();
+        }*/
+
+        //myAddressesPage.findAddresses();
     }
 }
