@@ -43,18 +43,8 @@ public class VerificationAddressesTest extends BaseTest{
         accountCreationPage.register();
         myAccountPage.clickMyAddresses();
 
-
         addNewAddressPage.addNewAddress(accountData);
 
         Assert.assertTrue(myAddressesPage.verificationAddresses(accountData));
-
-        //addNewAddressPage.addNewAddress(accountData);
-        /*for (int i = 1; i < accountData.getAddressMap().size(); i++) {
-            myAddressesPage.clickAddNewAddress();
-            addNewAddressPage.addNewAddress(accountData);
-            addNewAddressPage.saveNewAddress();
-        }*/
-
-        //myAddressesPage.findAddresses();
     }
 }

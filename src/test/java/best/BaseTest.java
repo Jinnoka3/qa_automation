@@ -28,7 +28,7 @@ public class BaseTest {
         System.setProperty("webdriver.chrome.driver", ConfigFileReader.readDriverPath());
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(ConfigFileReader.readImplicitlyWait(), TimeUnit.SECONDS);
-        //driver.manage().window().maximize();
+        driver.manage().window().maximize();
         driver.get(ConfigFileReader.readUrl());
         PropertyConfigurator.configure(ConfigFileReader.readLog());
 
@@ -36,6 +36,6 @@ public class BaseTest {
 
     @AfterClass
     public void afterClassMethod(){
-        //driver.close();
+        driver.close();
     }
 }

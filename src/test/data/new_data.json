@@ -1,21 +1,23 @@
 {
-  "password": "123455685685468",
+  "password": "2352352",
 
   "userInfo": {
     "gender": "1",
     "firstName": "Misha",
     "lastName": "Misha",
-    "day": "7",
-    "month": "3",
+    "day": "5",
+    "month": "5",
     "year": "2019",
-    "newsletter": false,
-    "specialOffers": false
+    "newsletter": true,
+    "specialOffers": true
   },
 
   "addressMap":
   [
     {
-      "company": "Magnit",
+      "addressFirstName": "Misha",
+      "addressLastName": "Misha",
+      "company": "Volgu",
       "address1": "Bulvar",
       "address2": "15",
       "city": "Volgograd",
@@ -25,9 +27,11 @@
       "info": "Hello",
       "phone": "56856",
       "mobile": "86856568",
-      "alias": "New Address Misha"
+      "alias": "Seventh"
     },
     {
+      "addressFirstName": "Daria",
+      "addressLastName": "Kalinina",
       "company": "Sperasoft",
       "address1": "Bulvar",
       "address2": "15",
@@ -38,9 +42,11 @@
       "info": "Hello",
       "phone": "56856",
       "mobile": "86856568",
-      "alias": "Newww Address Misha"
+      "alias": "Eighth"
     },
     {
+      "addressFirstName": "Daria",
+      "addressLastName": "Kalinina",
       "company": "Company",
       "address1": "Bulvar",
       "address2": "15",
@@ -51,7 +57,7 @@
       "info": "Hello",
       "phone": "56856",
       "mobile": "86856568",
-      "alias": "Newww Company Misha"
+      "alias": "Ninth"
     }
   ]
 }

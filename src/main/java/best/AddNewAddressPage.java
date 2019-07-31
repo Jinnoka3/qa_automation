@@ -82,6 +82,7 @@ public class AddNewAddressPage extends  AccountCreationPage {
         }
     }
 
+
     public void saveNewAddress() {
         click(save);
     }

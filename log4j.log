@@ -374,7 +374,7 @@
 19/07/18 04:03:06 INFO best.AccountCreationPage: Test was success
 19/07/18 04:03:13 INFO best.AccountCreationPage: Test has started running:editAddressesTest at:1563411793010
 19/07/18 04:03:13 INFO best.AccountCreationPage: Test was success
-19/07/18 04:03:13 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=editAddressesTest status=SUCCESS method=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:best.EditAddressesTest@12d3a4e9] output={null}]=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:best.EditAddressesTest@12d3a4e9], [TestResult name=editUserDataTest status=SUCCESS method=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@2c34f934] output={null}]=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@2c34f934]}]
+19/07/18 04:03:13 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=editAddressesTest status=SUCCESS method=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@12d3a4e9] output={null}]=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@12d3a4e9], [TestResult name=editUserDataTest status=SUCCESS method=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@2c34f934] output={null}]=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@2c34f934]}]
 19/07/18 04:03:13 INFO best.AccountCreationPage: Failed tests:[ResultMap map={}]
 19/07/18 04:03:13 INFO best.AccountCreationPage: End
 19/07/18 04:15:48 INFO best.AccountCreationPage: Start
@@ -382,7 +382,7 @@
 19/07/18 04:16:03 INFO best.AccountCreationPage: Test was success
 19/07/18 04:16:10 INFO best.AccountCreationPage: Test has started running:editAddressesTest at:1563412570584
 19/07/18 04:16:18 INFO best.AccountCreationPage: Test was success
-19/07/18 04:16:19 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=editAddressesTest status=SUCCESS method=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:best.EditAddressesTest@5762806e] output={null}]=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:best.EditAddressesTest@5762806e], [TestResult name=editUserDataTest status=SUCCESS method=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@548a102f] output={null}]=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@548a102f]}]
+19/07/18 04:16:19 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=editAddressesTest status=SUCCESS method=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@5762806e] output={null}]=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@5762806e], [TestResult name=editUserDataTest status=SUCCESS method=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@548a102f] output={null}]=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@548a102f]}]
 19/07/18 04:16:19 INFO best.AccountCreationPage: Failed tests:[ResultMap map={}]
 19/07/18 04:16:19 INFO best.AccountCreationPage: End
 19/07/18 04:20:40 INFO best.AccountCreationPage: Start
@@ -406,7 +406,7 @@
 19/07/18 04:22:48 INFO best.AccountCreationPage: Test was success
 19/07/18 04:22:55 INFO best.AccountCreationPage: Test has started running:editAddressesTest at:1563412975469
 19/07/18 04:23:03 INFO best.AccountCreationPage: Test was success
-19/07/18 04:23:03 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=editUserDataTest status=SUCCESS method=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@5762806e] output={null}]=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@5762806e], [TestResult name=editAddressesTest status=SUCCESS method=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:best.EditAddressesTest@17c386de] output={null}]=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:best.EditAddressesTest@17c386de]}]
+19/07/18 04:23:03 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=editUserDataTest status=SUCCESS method=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@5762806e] output={null}]=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@5762806e], [TestResult name=editAddressesTest status=SUCCESS method=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@17c386de] output={null}]=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@17c386de]}]
 19/07/18 04:23:03 INFO best.AccountCreationPage: Failed tests:[ResultMap map={}]
 19/07/18 04:23:03 INFO best.AccountCreationPage: End
 19/07/18 04:25:11 INFO best.AccountCreationPage: Start
@@ -432,7 +432,7 @@
 19/07/18 04:27:49 INFO best.AccountCreationPage: Test was success
 19/07/18 04:27:57 INFO best.AccountCreationPage: Test has started running:editAddressesTest at:1563413277430
 19/07/18 04:28:05 INFO best.AccountCreationPage: Test was success
-19/07/18 04:28:05 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=editAddressesTest status=SUCCESS method=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:best.EditAddressesTest@5762806e] output={null}]=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:best.EditAddressesTest@5762806e], [TestResult name=editUserDataTest status=SUCCESS method=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@548a102f] output={null}]=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@548a102f]}]
+19/07/18 04:28:05 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=editAddressesTest status=SUCCESS method=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@5762806e] output={null}]=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@5762806e], [TestResult name=editUserDataTest status=SUCCESS method=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@548a102f] output={null}]=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@548a102f]}]
 19/07/18 04:28:05 INFO best.AccountCreationPage: Failed tests:[ResultMap map={}]
 19/07/18 04:28:05 INFO best.AccountCreationPage: End
 19/07/18 14:12:12 INFO best.AccountCreationPage: Start
@@ -672,7 +672,7 @@
 19/07/18 15:44:34 INFO best.AccountCreationPage: Test was success
 19/07/18 15:44:40 INFO best.AccountCreationPage: Test has started running:editAddressesTest at:1563450280982
 19/07/18 15:44:53 INFO best.AccountCreationPage: Test was success
-19/07/18 15:44:53 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=editUserDataTest status=SUCCESS method=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@553f17c] output={null}]=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@553f17c], [TestResult name=editAddressesTest status=SUCCESS method=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:best.EditAddressesTest@4f7d0008] output={null}]=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:best.EditAddressesTest@4f7d0008]}]
+19/07/18 15:44:53 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=editUserDataTest status=SUCCESS method=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@553f17c] output={null}]=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@553f17c], [TestResult name=editAddressesTest status=SUCCESS method=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@4f7d0008] output={null}]=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@4f7d0008]}]
 19/07/18 15:44:53 INFO best.AccountCreationPage: Failed tests:[ResultMap map={}]
 19/07/18 15:44:53 INFO best.AccountCreationPage: End
 19/07/19 14:12:05 INFO best.AccountCreationPage: Start
@@ -756,7 +756,7 @@
 19/07/19 14:33:35 INFO best.AccountCreationPage: Test was success
 19/07/19 14:33:43 INFO best.AccountCreationPage: Test has started running:editAddressesTest at:1563532423944
 19/07/19 14:33:56 INFO best.AccountCreationPage: Test was success
-19/07/19 14:33:56 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=editUserDataTest status=SUCCESS method=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@14bf9759] output={null}]=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@14bf9759], [TestResult name=editAddressesTest status=SUCCESS method=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:best.EditAddressesTest@5f341870] output={null}]=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:best.EditAddressesTest@5f341870]}]
+19/07/19 14:33:56 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=editUserDataTest status=SUCCESS method=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@14bf9759] output={null}]=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@14bf9759], [TestResult name=editAddressesTest status=SUCCESS method=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@5f341870] output={null}]=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@5f341870]}]
 19/07/19 14:33:56 INFO best.AccountCreationPage: Failed tests:[ResultMap map={}]
 19/07/19 14:33:56 INFO best.AccountCreationPage: End
 19/07/19 14:37:16 INFO best.AccountCreationPage: Start
@@ -764,7 +764,7 @@
 19/07/19 14:37:35 INFO best.AccountCreationPage: Test was success
 19/07/19 14:37:41 INFO best.AccountCreationPage: Test has started running:editAddressesTest at:1563532661795
 19/07/19 14:37:52 INFO best.AccountCreationPage: Test was success
-19/07/19 14:37:53 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=editAddressesTest status=SUCCESS method=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:best.EditAddressesTest@553f17c] output={null}]=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:best.EditAddressesTest@553f17c], [TestResult name=editUserDataTest status=SUCCESS method=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@5f341870] output={null}]=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@5f341870]}]
+19/07/19 14:37:53 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=editAddressesTest status=SUCCESS method=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@553f17c] output={null}]=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@553f17c], [TestResult name=editUserDataTest status=SUCCESS method=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@5f341870] output={null}]=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@5f341870]}]
 19/07/19 14:37:53 INFO best.AccountCreationPage: Failed tests:[ResultMap map={}]
 19/07/19 14:37:53 INFO best.AccountCreationPage: End
 19/07/19 14:38:21 INFO best.AccountCreationPage: Start
@@ -920,7 +920,7 @@
 19/07/19 17:13:59 INFO best.AccountCreationPage: Test was success
 19/07/19 17:14:06 INFO best.AccountCreationPage: Test has started running:editAddressesTest at:1563542046512
 19/07/19 17:14:20 INFO best.AccountCreationPage: Test was success
-19/07/19 17:14:20 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=editAddressesTest status=SUCCESS method=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:best.EditAddressesTest@553f17c] output={null}]=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:best.EditAddressesTest@553f17c], [TestResult name=editUserDataTest status=SUCCESS method=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@5f341870] output={null}]=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@5f341870]}]
+19/07/19 17:14:20 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=editAddressesTest status=SUCCESS method=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@553f17c] output={null}]=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@553f17c], [TestResult name=editUserDataTest status=SUCCESS method=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@5f341870] output={null}]=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@5f341870]}]
 19/07/19 17:14:20 INFO best.AccountCreationPage: Failed tests:[ResultMap map={}]
 19/07/19 17:14:20 INFO best.AccountCreationPage: End
 19/07/19 17:14:32 INFO best.AccountCreationPage: Start
@@ -1602,7 +1602,7 @@
 19/07/28 00:02:08 ERROR best.AccountCreationPage: Test was failure
 19/07/28 00:02:14 INFO best.AccountCreationPage: Test has started running:editAddressesTest at:1564261334579
 19/07/28 00:02:14 INFO best.AccountCreationPage: Test was success
-19/07/28 00:02:14 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=editAddressesTest status=SUCCESS method=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:best.EditAddressesTest@14ec4505] output={null}]=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:best.EditAddressesTest@14ec4505]}]
+19/07/28 00:02:14 INFO best.AccountCreationPage: Passed tests: [ResultMap map={[TestResult name=editAddressesTest status=SUCCESS method=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@14ec4505] output={null}]=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@14ec4505]}]
 19/07/28 00:02:14 INFO best.AccountCreationPage: Failed tests:[ResultMap map={[TestResult name=editUserDataTest status=FAILURE method=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@e50a6f6] output={null}]=EditInfoTest.editUserDataTest(data_model.AccountData)[pri:0, instance:best.EditInfoTest@e50a6f6]}]
 19/07/28 00:02:14 INFO best.AccountCreationPage: End
 19/07/28 00:02:33 INFO best.AccountCreationPage: Start
@@ -3096,7 +3096,7 @@
 19/07/29 00:07:10 INFO best.BaseTest: Test was success
 19/07/29 00:07:17 ERROR best.BaseTest: Test was failure
 19/07/29 00:07:17 INFO best.BaseTest: Passed tests: [ResultMap map={[TestResult name=editUserDataTest status=SUCCESS method=EditInfoTest.editUserDataTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.EditInfoTest@53ca01a2] output={null}]=EditInfoTest.editUserDataTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.EditInfoTest@53ca01a2]}]
-19/07/29 00:07:17 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=editAddressesTest status=FAILURE method=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:best.EditAddressesTest@358c99f5] output={null}]=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:best.EditAddressesTest@358c99f5]}]
+19/07/29 00:07:17 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=editAddressesTest status=FAILURE method=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@358c99f5] output={null}]=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@358c99f5]}]
 19/07/29 00:07:17 INFO best.BaseTest: End
 19/07/29 00:08:07 INFO best.BaseTest: Start
 19/07/29 00:08:13 INFO best.BaseTest: Test has started running:negativePersonalInfoTest at:1564348093983
@@ -4260,3 +4260,211 @@
 19/07/31 13:43:38 INFO best.BaseTest: Passed tests: [ResultMap map={[TestResult name=addNewAddressesTest status=SUCCESS method=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@553f17c] output={null}]=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@553f17c]}]
 19/07/31 13:43:38 INFO best.BaseTest: Failed tests:[ResultMap map={}]
 19/07/31 13:43:38 INFO best.BaseTest: End
+19/07/31 13:51:59 INFO best.BaseTest: Start
+19/07/31 13:52:07 ERROR best.BaseTest: Test was failure
+19/07/31 13:52:07 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 13:52:07 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=editAddressesTest status=FAILURE method=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@4f7d0008] output={null}]=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@4f7d0008]}]
+19/07/31 13:52:07 INFO best.BaseTest: End
+19/07/31 13:53:41 INFO best.BaseTest: Start
+19/07/31 13:53:50 ERROR best.BaseTest: Test was failure
+19/07/31 13:53:50 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 13:53:50 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=editAddressesTest status=FAILURE method=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@553f17c] output={null}]=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@553f17c]}]
+19/07/31 13:53:50 INFO best.BaseTest: End
+19/07/31 13:55:16 INFO best.BaseTest: Start
+19/07/31 13:55:23 INFO best.BaseTest: Test has started running:editAddressesTest at:1564566923237
+19/07/31 13:55:45 INFO best.BaseTest: Test was success
+19/07/31 13:55:45 INFO best.BaseTest: Passed tests: [ResultMap map={[TestResult name=editAddressesTest status=SUCCESS method=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@4f7d0008] output={null}]=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@4f7d0008]}]
+19/07/31 13:55:45 INFO best.BaseTest: Failed tests:[ResultMap map={}]
+19/07/31 13:55:45 INFO best.BaseTest: End
+19/07/31 14:01:59 INFO best.BaseTest: Start
+19/07/31 14:02:07 INFO best.BaseTest: Test has started running:editAddressesTest at:1564567327352
+19/07/31 14:02:30 ERROR best.BaseTest: Test was failure
+19/07/31 14:02:30 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 14:02:30 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=editAddressesTest status=FAILURE method=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@4f7d0008] output={null}]=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@4f7d0008]}]
+19/07/31 14:02:30 INFO best.BaseTest: End
+19/07/31 14:03:06 INFO best.BaseTest: Start
+19/07/31 14:03:13 INFO best.BaseTest: Test has started running:editAddressesTest at:1564567393205
+19/07/31 14:03:34 ERROR best.BaseTest: Test was failure
+19/07/31 14:03:34 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 14:03:34 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=editAddressesTest status=FAILURE method=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@271053e1] output={null}]=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@271053e1]}]
+19/07/31 14:03:34 INFO best.BaseTest: End
+19/07/31 14:04:42 INFO best.BaseTest: Start
+19/07/31 14:04:52 INFO best.BaseTest: Test has started running:editAddressesTest at:1564567492097
+19/07/31 14:05:16 ERROR best.BaseTest: Test was failure
+19/07/31 14:05:16 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 14:05:16 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=editAddressesTest status=FAILURE method=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@4f7d0008] output={null}]=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@4f7d0008]}]
+19/07/31 14:05:16 INFO best.BaseTest: End
+19/07/31 14:07:32 INFO best.BaseTest: Start
+19/07/31 14:07:39 INFO best.BaseTest: Test has started running:editAddressesTest at:1564567659207
+19/07/31 14:08:00 ERROR best.BaseTest: Test was failure
+19/07/31 14:08:00 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 14:08:00 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=editAddressesTest status=FAILURE method=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@553f17c] output={null}]=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@553f17c]}]
+19/07/31 14:08:00 INFO best.BaseTest: End
+19/07/31 14:08:51 INFO best.BaseTest: Start
+19/07/31 14:08:57 INFO best.BaseTest: Test has started running:editAddressesTest at:1564567737786
+19/07/31 14:09:19 ERROR best.BaseTest: Test was failure
+19/07/31 14:09:19 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 14:09:19 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=editAddressesTest status=FAILURE method=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@4f7d0008] output={null}]=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@4f7d0008]}]
+19/07/31 14:09:19 INFO best.BaseTest: End
+19/07/31 14:10:43 INFO best.BaseTest: Start
+19/07/31 14:10:50 INFO best.BaseTest: Test has started running:editAddressesTest at:1564567850166
+19/07/31 14:11:13 ERROR best.BaseTest: Test was failure
+19/07/31 14:11:13 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 14:11:13 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=editAddressesTest status=FAILURE method=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@5f341870] output={null}]=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@5f341870]}]
+19/07/31 14:11:13 INFO best.BaseTest: End
+19/07/31 14:14:07 INFO best.BaseTest: Start
+19/07/31 14:14:14 INFO best.BaseTest: Test has started running:editAddressesTest at:1564568054329
+19/07/31 14:14:37 ERROR best.BaseTest: Test was failure
+19/07/31 14:14:37 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 14:14:37 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=editAddressesTest status=FAILURE method=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@4f7d0008] output={null}]=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@4f7d0008]}]
+19/07/31 14:14:37 INFO best.BaseTest: End
+19/07/31 14:40:44 INFO best.BaseTest: Start
+19/07/31 14:40:54 INFO best.BaseTest: Test has started running:editAddressesTest at:1564569654508
+19/07/31 14:41:22 ERROR best.BaseTest: Test was failure
+19/07/31 14:41:22 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 14:41:22 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=editAddressesTest status=FAILURE method=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@4f7d0008] output={null}]=EditAddressesTest.editAddressesTest(data_model.AccountData)[pri:0, instance:EditAddressesTest@4f7d0008]}]
+19/07/31 14:41:22 INFO best.BaseTest: End
+19/07/31 14:47:36 INFO best.BaseTest: Start
+19/07/31 14:47:42 INFO best.BaseTest: Test has started running:updateUserAddressesTest at:1564570062367
+19/07/31 14:48:09 ERROR best.BaseTest: Test was failure
+19/07/31 14:48:09 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 14:48:09 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=updateUserAddressesTest status=FAILURE method=UpdateAddressesTest.updateUserAddressesTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.UpdateAddressesTest@553f17c] output={null}]=UpdateAddressesTest.updateUserAddressesTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.UpdateAddressesTest@553f17c]}]
+19/07/31 14:48:09 INFO best.BaseTest: End
+19/07/31 14:51:54 INFO best.BaseTest: Start
+19/07/31 14:52:00 INFO best.BaseTest: Test has started running:updateUserAddressesTest at:1564570320370
+19/07/31 14:52:26 ERROR best.BaseTest: Test was failure
+19/07/31 14:52:26 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 14:52:26 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=updateUserAddressesTest status=FAILURE method=UpdateAddressesTest.updateUserAddressesTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.UpdateAddressesTest@553f17c] output={null}]=UpdateAddressesTest.updateUserAddressesTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.UpdateAddressesTest@553f17c]}]
+19/07/31 14:52:26 INFO best.BaseTest: End
+19/07/31 15:04:55 INFO best.BaseTest: Start
+19/07/31 15:05:05 INFO best.BaseTest: Test has started running:updateUserAddressesTest at:1564571105305
+19/07/31 15:05:28 ERROR best.BaseTest: Test was failure
+19/07/31 15:05:28 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 15:05:28 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=updateUserAddressesTest status=FAILURE method=UpdateAddressesTest.updateUserAddressesTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.UpdateAddressesTest@5f341870] output={null}]=UpdateAddressesTest.updateUserAddressesTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.UpdateAddressesTest@5f341870]}]
+19/07/31 15:05:28 INFO best.BaseTest: End
+19/07/31 15:07:26 INFO best.BaseTest: Start
+19/07/31 15:07:33 INFO best.BaseTest: Test has started running:updateUserAddressesTest at:1564571253252
+19/07/31 15:07:56 ERROR best.BaseTest: Test was failure
+19/07/31 15:07:56 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 15:07:56 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=updateUserAddressesTest status=FAILURE method=UpdateAddressesTest.updateUserAddressesTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.UpdateAddressesTest@553f17c] output={null}]=UpdateAddressesTest.updateUserAddressesTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.UpdateAddressesTest@553f17c]}]
+19/07/31 15:07:56 INFO best.BaseTest: End
+19/07/31 15:08:39 INFO best.BaseTest: Start
+19/07/31 15:08:46 INFO best.BaseTest: Test has started running:updateUserAddressesTest at:1564571326414
+19/07/31 15:09:08 ERROR best.BaseTest: Test was failure
+19/07/31 15:09:08 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 15:09:08 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=updateUserAddressesTest status=FAILURE method=UpdateAddressesTest.updateUserAddressesTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.UpdateAddressesTest@553f17c] output={null}]=UpdateAddressesTest.updateUserAddressesTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.UpdateAddressesTest@553f17c]}]
+19/07/31 15:09:08 INFO best.BaseTest: End
+19/07/31 15:09:36 INFO best.BaseTest: Start
+19/07/31 15:09:42 INFO best.BaseTest: Test has started running:updateUserAddressesTest at:1564571382676
+19/07/31 15:10:04 ERROR best.BaseTest: Test was failure
+19/07/31 15:10:04 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 15:10:04 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=updateUserAddressesTest status=FAILURE method=UpdateAddressesTest.updateUserAddressesTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.UpdateAddressesTest@553f17c] output={null}]=UpdateAddressesTest.updateUserAddressesTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.UpdateAddressesTest@553f17c]}]
+19/07/31 15:10:04 INFO best.BaseTest: End
+19/07/31 15:10:59 INFO best.BaseTest: Start
+19/07/31 15:11:08 INFO best.BaseTest: Test has started running:updateUserAddressesTest at:1564571468847
+19/07/31 15:11:34 ERROR best.BaseTest: Test was failure
+19/07/31 15:11:34 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 15:11:34 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=updateUserAddressesTest status=FAILURE method=UpdateAddressesTest.updateUserAddressesTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.UpdateAddressesTest@4f7d0008] output={null}]=UpdateAddressesTest.updateUserAddressesTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.UpdateAddressesTest@4f7d0008]}]
+19/07/31 15:11:34 INFO best.BaseTest: End
+19/07/31 15:13:36 INFO best.BaseTest: Start
+19/07/31 15:13:43 INFO best.BaseTest: Test has started running:updateUserAddressesTest at:1564571623283
+19/07/31 15:14:17 INFO best.BaseTest: Test was success
+19/07/31 15:14:17 INFO best.BaseTest: Passed tests: [ResultMap map={[TestResult name=updateUserAddressesTest status=SUCCESS method=UpdateAddressesTest.updateUserAddressesTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.UpdateAddressesTest@4f7d0008] output={null}]=UpdateAddressesTest.updateUserAddressesTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.UpdateAddressesTest@4f7d0008]}]
+19/07/31 15:14:17 INFO best.BaseTest: Failed tests:[ResultMap map={}]
+19/07/31 15:14:17 INFO best.BaseTest: End
+19/07/31 15:19:04 INFO best.BaseTest: Start
+19/07/31 15:19:11 INFO best.BaseTest: Test has started running:updateUserAddressesTest at:1564571951669
+19/07/31 15:19:47 INFO best.BaseTest: Test was success
+19/07/31 15:19:47 INFO best.BaseTest: Passed tests: [ResultMap map={[TestResult name=updateUserAddressesTest status=SUCCESS method=UpdateAddressesTest.updateUserAddressesTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.UpdateAddressesTest@553f17c] output={null}]=UpdateAddressesTest.updateUserAddressesTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.UpdateAddressesTest@553f17c]}]
+19/07/31 15:19:47 INFO best.BaseTest: Failed tests:[ResultMap map={}]
+19/07/31 15:19:47 INFO best.BaseTest: End
+19/07/31 15:21:28 INFO best.BaseTest: Start
+19/07/31 15:21:35 INFO best.BaseTest: Test has started running:updateUserAddressesTest at:1564572095054
+19/07/31 15:22:11 INFO best.BaseTest: Test was success
+19/07/31 15:22:11 INFO best.BaseTest: Passed tests: [ResultMap map={[TestResult name=updateUserAddressesTest status=SUCCESS method=UpdateAddressesTest.updateUserAddressesTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.UpdateAddressesTest@553f17c] output={null}]=UpdateAddressesTest.updateUserAddressesTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.UpdateAddressesTest@553f17c]}]
+19/07/31 15:22:11 INFO best.BaseTest: Failed tests:[ResultMap map={}]
+19/07/31 15:22:11 INFO best.BaseTest: End
+19/07/31 15:31:24 INFO best.BaseTest: Start
+19/07/31 15:31:31 INFO best.BaseTest: Test has started running:addNewAddressesTest at:1564572691669
+19/07/31 15:31:43 ERROR best.BaseTest: Test was failure
+19/07/31 15:31:43 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 15:31:43 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=addNewAddressesTest status=FAILURE method=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@553f17c] output={null}]=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@553f17c]}]
+19/07/31 15:31:43 INFO best.BaseTest: End
+19/07/31 15:31:58 INFO best.BaseTest: Start
+19/07/31 15:32:05 INFO best.BaseTest: Test has started running:addNewAddressesTest at:1564572725318
+19/07/31 15:32:25 INFO best.BaseTest: Test was success
+19/07/31 15:32:25 INFO best.BaseTest: Passed tests: [ResultMap map={[TestResult name=addNewAddressesTest status=SUCCESS method=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@553f17c] output={null}]=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@553f17c]}]
+19/07/31 15:32:25 INFO best.BaseTest: Failed tests:[ResultMap map={}]
+19/07/31 15:32:25 INFO best.BaseTest: End
+19/07/31 15:33:15 INFO best.BaseTest: Start
+19/07/31 15:33:24 INFO best.BaseTest: Test has started running:editUserDataTest at:1564572804325
+19/07/31 15:33:45 ERROR best.BaseTest: Test was failure
+19/07/31 15:33:45 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 15:33:45 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=editUserDataTest status=FAILURE method=EditInfoTest.editUserDataTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.EditInfoTest@553f17c] output={null}]=EditInfoTest.editUserDataTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.EditInfoTest@553f17c]}]
+19/07/31 15:33:45 INFO best.BaseTest: End
+19/07/31 15:34:09 INFO best.BaseTest: Start
+19/07/31 15:34:15 INFO best.BaseTest: Test has started running:editUserDataTest at:1564572855558
+19/07/31 15:34:36 ERROR best.BaseTest: Test was failure
+19/07/31 15:34:36 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 15:34:36 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=editUserDataTest status=FAILURE method=EditInfoTest.editUserDataTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.EditInfoTest@553f17c] output={null}]=EditInfoTest.editUserDataTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.EditInfoTest@553f17c]}]
+19/07/31 15:34:36 INFO best.BaseTest: End
+19/07/31 15:35:33 INFO best.BaseTest: Start
+19/07/31 15:35:39 INFO best.BaseTest: Test has started running:editUserDataTest at:1564572939830
+19/07/31 15:35:59 ERROR best.BaseTest: Test was failure
+19/07/31 15:35:59 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 15:35:59 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=editUserDataTest status=FAILURE method=EditInfoTest.editUserDataTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.EditInfoTest@14bf9759] output={null}]=EditInfoTest.editUserDataTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.EditInfoTest@14bf9759]}]
+19/07/31 15:35:59 INFO best.BaseTest: End
+19/07/31 15:36:40 INFO best.BaseTest: Start
+19/07/31 15:36:47 INFO best.BaseTest: Test has started running:editUserDataTest at:1564573007082
+19/07/31 15:37:07 ERROR best.BaseTest: Test was failure
+19/07/31 15:37:07 INFO best.BaseTest: Passed tests: [ResultMap map={}]
+19/07/31 15:37:07 INFO best.BaseTest: Failed tests:[ResultMap map={[TestResult name=editUserDataTest status=FAILURE method=EditInfoTest.editUserDataTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.EditInfoTest@4f7d0008] output={null}]=EditInfoTest.editUserDataTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.EditInfoTest@4f7d0008]}]
+19/07/31 15:37:07 INFO best.BaseTest: End
+19/07/31 15:38:31 INFO best.BaseTest: Start
+19/07/31 15:38:40 INFO best.BaseTest: Test has started running:editUserDataTest at:1564573120695
+19/07/31 15:38:54 INFO best.BaseTest: Test was success
+19/07/31 15:38:54 INFO best.BaseTest: Passed tests: [ResultMap map={[TestResult name=editUserDataTest status=SUCCESS method=EditInfoTest.editUserDataTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.EditInfoTest@553f17c] output={null}]=EditInfoTest.editUserDataTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.EditInfoTest@553f17c]}]
+19/07/31 15:38:54 INFO best.BaseTest: Failed tests:[ResultMap map={}]
+19/07/31 15:38:54 INFO best.BaseTest: End
+19/07/31 15:39:19 INFO best.BaseTest: Start
+19/07/31 15:39:26 INFO best.BaseTest: Test has started running:addNewAddressesTest at:1564573166216
+19/07/31 15:39:45 INFO best.BaseTest: Test was success
+19/07/31 15:39:45 INFO best.BaseTest: Passed tests: [ResultMap map={[TestResult name=addNewAddressesTest status=SUCCESS method=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@4f7d0008] output={null}]=AddNewAddressesTest.addNewAddressesTest(data_model.AccountData)[pri:0, instance:best.AddNewAddressesTest@4f7d0008]}]
+19/07/31 15:39:45 INFO best.BaseTest: Failed tests:[ResultMap map={}]
+19/07/31 15:39:45 INFO best.BaseTest: End
+19/07/31 15:39:59 INFO best.BaseTest: Start
+19/07/31 15:40:06 INFO best.BaseTest: Test has started running:updateUserAddressesTest at:1564573206294
+19/07/31 15:40:39 INFO best.BaseTest: Test was success
+19/07/31 15:40:39 INFO best.BaseTest: Passed tests: [ResultMap map={[TestResult name=updateUserAddressesTest status=SUCCESS method=UpdateAddressesTest.updateUserAddressesTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.UpdateAddressesTest@553f17c] output={null}]=UpdateAddressesTest.updateUserAddressesTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.UpdateAddressesTest@553f17c]}]
+19/07/31 15:40:39 INFO best.BaseTest: Failed tests:[ResultMap map={}]
+19/07/31 15:40:39 INFO best.BaseTest: End
+19/07/31 15:42:42 INFO best.BaseTest: Start
+19/07/31 15:42:50 INFO best.BaseTest: Test has started running:negativePersonalInfoTest at:1564573370452
+19/07/31 15:42:59 INFO best.AccountCreationPage: All error messages are exist
+19/07/31 15:42:59 INFO best.BaseTest: Test was success
+19/07/31 15:42:59 INFO best.BaseTest: Passed tests: [ResultMap map={[TestResult name=negativePersonalInfoTest status=SUCCESS method=NegativeAccountCreationTest.negativePersonalInfoTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.NegativeAccountCreationTest@4f7d0008] output={null}]=NegativeAccountCreationTest.negativePersonalInfoTest(data_model.AccountData, data_model.AccountData)[pri:0, instance:best.NegativeAccountCreationTest@4f7d0008]}]
+19/07/31 15:42:59 INFO best.BaseTest: Failed tests:[ResultMap map={}]
+19/07/31 15:42:59 INFO best.BaseTest: End
+19/07/31 15:43:05 INFO best.BaseTest: Start
+19/07/31 15:43:12 INFO best.BaseTest: Test has started running:pageElementShown at:1564573392250
+19/07/31 15:43:16 INFO best.AccountCreationPage: All page elements is shown
+19/07/31 15:43:16 INFO best.BaseTest: Test was success
+19/07/31 15:43:16 INFO best.BaseTest: Passed tests: [ResultMap map={[TestResult name=pageElementShown status=SUCCESS method=PageElementsDisplayTest.pageElementShown(data_model.AccountData)[pri:0, instance:best.PageElementsDisplayTest@4f7d0008] output={null}]=PageElementsDisplayTest.pageElementShown(data_model.AccountData)[pri:0, instance:best.PageElementsDisplayTest@4f7d0008]}]
+19/07/31 15:43:16 INFO best.BaseTest: Failed tests:[ResultMap map={}]
+19/07/31 15:43:16 INFO best.BaseTest: End
+19/07/31 15:43:25 INFO best.BaseTest: Start
+19/07/31 15:43:33 INFO best.BaseTest: Test has started running:signInTest at:1564573413017
+19/07/31 15:43:34 INFO best.BaseTest: Test was success
+19/07/31 15:43:44 INFO best.BaseTest: Test has started running:personalInfoTest at:1564573424496
+19/07/31 15:43:53 INFO best.BaseTest: Test was success
+19/07/31 15:43:53 INFO best.BaseTest: Passed tests: [ResultMap map={[TestResult name=signInTest status=SUCCESS method=SignInTest.signInTest(data_model.AccountData)[pri:0, instance:best.SignInTest@271053e1] output={null}]=SignInTest.signInTest(data_model.AccountData)[pri:0, instance:best.SignInTest@271053e1], [TestResult name=personalInfoTest status=SUCCESS method=AccountCreationTest.personalInfoTest(data_model.AccountData)[pri:0, instance:best.AccountCreationTest@589838eb] output={null}]=AccountCreationTest.personalInfoTest(data_model.AccountData)[pri:0, instance:best.AccountCreationTest@589838eb]}]
+19/07/31 15:43:53 INFO best.BaseTest: Failed tests:[ResultMap map={}]
+19/07/31 15:43:53 INFO best.BaseTest: End
+19/07/31 15:44:24 INFO best.BaseTest: Start
+19/07/31 15:44:31 INFO best.BaseTest: Test has started running:verificationUserDataTest at:1564573471630
+19/07/31 15:44:42 INFO best.BaseTest: Test was success
+19/07/31 15:44:48 INFO best.BaseTest: Test has started running:verificationUserAddressesTest at:1564573488837
+19/07/31 15:45:08 INFO best.BaseTest: Test was success
+19/07/31 15:45:09 INFO best.BaseTest: Passed tests: [ResultMap map={[TestResult name=verificationUserDataTest status=SUCCESS method=VerificationInfoTest.verificationUserDataTest(data_model.AccountData)[pri:0, instance:best.VerificationInfoTest@271053e1] output={null}]=VerificationInfoTest.verificationUserDataTest(data_model.AccountData)[pri:0, instance:best.VerificationInfoTest@271053e1], [TestResult name=verificationUserAddressesTest status=SUCCESS method=VerificationAddressesTest.verificationUserAddressesTest(data_model.AccountData)[pri:0, instance:best.VerificationAddressesTest@589838eb] output={null}]=VerificationAddressesTest.verificationUserAddressesTest(data_model.AccountData)[pri:0, instance:best.VerificationAddressesTest@589838eb]}]
+19/07/31 15:45:09 INFO best.BaseTest: Failed tests:[ResultMap map={}]
+19/07/31 15:45:09 INFO best.BaseTest: End

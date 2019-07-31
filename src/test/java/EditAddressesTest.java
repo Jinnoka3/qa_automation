@@ -1,5 +1,5 @@
-package best;
-
+/*
+import best.*;
 import best.data_pool.DataPool;
 import data_model.AccountData;
 import org.openqa.selenium.support.PageFactory;
@@ -16,16 +16,18 @@ public class EditAddressesTest extends BaseTest {
     private AccountCreationPage accountCreationPage;
     private MyAccountPage myAccountPage;
     private MyAddressesPage myAddressesPage;
-    private MyPersonalInfoPage myPersonalInfoPage;
+    private AddNewAddressPage addNewAddressPage;
+    private MyAddresseUpdatePage myAddresseUpdatePage;
 
     @BeforeClass
     protected void beforeSuite( ITestContext testContext ) {
         dataPool = new DataPool<>("dataFile", testContext, AccountData.class);
-        dataPool.fillNewDataPool("dataToReplaceFile", testContext, AccountData.class);
         signInPage = PageFactory.initElements(driver, SignInPage.class);
         accountCreationPage = PageFactory.initElements(driver, AccountCreationPage.class);
         myAccountPage = PageFactory.initElements(driver, MyAccountPage.class);
-        myPersonalInfoPage = PageFactory.initElements(driver, MyPersonalInfoPage.class);
+        myAddressesPage = PageFactory.initElements(driver, MyAddressesPage.class);
+        addNewAddressPage = PageFactory.initElements(driver, AddNewAddressPage.class);
+        myAddresseUpdatePage = PageFactory.initElements(driver, MyAddresseUpdatePage.class);
     }
 
     @DataProvider(name = "personalInformation")
@@ -42,8 +44,12 @@ public class EditAddressesTest extends BaseTest {
 
         accountCreationPage.accountCreate(accountData);
         accountCreationPage.register();
+
         myAccountPage.clickMyAddresses();
 
-        //Assert.assertEquals("Addresses - My Store", myAddressesPage.getTitle());*/
+        addNewAddressPage.addNewAddress(accountData);
+
+        myAddresseUpdatePage.updateAddress(accountData);
     }
 }
+*/

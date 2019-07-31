@@ -3,6 +3,7 @@ package best;
 import best.data_pool.DataPool;
 import data_model.AccountData;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
@@ -40,9 +41,11 @@ public class AddNewAddressesTest extends BaseTest{
 
         accountCreationPage.accountCreate(accountData);
         accountCreationPage.register();
+
         myAccountPage.clickMyAddresses();
 
-        //myAddressesPage.clickAddNewAddress();
         addNewAddressPage.addNewAddress(accountData);
+
+        Assert.assertTrue(myAddressesPage.verifyAddAddresses(accountData));
     }
 }

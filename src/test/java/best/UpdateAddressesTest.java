@@ -16,15 +16,18 @@ public class UpdateAddressesTest extends BaseTest {
     private MyAccountPage myAccountPage;
     private MyAddressesPage myAddressesPage;
     private AddNewAddressPage addNewAddressPage;
+    private MyAddresseUpdatePage myAddresseUpdatePage;
 
     @BeforeClass
     protected void beforeSuite( ITestContext testContext ) {
         dataPool = new DataPool<>("dataFile", testContext, AccountData.class);
+        dataPool.fillNewDataPool("dataToReplaceFile", testContext, AccountData.class);
         signInPage = PageFactory.initElements(driver, SignInPage.class);
         accountCreationPage = PageFactory.initElements(driver, AccountCreationPage.class);
         myAccountPage = PageFactory.initElements(driver, MyAccountPage.class);
         myAddressesPage = PageFactory.initElements(driver, MyAddressesPage.class);
         addNewAddressPage = PageFactory.initElements(driver, AddNewAddressPage.class);
+        myAddresseUpdatePage = PageFactory.initElements(driver, MyAddresseUpdatePage.class);
     }
 
     @DataProvider(name = "personalInformation")
@@ -33,7 +36,7 @@ public class UpdateAddressesTest extends BaseTest {
     }
 
     @Test(dataProvider = "personalInformation")
-    public void verificationUserAddressesTest(AccountData accountData) {
+    public void updateUserAddressesTest(AccountData accountData, AccountData accountData2) {
 
         signInPage.clickSignIn();
         signInPage.sendEmailForCreateAnAccount(accountData.getEmail());
@@ -45,18 +48,8 @@ public class UpdateAddressesTest extends BaseTest {
 
         addNewAddressPage.addNewAddress(accountData);
 
-        //myAddressesPage.updateAddresses(accountData);
+        myAddressesPage.updateAddresses(accountData2);
 
-
-        //Assert.assertTrue(myAddressesPage.verificationAddresses(accountData));
-
-        //addNewAddressPage.addNewAddress(accountData);
-        /*for (int i = 1; i < accountData.getAddressMap().size(); i++) {
-            myAddressesPage.clickAddNewAddress();
-            addNewAddressPage.addNewAddress(accountData);
-            addNewAddressPage.saveNewAddress();
-        }*/
-
-        //myAddressesPage.findAddresses();
+        Assert.assertTrue(myAddressesPage.verificationAddresses(accountData2));
     }
 }

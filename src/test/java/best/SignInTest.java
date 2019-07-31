@@ -33,7 +33,6 @@ public class SignInTest extends BaseTest {
         signInPage.clickCreateAnAccount();
 
         Assert.assertEquals("Login - My Store", signInPage.getTitle());
-
     }
 }
 
