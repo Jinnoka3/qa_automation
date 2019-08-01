@@ -41,14 +41,14 @@ public class AddNewAddressPage extends  AccountCreationPage {
 
     private ArrayList<String> aliseArray = new ArrayList<>();
 
-    public void addAlisesArray(AccountData accountData){
+    public void addAliasArray(AccountData accountData){
         for (int i = 0; i < accountData.getAddressMap().size(); i++) {
             aliseArray.add(accountData.getAddressMap().get(i).getAlias());
         }
     }
     public void addNewAddress(AccountData accountData) {
 
-        addAlisesArray(accountData);
+        addAliasArray(accountData);
 
         for (int i = 0; i < aliseArray.size(); i++) {
 
