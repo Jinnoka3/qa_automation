@@ -1,12 +1,16 @@
 package best;
 
 import io.qameta.allure.Attachment;
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+
+import java.io.File;
+import java.io.IOException;
 
 import static best.BaseTest.LOGGER;
 
@@ -33,6 +37,11 @@ public class SimpleTestListener implements ITestListener {
 
     @Override
     public void onTestFailure(ITestResult iTestResult) {
+        try {
+            takeScreenShot(iTestResult);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         LOGGER.error("Test was failure");
     }
 
@@ -56,5 +65,13 @@ public class SimpleTestListener implements ITestListener {
         LOGGER.info("Passed tests: " + iTestContext.getPassedTests());
         LOGGER.info("Failed tests:" + iTestContext.getFailedTests());
         LOGGER.info("End");
+    }
+
+    private void takeScreenShot(ITestResult var1) throws IOException {
+        Object currentClass = var1.getInstance();
+        WebDriver webDriver = ((BaseTest) currentClass).getDriver();
+        File screenshot = ((TakesScreenshot) webDriver)
+                .getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(screenshot, new File("src/target/allure-results/screenshots/" + var1.getTestClass()+ ".jpg"));
     }
 }

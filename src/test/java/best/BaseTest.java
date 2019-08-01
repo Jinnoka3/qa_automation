@@ -41,4 +41,8 @@ public class BaseTest {
     public void afterClassMethod(){
         driver.close();
     }
+
+    public WebDriver getDriver() {
+        return driver;
+    }
 }
