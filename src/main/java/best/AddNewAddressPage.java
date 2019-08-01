@@ -39,18 +39,18 @@ public class AddNewAddressPage extends  AccountCreationPage {
         return false;
     }
 
-    private ArrayList<String> aliseArray = new ArrayList<>();
+    private ArrayList<String> aliasArray = new ArrayList<>();
 
     public void addAliasArray(AccountData accountData){
         for (int i = 0; i < accountData.getAddressMap().size(); i++) {
-            aliseArray.add(accountData.getAddressMap().get(i).getAlias());
+            aliasArray.add(accountData.getAddressMap().get(i).getAlias());
         }
     }
     public void addNewAddress(AccountData accountData) {
 
         addAliasArray(accountData);
 
-        for (int i = 0; i < aliseArray.size(); i++) {
+        for (int i = 0; i < aliasArray.size(); i++) {
 
             if (!aliasIsOnThePage(accountData.getAddressMap().get(i).getAlias(), aliasTitles)) {
 
@@ -81,7 +81,6 @@ public class AddNewAddressPage extends  AccountCreationPage {
             }
         }
     }
-
 
     public void saveNewAddress() {
         click(save);

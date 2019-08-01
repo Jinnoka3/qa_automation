@@ -71,37 +71,4 @@ public class UserInfo implements Comparable <UserInfo>{
 
         return 0;
     }
-
-    /*@Override
-    public String toString(){
-        return  "gender: " + gender +
-                "; customerFirstName: " + firstName +
-                "; customerLastName: " + lastName +
-                "; day: " + day +
-                "; month: " + month +
-                "; year: " + year +
-                "; newsLetter: " + newsletter +
-                "; specialOffers: " + specialOffers;
-    }*/
-
-        //return Integer.compare(age, other.age);
-        /*return Comparator.comparing(UserInfo::getGender)
-                .thenComparing(UserInfo::getFirstName)
-                .thenComparing(UserInfo::getLastName)
-                .compare(this, o);*/
-
-
-    /*@Override
-    public int compareTo(UserInfo comparedWith){
-        int i = this.gender.compareTo(comparedWith.gender);
-        if(i == 0){
-            i = this.firstName.compareTo(comparedWith.firstName);
-        }
-        return i;
-    }*/
-
-    /*@Override
-    public int compare(UserInfo a, UserInfo b) {
-        return a.getGender().compareTo(b.getGender());
-    }*/
 }

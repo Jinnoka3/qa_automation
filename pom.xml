@@ -15,12 +15,12 @@
                 <version>3.0.0-M3</version>
                 <configuration>
                     <suiteXmlFiles>
-                       <!-- <suiteXmlFile>src/test/test_suites/edit_test_suite.xml</suiteXmlFile>
-                        <suiteXmlFile>src/test/test_suites/login_logout.xml</suiteXmlFile>-->
+                        <suiteXmlFile>src/test/test_suites/edit_test_suite.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/test_suites/login_logout.xml</suiteXmlFile>
                         <suiteXmlFile>src/test/test_suites/negative_test_suite.xml</suiteXmlFile>
-                       <!-- <suiteXmlFile>src/test/test_suites/page_elements_test_suite.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/test_suites/page_elements_test_suite.xml</suiteXmlFile>
                         <suiteXmlFile>src/test/test_suites/verification_test_suite.xml</suiteXmlFile>
-                        <suiteXmlFile>src/test/test_suites/registration_test_suite.xml</suiteXmlFile>-->
+                        <suiteXmlFile>src/test/test_suites/registration_test_suite.xml</suiteXmlFile>
                     </suiteXmlFiles>
 
                     <!--<parallel>methods</parallel>

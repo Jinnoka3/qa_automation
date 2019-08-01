@@ -10,7 +10,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class VerificationAddressesTest extends BaseTest{
+public class  VerificationAddressesTest extends BaseTest{
     private SignInPage signInPage;
     private AccountCreationPage accountCreationPage;
     private MyAccountPage myAccountPage;
