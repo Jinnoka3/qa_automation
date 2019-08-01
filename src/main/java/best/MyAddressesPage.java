@@ -31,24 +31,24 @@ public class MyAddressesPage extends AccountCreationPage {
     @FindBy(css = "a[title = \"Update\"]")
     List<WebElement> updateButtons;
 
-    private ArrayList<String> aliseArray = new ArrayList<>();
+    private ArrayList<String> aliasArray = new ArrayList<>();
 
     public void addAliasesArray(AccountData accountData) {
         for (int i = 0; i < accountData.getAddressMap().size(); i++) {
-            aliseArray.add(accountData.getAddressMap().get(i).getAlias());
+            aliasArray.add(accountData.getAddressMap().get(i).getAlias());
         }
     }
 
     public boolean verifyAddAddresses(AccountData accountData) {
         addAliasesArray(accountData);
-        return (aliseArray.size() == accountData.getAddressMap().size()) ;
+        return (aliasArray.size() == accountData.getAddressMap().size()) ;
     }
 
     public void updateAddresses(AccountData accountData) {
 
         addAliasesArray(accountData);
 
-        for (int i = 0; i < aliseArray.size(); i++) {
+        for (int i = 0; i < aliasArray.size(); i++) {
 
                 click(updateButtons.get(i));
 
