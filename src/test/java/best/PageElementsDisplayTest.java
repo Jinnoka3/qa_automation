@@ -30,7 +30,6 @@ public class PageElementsDisplayTest extends BaseTest{
     public void pageElementShown(AccountData accountData){
 
         signInPage.clickSignIn();
-
         signInPage.sendEmailForCreateAnAccount(accountData.getEmail());
         signInPage.clickCreateAnAccount();
 

@@ -15,7 +15,7 @@
 
             <class name="best.AccountCreationTest">
                 <methods>
-                    <include name="personalInfoTest" />
+                    <include name="accountCreationTest" />
                 </methods>
             </class>
 

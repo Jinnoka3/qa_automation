@@ -18,7 +18,7 @@ public class VerificationAddressesTest extends BaseTest{
     private AddNewAddressPage addNewAddressPage;
 
     @BeforeClass
-    protected void beforeSuite( ITestContext testContext ) {
+    protected void beforeClass( ITestContext testContext ) {
         dataPool = new DataPool<>("dataFile", testContext, AccountData.class);
         signInPage = PageFactory.initElements(driver, SignInPage.class);
         accountCreationPage = PageFactory.initElements(driver, AccountCreationPage.class);
@@ -41,10 +41,11 @@ public class VerificationAddressesTest extends BaseTest{
 
         accountCreationPage.accountCreate(accountData);
         accountCreationPage.register();
+
         myAccountPage.clickMyAddresses();
 
         addNewAddressPage.addNewAddress(accountData);
 
-        Assert.assertTrue(myAddressesPage.verificationAddresses(accountData));
+        Assert.assertTrue(myAddressesPage.verifyAddresses(accountData));
     }
 }

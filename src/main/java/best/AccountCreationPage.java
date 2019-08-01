@@ -151,7 +151,6 @@ public class AccountCreationPage extends BasePage {
         pageElements.add(mobilePhone);
         pageElements.add(anAdressAlias);
         pageElements.add(register);
-
     }
 
     public void fillErrorArrayList(){

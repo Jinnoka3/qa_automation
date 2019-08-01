@@ -44,12 +44,13 @@ public class UpdateAddressesTest extends BaseTest {
 
         accountCreationPage.accountCreate(accountData);
         accountCreationPage.register();
+        
         myAccountPage.clickMyAddresses();
 
         addNewAddressPage.addNewAddress(accountData);
 
         myAddressesPage.updateAddresses(accountData2);
 
-        Assert.assertTrue(myAddressesPage.verificationAddresses(accountData2));
+        Assert.assertTrue(myAddressesPage.verifyAddresses(accountData2));
     }
 }

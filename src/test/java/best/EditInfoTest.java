@@ -40,6 +40,7 @@ public class EditInfoTest extends BaseTest {
         accountCreationPage.register();
 
         myAccountPage.clickPersonalInfo();
+
         myPersonalInfoPage.editUserInformation(accountData, accountData2);
         myPersonalInfoPage.saveUpdate();
 

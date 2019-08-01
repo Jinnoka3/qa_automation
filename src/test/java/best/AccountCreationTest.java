@@ -28,15 +28,15 @@ public class AccountCreationTest extends BaseTest{
     }
 
     @Test(dataProvider = "personalInformation")
-    public void personalInfoTest(AccountData accountData){
+    public void accountCreationTest(AccountData accountData){
 
         signInPage.clickSignIn();
-
         signInPage.sendEmailForCreateAnAccount(accountData.getEmail());
         signInPage.clickCreateAnAccount();
 
         accountCreationPage.accountCreate(accountData);
         accountCreationPage.register();
+
         Assert.assertEquals("My account - My Store", accountCreationPage.getTitle());
     }
 }

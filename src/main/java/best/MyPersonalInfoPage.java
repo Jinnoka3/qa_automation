@@ -61,15 +61,15 @@ public class MyPersonalInfoPage extends AccountCreationPage{
         return AccountData.builder(getAttribute(getEmail())).password("").userInfo(getUserInfoFromPage()).addressMap(new ArrayList<UserAddress>()).build();
     }
 
-    public boolean verificationAllFields(AccountData accountData){
+    public boolean verifyAllFields(AccountData accountData){
         return accountData.getUserInfo().compareTo(getUserInfoFromPage()) == 0;
     }
 
-    public boolean verificationEmail(AccountData accountData){
+    public boolean verifyEmail(AccountData accountData){
         return accountData.compareTo(getUserEmailFromPage()) == 0;
     }
 
-    public boolean verificationNewsletter(AccountData accountData){
+    public boolean verifyNewsletter(AccountData accountData){
         if(!accountData.getUserInfo().isNewsletter() == getUserInfoFromPage().isNewsletter())
         {
             LOGGER.error("Newsletters aren't equal");
@@ -78,9 +78,9 @@ public class MyPersonalInfoPage extends AccountCreationPage{
         return true;
     }
 
-    public boolean verificationSpecialOffers(AccountData accountData){
+    public boolean verifySpecialOffers(AccountData accountData){
         if(!accountData.getUserInfo().isSpecialOffers() == getUserInfoFromPage().isSpecialOffers()){
-            LOGGER.error("Special Offers aren't equal");
+            LOGGER.error("Special Offer aren't equal");
             return false;
         }
         return true;

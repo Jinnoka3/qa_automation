@@ -19,7 +19,7 @@ public class VerificationInfoTest extends BaseTest {
     private MyPersonalInfoPage myPersonalInfoPage;
 
     @BeforeClass
-    protected void beforeSuite(ITestContext testContext) {
+    protected void beforeClass(ITestContext testContext) {
         dataPool = new DataPool<>("dataFile", testContext, AccountData.class);
         signInPage = PageFactory.initElements(driver, SignInPage.class);
         accountCreationPage = PageFactory.initElements(driver, AccountCreationPage.class);
@@ -45,10 +45,10 @@ public class VerificationInfoTest extends BaseTest {
         myAccountPage.clickPersonalInfo();
 
         SoftAssert asert = new SoftAssert();
-        asert.assertTrue(myPersonalInfoPage.verificationEmail(accountData));
-        Assert.assertTrue(myPersonalInfoPage.verificationAllFields(accountData));
-        Assert.assertTrue(myPersonalInfoPage.verificationNewsletter(accountData));
-        Assert.assertTrue(myPersonalInfoPage.verificationSpecialOffers(accountData));
+        asert.assertTrue(myPersonalInfoPage.verifyEmail(accountData));
+        Assert.assertTrue(myPersonalInfoPage.verifyAllFields(accountData));
+        Assert.assertTrue(myPersonalInfoPage.verifyNewsletter(accountData));
+        Assert.assertTrue(myPersonalInfoPage.verifySpecialOffers(accountData));
         asert.assertAll();
     }
 }

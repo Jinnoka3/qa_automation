@@ -34,7 +34,6 @@ public class NegativeAccountCreationTest extends BaseTest{
     public void negativePersonalInfoTest(AccountData accountData, AccountData accountData2){
 
         signInPage.clickSignIn();
-
         signInPage.sendEmailForCreateAnAccount(accountData.getEmail());
         signInPage.clickCreateAnAccount();
 
