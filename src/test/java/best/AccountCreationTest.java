@@ -28,7 +28,7 @@ public class AccountCreationTest extends BaseTest{
     }
 
     @Test(dataProvider = "personalInformation")
-    public void accountCreationTest(AccountData accountData){
+    public void accountCreationTest(AccountData accountData) throws IllegalAccessException {
 
         signInPage.clickSignIn();
         signInPage.sendEmailForCreateAnAccount(accountData.getEmail());

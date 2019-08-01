@@ -7,11 +7,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Getter
@@ -37,8 +40,7 @@ public class AccountCreationPage extends BasePage {
     final static String MESSAGE_ERROR_MOBILE = "phone_mobile is invalid.";
 
     private ArrayList<String> baseErrors = new ArrayList<>();
-
-    private ArrayList<WebElement> pageElements = new ArrayList<>();
+    private List<WebElement> pageElements = new ArrayList<>();
 
     @FindBy(css = "div.alert li")
     List<WebElement> userErrors;
@@ -125,32 +127,30 @@ public class AccountCreationPage extends BasePage {
         return invalidData.getText();
     }
 
-    public void fillPageElementsList(){
-        pageElements.add(male);
-        pageElements.add(female);
-        pageElements.add(customerFirstName);
-        pageElements.add(customerLastName);
-        pageElements.add(email);
-        pageElements.add(password);
-        pageElements.add(day);
-        pageElements.add(month);
-        pageElements.add(year);
-        pageElements.add(newsletter);
-        pageElements.add(specialOffers);
-        pageElements.add(firstNameInAdressForm);
-        pageElements.add(lastNameInAdressForm);
-        pageElements.add(company);
-        pageElements.add(adressLine1);
-        pageElements.add(adressLine2);
-        pageElements.add(city);
-        pageElements.add(state);
-        pageElements.add(zip);
-        pageElements.add(country);
-        pageElements.add(additionalInformation);
-        pageElements.add(homePhone);
-        pageElements.add(mobilePhone);
-        pageElements.add(anAdressAlias);
-        pageElements.add(register);
+    public void fillPageElementsList() throws IllegalAccessException {
+
+        List<Field> allElements = new ArrayList<>(Arrays.asList(AccountCreationPage.class.getDeclaredFields()));
+        for (Field allElement : allElements) {
+            if (allElement.getType().toString().equals("interface org.openqa.selenium.WebElement")) {
+
+                AccountCreationPage obj = PageFactory.initElements(super.driver, AccountCreationPage.class);
+                pageElements.add(((WebElement) allElement.get(obj)));
+            }
+        }
+    }
+
+    public boolean correctPageElementsAreShown() throws IllegalAccessException {
+
+        fillPageElementsList();
+
+        for (WebElement webElement : pageElements) {
+            if (!elementIsVisible(webElement) && !elementIsClicable(webElement)) {
+                LOGGER.error("Page element \"" + webElement + "\" isn't shown");
+                return false;
+            }
+        }
+        LOGGER.info("All page elements is shown");
+        return true;
     }
 
     public void fillErrorArrayList(){
@@ -219,18 +219,5 @@ public class AccountCreationPage extends BasePage {
 
     public void register(){
         click(register);
-    }
-
-    public boolean correctPageElementsAreShown(){
-        fillPageElementsList();
-
-        for (WebElement webElement : pageElements) {
-            if (!elementIsVisible(webElement) && !elementIsClicable(webElement)) {
-                LOGGER.error("Page element \"" + webElement + "\" isn't shown");
-                return false;
-            }
-        }
-        LOGGER.info("All page elements is shown");
-        return true;
     }
 }

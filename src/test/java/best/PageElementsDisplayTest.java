@@ -27,7 +27,7 @@ public class PageElementsDisplayTest extends BaseTest{
     }
 
     @Test(dataProvider = "personalInformation")
-    public void pageElementShown(AccountData accountData){
+    public void pageElementShown(AccountData accountData) throws IllegalAccessException {
 
         signInPage.clickSignIn();
         signInPage.sendEmailForCreateAnAccount(accountData.getEmail());
