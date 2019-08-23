@@ -7,45 +7,7 @@
     <groupId>sperasoft</groupId>
     <artifactId>qa_testing</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M3</version>
-                <configuration>
-                    <suiteXmlFiles>
-                        <suiteXmlFile>src/test/test_suites/edit_test_suite.xml</suiteXmlFile>
-                        <suiteXmlFile>src/test/test_suites/login_logout.xml</suiteXmlFile>
-                        <suiteXmlFile>src/test/test_suites/negative_test_suite.xml</suiteXmlFile>
-                        <suiteXmlFile>src/test/test_suites/page_elements_test_suite.xml</suiteXmlFile>
-                        <suiteXmlFile>src/test/test_suites/verification_test_suite.xml</suiteXmlFile>
-                        <suiteXmlFile>src/test/test_suites/registration_test_suite.xml</suiteXmlFile>
-                    </suiteXmlFiles>
 
-                    <!--<parallel>methods</parallel>
-                    <threadCount>3</threadCount>-->
-
-                    <properties>
-                        <property>
-                            <name>suitethreadpoolsize</name>
-                            <value>3</value>
-                        </property>
-                    </properties>
-
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>8</source>
-                    <target>8</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
     <dependencies>
 
         <dependency>
@@ -60,14 +22,6 @@
             <artifactId>selenium-java</artifactId>
             <version>3.141.59</version>
         </dependency>
-
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>6.8</version>
-            <scope>test</scope>
-        </dependency>
-
 
         <dependency>
             <groupId>org.testng</groupId>

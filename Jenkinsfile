@@ -1,10 +1,5 @@
 pipeline {
-    agent {
-        label 'best_practice'
-        }
-    options {
-    timestamps()
-    }
+    agent any
     stages{
         stage("First"){
         steps {
