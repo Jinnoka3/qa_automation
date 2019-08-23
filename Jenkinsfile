@@ -6,6 +6,10 @@ pipeline {
     timestamps()
     }
     stages{
-        stage("First")
+        stage("First"){
+        steps {
+        echo "Lil Pip"
+        }
+        }
     }
 }
