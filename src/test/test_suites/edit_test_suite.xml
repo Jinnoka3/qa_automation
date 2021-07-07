@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Edit test suite">
+
+    <test name="Edit" verbose="2">
+        <parameter name="dataFile" value="src/test/data/data.json"/>
+        <parameter name="dataToReplaceFile" value="src/test/data/new_data.json"/>
+        <classes>
+
+            <class name="best.EditInfoTest">
+                <methods>
+                    <include name="editUserDataTest" />
+                </methods>
+            </class>
+
+            <class name="best.AddNewAddressesTest">
+
+                <methods>
+                    <include name="addNewAddressesTest" />
+                </methods>
+            </class>
+
+            <class name="best.UpdateAddressesTest">
+
+                <methods>
+                    <include name="updateUserAddressesTest" />
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+</suite>

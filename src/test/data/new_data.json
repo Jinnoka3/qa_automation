@@ -1,0 +1,63 @@
+{
+  "password": "2352352",
+
+  "userInfo": {
+    "gender": "1",
+    "firstName": "Misha",
+    "lastName": "Misha",
+    "day": "5",
+    "month": "5",
+    "year": "2019",
+    "newsletter": true,
+    "specialOffers": true
+  },
+
+  "addressMap":
+  [
+    {
+      "addressFirstName": "Misha",
+      "addressLastName": "Misha",
+      "company": "Volgu",
+      "address1": "Bulvar",
+      "address2": "15",
+      "city": "Volgograd",
+      "zip": "00000",
+      "country": "United States",
+      "state": "Alaska",
+      "info": "Hello",
+      "phone": "56856",
+      "mobile": "86856568",
+      "alias": "Seventh"
+    },
+    {
+      "addressFirstName": "Daria",
+      "addressLastName": "Kalinina",
+      "company": "Sperasoft",
+      "address1": "Bulvar",
+      "address2": "15",
+      "city": "Volgograd",
+      "zip": "00000",
+      "country": "United States",
+      "state": "Alaska",
+      "info": "Hello",
+      "phone": "56856",
+      "mobile": "86856568",
+      "alias": "Eighth"
+    },
+    {
+      "addressFirstName": "Daria",
+      "addressLastName": "Kalinina",
+      "company": "Company",
+      "address1": "Bulvar",
+      "address2": "15",
+      "city": "Volgograd",
+      "zip": "00000",
+      "country": "United States",
+      "state": "Alaska",
+      "info": "Hello",
+      "phone": "56856",
+      "mobile": "86856568",
+      "alias": "Ninth"
+    }
+  ]
+}
